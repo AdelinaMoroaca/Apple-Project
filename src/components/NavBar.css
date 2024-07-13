@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    /* display: flex; */
+
+    background-color: rgba(29, 29, 31, .8);;
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+.nav-item{
+    padding: 0.4rem;
+
+}
+
+.nav-link{
+    color: #E8E8ED;
+   
+
+}
+
+.nav-link:hover{
+    color: #FFFFFF;
+}
