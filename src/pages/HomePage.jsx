@@ -9,7 +9,7 @@ function Homepage(){
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: '12px',
+        // gap: '12px',
         width: '100%'
     }
 
@@ -24,6 +24,13 @@ function Homepage(){
         marginBottom: '0.75rem'
     }
 
+    const gridContainerStyle = {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(700px, 1fr))',
+        gap: '0.75rem',
+        width: '100%',
+    }
+
     return(
         <div style={newStyle}>
             
@@ -35,6 +42,15 @@ function Homepage(){
                 <Banner/>
 
                 {/* iPhone ~ merge la pagina de iphone/ */}
+                <Banner/>
+            </section>
+
+            <section style={gridContainerStyle}>
+                <Banner/>
+                <Banner/>
+                <Banner/>
+                <Banner/>
+                <Banner/>
                 <Banner/>
             </section>
 

@@ -14,6 +14,8 @@ export default function ConditinalRendering(){
 
     return(
         <div style={{backgroundColor:'yellowgreen', display: 'flex', flexDirection: 'column'}}>
+            
+            <button onClick={() => setPerson({...person, age: 20})}>Modify age</button>
             <h3>{person.name}</h3>
             <p>{person.age}</p>
 
@@ -21,7 +23,7 @@ export default function ConditinalRendering(){
             {isOldEnoughToDrive()}
 
             {/* Metoda 2: afisam sau nu o anumita componenta, in functie de o conditie */}
-            {person.age > 10 && <span>Is older than 10! ~ M2 </span>}
+            {person.age >= 20 && <span>Is older than 20! ~ M2 </span>}
         
             {/* Metoda 3: afisam cu operatorul ?: fie o componenta, fie alta */}
             {/* conditie ? conditia e adevarata: conditia e falsa */}

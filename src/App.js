@@ -9,6 +9,9 @@ import Homepage from './pages/HomePage';
 import Storepage from './pages/StorePage';
 import {Form, InputValidator} from './demoComponents/Form';
 import ConditinalRendering from './demoComponents/ConditionalRendering';
+import Lists from './demoComponents/Lists';
+import UseEffList from './demoComponents/useEffect/UseEffList';
+
 
 function App() {
   return (
@@ -44,16 +47,20 @@ function App() {
  
      <TestAPI/> 
     
-    <div style={{backgroundColor: 'bisque'}}>
+    {/* <div style={{backgroundColor: 'bisque'}}>
       <p>Test Form</p>
       <Form/>
       <p>Test Input</p>
-      <InputValidator/>
+      <InputValidator/> */}
+
+  
      {/* <AppleSingInComponent/>     */}
 
 
-      <ConditinalRendering/>
-    </div>
+      {/* <ConditinalRendering/>
+      <Lists/>
+      <UseEffList/>
+    </div> */}
 
 
 
