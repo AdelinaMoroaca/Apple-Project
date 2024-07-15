@@ -1,7 +1,7 @@
 // import Geolocation from '../demoComponents/Geolocation';
 import { Banner } from '../demoComponents/Banner';
 // import { Counter } from '../demoComponents/Counter';
-
+import LayoutBlack from '../components/LayoutBlack';
 
 function Homepage(){
     const newStyle = {
@@ -32,31 +32,34 @@ function Homepage(){
     }
 
     return(
-        <div style={newStyle}>
-            
-            <section style={bannerContainerStyle}>
-                {/* iPad Pro  merge la ultumul iPad*/}
-                <Banner/>
-
-                {/* shop/back-to-school*/}
-                <Banner/>
-
-                {/* iPhone ~ merge la pagina de iphone/ */}
-                <Banner/>
-            </section>
-
-            <section style={gridContainerStyle}>
-                <Banner/>
-                <Banner/>
-                <Banner/>
-                <Banner/>
-                <Banner/>
-                <Banner/>
-            </section>
-
-
-  
-        </div>
+        <LayoutBlack>
+            <div style={newStyle}>
+                
+                     <section style={bannerContainerStyle}>
+                       {/* iPad Pro  merge la ultumul iPad*/}
+                      <Banner/>
+    
+                       {/* shop/back-to-school*/}
+                       <Banner/>
+    
+                    {/* iPhone ~ merge la pagina de iphone/ */}
+                     <Banner/>
+                </section>
+    
+                     <section style={gridContainerStyle}>
+                       <Banner/>
+                       <Banner/>
+                    <Banner/>
+                      <Banner/>
+                        <Banner/>
+                      <Banner/>
+                  </section>
+    
+    
+        
+                 </div>            
+        </LayoutBlack>
+        
     )
 
 }

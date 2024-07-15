@@ -32,18 +32,18 @@ function DriverCard(props) {
     );
 }
 
-function PhoneCard(props) {
-    const { iPhone } = props;
+// function PhoneCard(props) {
+//     const { iPhone } = props;
   
-    return (
-      <div >
-        <h3>
-          {iPhone.category} {iPhone.model}
-        </h3>
-        <p>{iPhone.finishesColor}</p>
-      </div>
-    );
-}
+//     return (
+//       <div >
+//         <h3>
+//           {iPhone.category} {iPhone.model}
+//         </h3>
+//         <p>{iPhone.finishesColor}</p>
+//       </div>
+//     );
+// }
 
 
 export default function Lists(){

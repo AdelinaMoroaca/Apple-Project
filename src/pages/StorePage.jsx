@@ -1,82 +1,60 @@
 import React from "react";
-import { StoreProduct } from "../demoComponents/StoreProduct";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+// import { StoreProduct } from "../demoComponents/StoreProduct";
+import StoreProductList from "../demoComponents/StoreProductList";
+import LayoutWhite from "../components/LayoutWhite";
 
 function Storepage(){
+    const [category, setproductCategory] = useState([]);
+
+    function getAppleCategory() {
+        fetch("http://localhost:3000/category")
+        .then((response) => response.json())
+        .then((data) => {
+            setproductCategory(data)
+        })
+       
+    }
+
+    useEffect(() => {
+        getAppleCategory();
+    },[]);
+
     const newStyle = {
         border: '2px solid gray',
         width: '1500px',
         display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
+        backgroundColor: 'blue',
+        // height: '300px',
+        padding: '10px',
+        gap: '20px',
     }
     return(
+        <LayoutWhite>
         <section style={newStyle}>
-         
-            <StoreProduct
-                image = 'P'
-                imgDescription = 'desc'
-                title = 'iPhone'
-            />
+            <h1>Category</h1>
+       
 
-            <StoreProduct
-                imgSrc = 'P'
-                imgDescription = 'desc'
-                title = 'iPad'
-            />
+            <StoreProductList category={category} />   
+            <Link to={`/category/${category.id}`}>{category.title}</Link> 
 
-            <StoreProduct
-                imgSrc = 'P'
-                imgDescription = 'desc'
-                title = 'Apple Watch'
-            />
-
-            <StoreProduct
-                imgSrc = 'P'
-                imgDescription = 'desc'
-                title = 'Apple Vision Pro'
-            />
-
-            <StoreProduct
-                imgSrc = 'P'
-                imgDescription = 'desc'
-                title = 'AirPods'
-            />
-
-            <StoreProduct
-                imgSrc = 'P'
-                imgDescription = 'desc'
-                title = 'AirTag'
-            />
-
-            <StoreProduct
-                imgSrc = 'P'
-                imgDescription = 'desc'
-                title = 'Apple TV 4K'
-            />
-
-            <StoreProduct
-                imgSrc = 'P'
-                imgDescription = 'desc'
-                title = 'HomePod'
-            />
-
-            <StoreProduct
-                imgSrc = 'P'
-                imgDescription = 'desc'
-                title = 'Accessories'
-            />
-
-            <StoreProduct
-                imgSrc = 'P'
-                imgDescription = 'desc'
-                title = 'Apple Gift Card'
-            />
- 
-        
-        
-        
-        
+            <ul>
+                {/* <StoreProductList */}
+                {category.map((category) => (
+                    <li style={{color: 'white'}} key={category.id}>
+                         <Link style={{color: 'white'}} to={`/category/${category.id}`}>{category.title}</Link> 
+                    </li>
+                ))} 
+                {/* />  */}
+            </ul>
+            {/* <Iphone/> */}
         </section>
+
+        </LayoutWhite>
     )
 
 }
