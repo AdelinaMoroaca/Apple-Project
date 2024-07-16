@@ -7,7 +7,7 @@ function Ipadpage(){
     return(
         <LayoutWhite>
             <h2>iPad</h2>
-            <p>Pagina de prezentare</p>
+            <p>Pagina dddddddddddde prezentare</p>
         </LayoutWhite>
     )
 }
