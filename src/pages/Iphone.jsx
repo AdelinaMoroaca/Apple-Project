@@ -7,7 +7,7 @@ function Iphone() {
   const [iPhone, setUser] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/iPhone/${id}`)
+    fetch(`https://d903-2a02-2f0a-5204-b100-185a-eac5-4c63-ec55.ngrok-free.app/iPhone/${id}`)
       .then((response) => response.json())
       .then((data) => setUser(data));
   }, [id]);
