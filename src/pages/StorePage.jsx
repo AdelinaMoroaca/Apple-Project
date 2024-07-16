@@ -9,7 +9,7 @@ function Storepage(){
     const [category, setproductCategory] = useState([]);
 
     function getAppleCategory() {
-        fetch("http://localhost:3000/category")
+        fetch("https://d903-2a02-2f0a-5204-b100-185a-eac5-4c63-ec55.ngrok-free.app/category")
         .then((response) => response.json())
         .then((data) => {
             setproductCategory(data)
