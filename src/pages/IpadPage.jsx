@@ -1,13 +1,15 @@
 import React from "react";
 // import { useState, useEffect } from "react";
-import LayoutWhite from "../components/LayoutWhite";
+import { LayoutBlack, LayoutWhite } from "../components/Layout";
 
 
 function Ipadpage(){
     return(
         <LayoutWhite>
+        {/* // <LayoutWhite> */}
             <h2>iPad</h2>
-            <p>Pagina dddddddddddde prezentare</p>
+            <p>Pagina de prezentare</p>
+        {/* </LayoutWhite> */}
         </LayoutWhite>
     )
 }

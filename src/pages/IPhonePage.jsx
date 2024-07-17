@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import LayoutWhite from "../components/LayoutWhite";
+import { LayoutBlack, LayoutWhite } from "../components/Layout";
 
 
 function Iphones() {
@@ -30,6 +30,7 @@ function Iphones() {
                 {iPhone.map((iPhone) => (
                 <li key={iPhone.id}>
                     <Link to={`/iPhone/${iPhone.id}`}>{iPhone.category} - {iPhone.model}</Link>
+                    
                 </li>
                 ))}
             </ul>

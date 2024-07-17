@@ -3,13 +3,18 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { StoreProduct } from "../demoComponents/StoreProduct";
 import StoreProductList from "../demoComponents/StoreProductList";
-import LayoutWhite from "../components/LayoutWhite";
+import { LayoutWhite } from "../components/Layout";
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
+import styles from "./../pages/StorePage.module.css";
 
 function Storepage(){
     const [category, setproductCategory] = useState([]);
 
     function getAppleCategory() {
-        fetch("https://d903-2a02-2f0a-5204-b100-185a-eac5-4c63-ec55.ngrok-free.app/category")
+        fetch("https://localhost:3001/category")
         .then((response) => response.json())
         .then((data) => {
             setproductCategory(data)
@@ -21,22 +26,20 @@ function Storepage(){
         getAppleCategory();
     },[]);
 
-    const newStyle = {
-        border: '2px solid gray',
-        width: '1500px',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'blue',
-        // height: '300px',
-        padding: '10px',
-        gap: '20px',
-    }
+
     return(
         <LayoutWhite>
-        <section style={newStyle}>
-            <h1>Category</h1>
+        {/* <LayoutWhite> */}
+        <section className={styles.newStyle}>
+        <Container>
+            <Row>
+                <Col xs={6} md={4}>
+                <Image src="/images/StorePage/top-img.JPG" width='510px' height='194px' rounded />
+                </Col>
+            </Row>
+        </Container>
+            
+            <h1><span>Education Store.</span>The most powerful tools for learning.</h1>
        
 
             <StoreProductList category={category} />   
@@ -54,6 +57,7 @@ function Storepage(){
             {/* <Iphone/> */}
         </section>
 
+        {/* </LayoutWhite> */}
         </LayoutWhite>
     )
 

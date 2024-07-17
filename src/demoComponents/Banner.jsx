@@ -1,5 +1,5 @@
 import React from "react";
-import { ToggleTheme, ToggleVisibility } from '../demoComponents/ToggleTheme'
+import { ToggleTheme } from '../demoComponents/ToggleTheme'
 
 function Banner(props){
     const { title, image, imgDescription} = props;
@@ -19,7 +19,7 @@ function Banner(props){
     return(
         <div style={ style }>
             <ToggleTheme/>
-            <ToggleVisibility/>
+            {/* <ToggleVisibility/> */}
          
          
             <img src={image} alt={imgDescription} />

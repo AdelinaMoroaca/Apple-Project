@@ -4,7 +4,7 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 import { Route, Routes} from 'react-router-dom';
 import './index.css';
-// import {Header} from './components/Header';
+
 // import TestAPI from './TestAPI';
 
 import Homepage from './pages/HomePage';
@@ -32,7 +32,7 @@ function App() {
      {/* <h1>Geolocation in React</h1>
      <Geolocation />
      <AppleMusicComponent/>*/}
-      {/* <Header/> */}
+     
     
         {/* <NavBar
             homePageLink='/'
@@ -56,10 +56,7 @@ function App() {
         />   */}
 
       <Routes>
-      {/* <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/users" element={<Users />} />
-        <Route path="/users/:userId" element={<User />} /> */}
+      
         <Route path='/' element={<Homepage/>}/>
         <Route path='/store/' element={<Storepage/>}/>
         <Route path='/store/category/:id' element={<Storepage/>}/>
@@ -70,18 +67,12 @@ function App() {
         <Route path='/iPad/' element={<Ipadpage/>}/>
         <Route path='/watch/' element={<Watchpage/>}/>
         <Route path='/apple-vision-pro/' element={<Visionpage/>}/>
-
-
-        {/* <Route path='/mac/' element={<Macpage/>}/>
-        <Route path='/iPad/' element={<Ipadpage/>}/>
-        <Route path='/iPhone/' element={<Iphonepage/>}/>
-        <Route path='/watch/' element={<Watchpage/>}/>
-        <Route path='/apple-vision-pro/' element={<Visionpage/>}/>
-        <Route path='/airpods/' element={<Airpodspage/>}/>
+        {/* <Route path='/airpods/' element={<Airpodspage/>}/>
         <Route path='/tv-home/' element={<Tvhomepage/>}/>
         <Route path='/services/' element={<Servicespage/>}/>
         <Route path='/accessories/all/' element={<Accessoriespage/>}/>
         <Route path='/support.apple.com/' element={<Supportpage/>}/> */}
+
         <Route path='*' element={<Page404/>}/>
 
       </Routes>

@@ -1,24 +1,41 @@
 import React from "react";
-import '../demoComponents/StoreProductList.css';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Figure from 'react-bootstrap/Figure';
 // import category from '../../fixtures/db.json';
 // import { StoreProduct } from "./StoreProduct";
 // import { Card  } from 'react-bootstrap';
 // CardBody, CardTitle
-
+import '../demoComponents/StoreProductList.css';
 
 function ProductCategory(props){
     const { category } = props;
 
     return (
-        <div style={{padding: '1rem', backgroundColor: 'pink'}}>
+
+        <>
+        <Figure>
+            <Figure.Image
+            width={171}
+            height={180}
+            alt="171x180"
+            src= {category.imagePath}
+            />
+            <Figure.Caption>
+            <Link to={`/category/${category.id}`}>{category.title}</Link>
+            </Figure.Caption>
+        </Figure>
+
+
+        {/* <div style={{padding: '1rem', backgroundColor: 'pink'}}>
             <img src={category.imagePath} alt={category.imagePath} width={'30px'} height={'30px'}/>
             <Link to={`/category/${category.id}`}>{category.title}</Link>
-            {/* <li>{category.imagePath}</li> */}
+        
 
            
-        </div>
+        </div> */}
+
+        </>
     )
 }
 
@@ -61,10 +78,12 @@ function StoreProductList(props){
                         alt={category}
                         src={category}
                         />
+
+                        
                     })
                 }
             </ol>
     )
 }
 
-export default StoreProductList
+export default StoreProductList;

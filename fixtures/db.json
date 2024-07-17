@@ -346,6 +346,12 @@
           "A17 Pro chip delivers a massive leap in graphics performance, transforming mobile gaming",
           "USB-C connector with USB 3 for up to 20x faster transfer speeds footnote ² and new pro workflows"
         ],
+        "imagePath": ["/images/iPhone/15Pro/15pro.JPG",
+        "/images/iPhone/15Pro/15pro-2.JPG",
+        "/images/iPhone/15Pro/15pro-3.JPG",
+        "/images/iPhone/15Pro/15pro-4.JPG",
+        "/images/iPhone/15Pro/15pro-5.JPG"
+      ],
 
         "views": 100,  
         "img": "",
@@ -1312,48 +1318,59 @@
     }
   ],
 
+
+
     "category":[
       {
         "id": "91", 
         "title": "iPhone",
-        "imagePath": "/images/spatiu.JPG"
+        "imagePath": "/images/iPhone/15Pro/15pro.JPG"
       },
       {
         "id": "92", 
         "title": "iPad",
-        "imagePath": "/images/spatiu.JPG"
+        "imagePath": "/images/iPhone/15Pro/15pro-2.JPG"
       },
       {
         "id": "93", 
-        "title": "Apple Watch"
+        "title": "Apple Watch",
+        "imagePath": "/images/iPhone/15Pro/15pro-3.JPG"
       },
       {
         "id": "94", 
-        "title": "Apple Vision Pro"
+        "title": "Apple Vision Pro",
+        "imagePath": "/images/iPhone/15Pro/15pro-4.JPG",
+        "videoPath": "/videos/vision.mp4"
       },
       {
         "id": "95", 
-        "title": "AirPods"
+        "title": "AirPods",
+        "imagePath": "/images/iPhone/15Pro/15pro-5.JPG"
       },
       {
         "id": "96", 
-        "title": "AirTag"
+        "title": "AirTag",
+        "imagePath": "/images/iPhone/15Pro/15pro-2.JPG"
       },
       {
         "id": "97", 
-        "title": "Apple TV 4K"
+        "title": "Apple TV 4K",
+        "imagePath": "/images/iPhone/15Pro/15pro-3.JPG"
       },
       {
         "id": "98", 
-        "title": "HomePod"
+        "title": "HomePod",
+        "imagePath": "/images/iPhone/15Pro/15pro-4.JPG"
       },
       {
         "id": "99", 
-        "title": "Accessories"
+        "title": "Accessories",
+        "imagePath": "/images/iPhone/15Pro/15pro-5.JPG"
       },
       {
         "id": "100", 
-        "title": "Apple Gift Card"
+        "title": "Apple Gift Card",
+        "imagePath": "/images/iPhone/15Pro/15pro-2.JPG"
       }
     ],
     "comments": [
