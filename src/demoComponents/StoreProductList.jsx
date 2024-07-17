@@ -45,7 +45,7 @@ function StoreProductList(props){
     const [category, setproductCategory] = useState([]);
 
     function getAppleCategory() {
-        fetch("http://localhost:3000/category")
+        fetch("https://json-server-deployment-5til.onrender.com/category")
         .then((response) => response.json())
         .then((data) => {
             setproductCategory(data)

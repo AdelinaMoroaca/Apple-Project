@@ -7,7 +7,7 @@ function Iphone() {
   const [iPhone, setUser] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/iPhone/${id}`)
+    fetch(`https://json-server-deployment-5til.onrender.com/iPhone/${id}`)
       .then((response) => response.json())
       .then((data) => setUser(data));
   }, [id]);

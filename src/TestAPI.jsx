@@ -6,7 +6,7 @@ function TestAPI() {
   const [iPhone, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/iPhone/")
+    fetch("https://json-server-deployment-5til.onrender.com/iPhone/")
       .then((response) => response.json())
       .then((data) => setPosts(data));
   }, []);
@@ -18,7 +18,7 @@ function TestAPI() {
             <ol style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 {iPhone.map((iPhone) => (
                 <li key={iPhone.id}>
-                    <p to={`/posts/${iPhone.id}`}>{iPhone.title}</p>
+                    <p to={`/iPhone/${iPhone.id}`}>{iPhone.title}</p>
                 </li>
                 ))}
             </ol>

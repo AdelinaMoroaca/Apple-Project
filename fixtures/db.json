@@ -1324,53 +1324,53 @@
       {
         "id": "91", 
         "title": "iPhone",
-        "imagePath": "/images/iPhone/15Pro/15pro.JPG"
+        "imagePath": "/images/category/Mac.JPG"
       },
       {
         "id": "92", 
         "title": "iPad",
-        "imagePath": "/images/iPhone/15Pro/15pro-2.JPG"
+        "imagePath": "/images/category/iPad.JPG"
       },
       {
         "id": "93", 
         "title": "Apple Watch",
-        "imagePath": "/images/iPhone/15Pro/15pro-3.JPG"
+        "imagePath": "/images/category/iPhone.JPG"
       },
       {
         "id": "94", 
         "title": "Apple Vision Pro",
-        "imagePath": "/images/iPhone/15Pro/15pro-4.JPG",
+        "imagePath": "/images/category/watch.JPG",
         "videoPath": "/videos/vision.mp4"
       },
       {
         "id": "95", 
         "title": "AirPods",
-        "imagePath": "/images/iPhone/15Pro/15pro-5.JPG"
+        "imagePath": "/images/category/AirPods.JPG"
       },
       {
         "id": "96", 
         "title": "AirTag",
-        "imagePath": "/images/iPhone/15Pro/15pro-2.JPG"
+        "imagePath": "/images/category/AirTag.JPG"
       },
       {
         "id": "97", 
         "title": "Apple TV 4K",
-        "imagePath": "/images/iPhone/15Pro/15pro-3.JPG"
+        "imagePath": "/images/category/TV.JPG"
       },
       {
         "id": "98", 
         "title": "HomePod",
-        "imagePath": "/images/iPhone/15Pro/15pro-4.JPG"
+        "imagePath": "/images/category/HomePod.JPG"
       },
       {
         "id": "99", 
         "title": "Accessories",
-        "imagePath": "/images/iPhone/15Pro/15pro-5.JPG"
+        "imagePath": "/images/category/Accessories.JPG"
       },
       {
         "id": "100", 
         "title": "Apple Gift Card",
-        "imagePath": "/images/iPhone/15Pro/15pro-2.JPG"
+        "imagePath": "/images/category/GiftCard.JPG"
       }
     ],
     "comments": [

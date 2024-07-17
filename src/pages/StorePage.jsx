@@ -8,13 +8,14 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
+import StoreCard from "../components/componentsDemo/modal/ModalStore";
 import styles from "./../pages/StorePage.module.css";
 
 function Storepage(){
     const [category, setproductCategory] = useState([]);
 
     function getAppleCategory() {
-        fetch("https://localhost:3001/category")
+        fetch("https://json-server-deployment-5til.onrender.com/category")
         .then((response) => response.json())
         .then((data) => {
             setproductCategory(data)
@@ -45,19 +46,38 @@ function Storepage(){
             <StoreProductList category={category} />   
             <Link to={`/category/${category.id}`}>{category.title}</Link> 
 
-            <ul>
-                {/* <StoreProductList */}
+            {/* <ul class= 'StoreProductList'>
+    
                 {category.map((category) => (
                     <li style={{color: 'white'}} key={category.id}>
                          <Link style={{color: 'white'}} to={`/category/${category.id}`}>{category.title}</Link> 
                     </li>
                 ))} 
-                {/* />  */}
-            </ul>
-            {/* <Iphone/> */}
+           
+            </ul> */}
+          
         </section>
 
-        {/* </LayoutWhite> */}
+        <section>
+                <h2>Advanced tools for advanced studies.<span>Choose from a best-in-class lineup.</span></h2>
+                {/* Modal */}
+                <section style={{display: 'flex'}}>
+                <StoreCard/>
+                <StoreCard/>
+                <StoreCard/>
+                </section>
+        </section>
+
+        <section>
+                <h2>Max out your credits.<span>Add even more exclusive education offers.</span></h2>
+                {/* Modal */}
+                <section style={{display: 'flex'}}>
+                <StoreCard/>
+                <StoreCard/>
+                <StoreCard/>
+                </section>
+        </section>
+     
         </LayoutWhite>
     )
 
