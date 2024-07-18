@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CarouselHomePage from '../components/componentsDemo/carousel/Carousel';
-import { VideoCard} from "../components/Card";
+import { LargeVideoCard, LargeImageCard } from "../components/Card";
 import styles from "./Homepage.module.css";
 
 function Homepage(){
@@ -16,9 +16,9 @@ function Homepage(){
         // <>
         <LayoutBlack>
             <section className={styles.largeCardContainder}>
-                <VideoCard/>
-                <VideoCard/>
-                <VideoCard/>
+                <LargeVideoCard/>
+                <LargeImageCard/>
+                <LargeImageCard/>             
             </section>
    
             <Container fluid={true} className={styles.gridContainer}>
