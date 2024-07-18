@@ -73,11 +73,40 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  color: white !important;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+  color: rgb(245, 245, 247) !important;
+  /* background: rgba(0, 0, 0, 0.09); */
+  padding: 3.7rem 0 3.7rem 0 !important;
   box-sizing: border-box;
 }
+
+.cardTitle{
+  font-size: 48px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.096px !important;
+  line-height: 52px !important;
+}
+
+.cardText{
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.2px !important;
+  line-height: 28px !important;
+  margin-top: 5px !important;
+}
+
+.learnMoreBtn,.buyBtn{
+  font-weight: 400 !important;
+  letter-spacing: -0.374px !important;
+  line-height: 20px !important;
+  margin-top: 18px !important;
+  padding: 11px 21px !important;
+  border-bottom-right-radius: 980px !important;
+  border-bottom-left-radius: 980px !important;
+  border-top-left-radius: 980px !important;
+  border-top-right-radius: 980px !important;
+  font-size: 17px !important;
+}
+
 
 .learnMoreBtn {
   background-color: white !important;
@@ -93,16 +122,21 @@
   border: 1px solid white !important;
 }
 
+.shopBtn{
+  background-color: transparent !important;
+  color: rgb(0,122,255) !important;
+  border: 1px solid rgb(0,122,255) !important;
+}
+
 .buyBtn:hover {
   background-color: white !important;
   color: black !important;
   border: 1px solid white !important;
 }
 
-.buyBtn:hover {
-  background-color: white;
-  color: black;
-  border: none;
+.shopBtn:hover {
+  background-color: rgb(0,122,255)  !important;
+  color: white !important;
 } 
 
 /* Responsiveness Video and Image LargeCard*/

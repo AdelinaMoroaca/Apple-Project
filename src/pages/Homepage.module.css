@@ -13,12 +13,13 @@
 }
 
 .gridContainer{
-    background-color: rgba(250, 235, 215, 0.402);
-    padding: 0;
+    /* background-color: rgba(250, 235, 215, 0.402); */
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
     display: grid;
     grid-gap: 1.2rem;
     margin-bottom: 1.2rem;
-    padding: 0 !important;
+    /* padding: 0 !important; */
     /* grid-column: ; */
 }
 

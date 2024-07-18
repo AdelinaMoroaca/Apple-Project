@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CarouselHomePage from '../components/componentsDemo/carousel/Carousel';
-import { LargeVideoCard, LargeImageCard } from "../components/Card";
+import { LargeVideoCard, LargeImageCard1, LargeImageCard2 } from "../components/componentsDemo/cards/Card";
 import styles from "./Homepage.module.css";
 
 function Homepage(){
@@ -16,9 +16,35 @@ function Homepage(){
         // <>
         <LayoutBlack>
             <section className={styles.largeCardContainder}>
-                <LargeVideoCard/>
-                <LargeImageCard/>
-                <LargeImageCard/>             
+                <LargeVideoCard 
+                    src='/videos/vision.mp4'
+                    title='-LOGO-Vision Pro' 
+                    text='You`ve never seen everything like this before.'
+                    learnMoreBtnText='Learn more'
+                    buyBtnText= 'Buy' 
+                    shopBtnText=''
+                />
+                
+                <LargeImageCard1 
+                    src='/images/HomePage/Store.jpg' 
+                    // title='-LOGO-Vision Pro' 
+                    // text='You`ve never seen everything like this before.'
+                    // learnMoreBtnText='Learn more'
+                    // buyBtnText= 'Buy' 
+                    shopBtnText='Shop'
+                />
+                
+                
+                <LargeImageCard2
+                    src='/images/HomePage/iPadPRO1.jpg' 
+                    title='iPad Pro' 
+                    // Touch, draw, and type on one magical device.
+                    text='Touch, draw, and type on one magical device.'
+                    learnMoreBtnText='Learn more'
+                    buyBtnText= 'Buy' 
+                    shopBtnText=''
+                
+                />             
             </section>
    
             <Container fluid={true} className={styles.gridContainer}>
