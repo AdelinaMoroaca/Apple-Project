@@ -1,17 +1,17 @@
 import React from "react";
 // import { useState, useEffect } from "react";
-import { LayoutBlack, LayoutWhite } from '../components/Layout';
+import { LayoutWhite } from "../../components/Layout";
 
 
-function Visionpage(){
+function Ipadpage(){
     return(
         <LayoutWhite>
-        {/* <LayoutWhite> */}
-            <h2>Vision</h2>
+        {/* // <LayoutWhite> */}
+            <h2>iPad</h2>
             <p>Pagina de prezentare</p>
         {/* </LayoutWhite> */}
         </LayoutWhite>
     )
 }
 
-export default Visionpage;
+export default Ipadpage;

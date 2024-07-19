@@ -2,13 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { StoreProduct } from "../demoComponents/StoreProduct";
-import StoreProductList from "../demoComponents/StoreProductList";
+import {StoreProductList} from "../demoComponents/StoreProductList";
 import { LayoutWhite } from "../components/Layout";
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-import StoreCard from "../components/componentsDemo/modal/ModalStore";
+import StoreCard from "../components/modal/ModalStore";
 import styles from "./../pages/StorePage.module.css";
 
 function Storepage(){
@@ -77,6 +77,8 @@ function Storepage(){
                 <StoreCard/>
                 </section>
         </section>
+
+  
      
         </LayoutWhite>
     )

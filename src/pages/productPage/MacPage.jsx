@@ -1,7 +1,7 @@
 import React from "react";
 // import { useState, useEffect } from "react";
-import { LayoutBlack, LayoutWhite } from '../components/Layout'
-import LoginForm from "../components/componentsDemo/forms/FrmLogin";
+import { LayoutWhite } from '../../components/Layout'
+import LoginForm from "../../components/forms/FrmLogin";
 
 
 function Macpage(){

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { LayoutWhite } from "../components/Layout";
+import { LayoutWhite } from "../../components/Layout";
 import Card from 'react-bootstrap/Card';
 
 function Iphones() {

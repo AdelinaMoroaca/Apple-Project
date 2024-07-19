@@ -1,72 +1,118 @@
 // import Geolocation from '../demoComponents/Geolocation';
-import { Banner } from '../demoComponents/Banner';
 // import { Counter } from '../demoComponents/Counter';
 import { LayoutBlack } from '../components/Layout';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import CarouselHomePage from '../components/componentsDemo/carousel/Carousel';
-import { LargeVideoCard, LargeImageCard1, LargeImageCard2 } from "../components/componentsDemo/cards/Card";
+import CarouselHomePage from '../components/carousel/Carousel';
+import { LargeImageCard, LargeVideoCard } from "../components/cards/LargeCard";
+import { GridCard } from '../components/cards/GridCard'
+import { LearnMoreBtn } from '../components/buttons/learnMore/LearnMore';
+import { ShopBtn } from '../components/buttons/shop/ShopBtn';
+import { BuyBtn } from '../components/buttons/buy/BuyBtn';
+import { GetYourEstimateBtn } from '../components/buttons/estimation/GetYourEstimateBtn';
+import { ApplyNowBtn } from '../components/buttons/apply/ApplyNowBtn';
+import { WatchTheFilm } from '../components/buttons/seeMovie/WatchTheFilm';
+
+
 import styles from "./Homepage.module.css";
 
 function Homepage(){
-
-
     return(
-        // <>
         <LayoutBlack>
             <section className={styles.largeCardContainder}>
                 <LargeVideoCard 
                     src='/videos/vision.mp4'
                     title='-LOGO-Vision Pro' 
                     text='You`ve never seen everything like this before.'
-                    learnMoreBtnText='Learn more'
-                    buyBtnText= 'Buy' 
-                    shopBtnText=''
+                    firstBtnType = {<LearnMoreBtn />}
+                    secondBtnType = {<BuyBtn />}
                 />
                 
-                <LargeImageCard1 
+                <LargeImageCard
                     src='/images/HomePage/Store.jpg' 
-                    // title='-LOGO-Vision Pro' 
-                    // text='You`ve never seen everything like this before.'
-                    // learnMoreBtnText='Learn more'
-                    // buyBtnText= 'Buy' 
-                    shopBtnText='Shop'
+                    btn = {<ShopBtn />}
                 />
                 
-                
-                <LargeImageCard2
+                <LargeImageCard
                     src='/images/HomePage/iPadPRO1.jpg' 
                     title='iPad Pro' 
-                    // Touch, draw, and type on one magical device.
                     text='Touch, draw, and type on one magical device.'
                     learnMoreBtnText='Learn more'
-                    buyBtnText= 'Buy' 
-                    shopBtnText=''
-                
-                />             
+                    btn = {<LearnMoreBtn />}
+                    rightBtn = {<BuyBtn />}
+                />
+
             </section>
    
             <Container fluid={true} className={styles.gridContainer}>
-                {/* 1.2 rem gap */}
                 <Row >
-                    <Col><Banner/></Col>
-                    <Col><Banner/></Col>
+                    <Col>
+                        <GridCard
+                            // src='images/HomePage/gridImg/appleIntelligence.JPG'
+                            // src='images/HomePage/gridImg/tradeIn.JPG'
+                            src='images/HomePage/gridImg/outOfOffice.JPG'
+                            title='Out of Office'
+                            firstText='Apple at Work works from anywhere'
+                            btn={<LearnMoreBtn />}
+                            rightBtn={<WatchTheFilm />}
+                    /></Col>
+
+                    <Col><GridCard
+                
+                     src='images/HomePage/gridImg/appleIntelligence.JPG'
+                     title='Apple Intelligence'
+                     firstText='AI for the rest of us.'
+                     text2='Coming in beta this fall'
+                            
+                     btn={<LearnMoreBtn />}
+                     rightBtn={<WatchTheFilm />}
+                
+                    /></Col>
                 </Row>
 
                 <Row>
-                    <Col><Banner/></Col>
-                    <Col><Banner/></Col>
+                    <Col><GridCard
+                        src='images/HomePage/gridImg/iPadPRO.JPG'
+                        title='iPad Pro'
+                        firstText='Unbelievably thin. Incredibly powerful'
+                        btn={<LearnMoreBtn />}
+                        rightBtn={<BuyBtn />}
+                    /></Col>
+                    <Col>
+
+                    <GridCard
+                      src='images/HomePage/gridImg/watch.JPG'
+                      title='logo-WATCH'
+                      firstText='series 9'
+                      secondText='Smarter. Brighter. Mightier'
+                      btn={<LearnMoreBtn />}
+                      rightBtn={<BuyBtn />}
+                    /></Col>
                 </Row>
 
                 <Row>
-                    <Col><Banner/></Col>
-                    <Col><Banner/></Col>
+                    <Col><GridCard className={styles.tradeInCard}
+                    src='images/HomePage/gridImg/card.JPG'
+                    title='logo-CARD'
+                    firstText='Get up to 3% Daily Cash back' 
+                    secondText='with every purchase.'
+                    btn={<LearnMoreBtn />}
+                    rightBtn={<ApplyNowBtn />}
+                    /></Col>
+
+                    <Col><GridCard className={styles.tradeInCard} id='tradeInCard'
+                    src='images/HomePage/gridImg/tradeIn.JPG'
+                    title='logo-Trade In'
+                    firstText='Get $170-$620 in credit when you'
+                    secondText=' trade in iPhone 11 or higher.'
+                    btn={<GetYourEstimateBtn />}
+                    /></Col>
                 </Row>
             </Container>
 
             <CarouselHomePage/>
-            <h2>hjj</h2>
+
 
             {/* <ImgOverlayExample className={styles.child}/> */}
             {/* <Container fluid={true} className={styles.banner}>

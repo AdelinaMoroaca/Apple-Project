@@ -2,8 +2,6 @@ import { HeaderBlack, HeaderWhite } from "./Header";
 import styles from "./Layout.module.css"
 
 function LayoutBlack({ children }) {
-
-
     return(
         <div className={styles.LayoutBlackContainer}>
             <HeaderBlack/>
