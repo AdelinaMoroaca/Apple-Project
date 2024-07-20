@@ -15,9 +15,13 @@ import { ApplyNowBtn } from '../components/buttons/apply/ApplyNowBtn';
 import { WatchTheFilm } from '../components/buttons/seeMovie/WatchTheFilm';
 
 
+
 import styles from "./Homepage.module.css";
 
 function Homepage(){
+
+  
+    
     return(
         <LayoutBlack>
             <section className={styles.largeCardContainder}>

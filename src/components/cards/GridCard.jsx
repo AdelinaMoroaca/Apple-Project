@@ -1,7 +1,7 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import styles from "./GridCard.module.css";
-// import { ToggleTheme } from '../demoComponents/ToggleTheme' - de sters
+
 function GridCard(props) {
     const { src, title, firstText, secondText, btn, rightBtn } = props;
   
@@ -30,31 +30,5 @@ function GridCard(props) {
     );
 }
 
-function Banner(props){
-    const { title, image, imgDescription} = props;
 
-    const style = {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-   
-        border: '1px solid gray',
-        width: '100%',
-        height: '600px',
-        // backgroundColor: 'blue',
-
-    }
-
-    return(
-        <div style={ style }>
-            {/* <ToggleTheme/> */}
-            {/* <ToggleVisibility/> */}
-         
-         
-            <img src={image} alt={imgDescription} />
-            <p>{title}</p>
-        </div>
-    )
-}
-
-export { GridCard , Banner};
+export { GridCard };
