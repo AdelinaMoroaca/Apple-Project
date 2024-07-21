@@ -1,9 +1,56 @@
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
-function WatchTheFilm() {
+// function WatchTheFilm(props) {
+//   const { url } = props;
+//   const handleClick = () => {
+//     window.location.href = url;
+//   };
+
+//   return (
+//     <Button variant="primary"
+//     onClick={handleClick}
+//     >Watch the Film</Button>
+//   );
+// }
+
+// export { WatchTheFilm };
+
+import React, { useState } from 'react';
+import { Button, Modal } from 'react-bootstrap';
+
+function WatchTheFilm(props){
+  const {src, titleMovie} = props;
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <Button variant="primary">Watch the Film</Button>
-  );
-}
+    <div>
+      <Button variant="primary" onClick={handleShow}>
+        Watch the Film
+      </Button>
 
-export { WatchTheFilm };
+      <Modal show={show} onHide={handleClose} size="lg" centered>
+        <Modal.Header closeButton>
+          <Modal.Title>{titleMovie}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <div className="video-container" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+            <iframe
+              src={src}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            ></iframe>
+          </div>
+        </Modal.Body>
+      </Modal>
+    </div>
+  );
+};
+
+export { WatchTheFilm};
+

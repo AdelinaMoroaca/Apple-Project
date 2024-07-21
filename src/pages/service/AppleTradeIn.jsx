@@ -4,15 +4,15 @@ import WillBeBackPage from '../WillBeBackPage'
 
 
 
-function Visionpage(){
+function AppleTradeIn(){
     return(
         <LayoutWhite>
             <WillBeBackPage
-                pageContent='Apple Vision Pro'
+                pageContent='Apple Trade In'
             />
    
         </LayoutWhite>
     )
 }
 
-export default Visionpage;
+export default AppleTradeIn;

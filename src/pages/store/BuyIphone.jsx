@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link } from "react-router-dom";
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { CartContext } from '../../store/Cart/context';
 import { LayoutBlack } from "../../components/Layout";
@@ -27,14 +26,17 @@ function BuyIphone(){
     const handleAddToCart = (product) => {
         const selected = selectedOptions[product.id] || {};
 
+        if (!selected.finish || !selected.storage) {
+            alert('Please select both finish and storage options before adding to cart.');
+            return;
+        }
+
         cartDispatch(addToCart({
             ...product,
             finish: selected.finish,
             storage: selected.storage,
         }));
 
-
-        // const selected = selectedOptions[iPhone.id] || {};
         console.log(`Added ${product.title} with  ${product.price},  ${selected.finish} finish and ${selected.storage} storage to cart`);
         // cartDispatch(addToCart(product));
     
@@ -81,24 +83,6 @@ function BuyIphone(){
                                         </label>
                                     ))}
                                 </div>
-                                {/* <h5>Model: {product.model}</h5>
-                                <h6>Finishes:</h6>
-                                <div>
-                                    {product.finishesColor.map((color, index) => (
-                                        <label key={index} className={styles.optionLabel}>
-                                            <input
-                                                type="radio"
-                                                name={`finish-${product.id}`}
-                                                value={color}
-                                                checked={selectedOptions[product.id]?.finish === color}
-                                                onChange={() => handleOptionChange(product.id, 'finish', color)}
-                                                className={styles.optionInput}
-                                            />
-                                            {color}
-                                        </label>
-                                    ))}
-                                </div> */}
-
 
                                 <h6>Storage Sizes:</h6>
                                 <div>
@@ -126,14 +110,21 @@ function BuyIphone(){
                                         <li key={index}>{detail}</li>
                                     ))}
                                 </ul>
-                                {/* <h6>Images:</h6>
+
+                                <h6>Images:</h6>
+                                {Array.isArray(product.imagePath) ? ( // Ensure imagePath is an array
                                 <ul>
-                                    {iphone.imagePath.map((path, index) => (
+                                    {product.imagePath.map((path, index) => (
                                         <li key={index}>
-                                            <img src={path} alt={`iPhone ${iphone.model}`} style={{ width: '100px', height: 'auto' }} />
+                                            <img src={path} 
+                                            alt={`iPhone ${product.model}`} 
+                                            style={{ width: '100px', height: 'auto' }} />
                                         </li>
                                     ))}
-                                </ul> */}
+                                </ul>
+                                ) : (
+                                   <p>No images available</p>
+                                )}
                             </Container>
                         </Col>
                     ))}

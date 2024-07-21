@@ -1,9 +1,15 @@
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
-function ApplyNowBtn() {
+function ApplyNowBtn(props) {
+  const { path } = props;
+  const navigate = useNavigate();
+
   return (
    
-      <Button variant="primary">Apply now</Button>
+    <Button variant="primary"
+      onClick={() => navigate(path)}
+    >Apply now</Button>
 
   );
 }

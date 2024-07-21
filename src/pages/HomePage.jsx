@@ -29,22 +29,21 @@ function Homepage(){
                     src='/videos/vision.mp4'
                     title='-LOGO-Vision Pro' 
                     text='You`ve never seen everything like this before.'
-                    firstBtnType = {<LearnMoreBtn />}
-                    secondBtnType = {<BuyBtn />}
+                    firstBtnType = {<LearnMoreBtn path='/apple-vision-pro/' />}
+                    secondBtnType = {<BuyBtn path='/shop/buy-vision/apple-vision-pro/' />}
                 />
                 
                 <LargeImageCard
                     src='/images/HomePage/Store.jpg' 
-                    btn = {<ShopBtn />}
+                    btn = {<ShopBtn path='/store/'/>}
                 />
                 
                 <LargeImageCard
                     src='/images/HomePage/iPadPRO1.jpg' 
                     title='iPad Pro' 
                     text='Touch, draw, and type on one magical device.'
-                    learnMoreBtnText='Learn more'
-                    btn = {<LearnMoreBtn />}
-                    rightBtn = {<BuyBtn />}
+                    btn = {<LearnMoreBtn path='/ipad-pro/'/>}
+                    rightBtn = {<BuyBtn path='/store/buy-ipad/ipad-pro/'/>}
                 />
 
             </section>
@@ -53,70 +52,83 @@ function Homepage(){
                 <Row >
                     <Col>
                         <GridCard
-                            // src='images/HomePage/gridImg/appleIntelligence.JPG'
-                            // src='images/HomePage/gridImg/tradeIn.JPG'
                             src='images/HomePage/gridImg/outOfOffice.JPG'
                             title='Out of Office'
                             firstText='Apple at Work works from anywhere'
-                            btn={<LearnMoreBtn />}
-                            rightBtn={<WatchTheFilm />}
-                    /></Col>
+                            btn={<LearnMoreBtn path='/business/'/>} //https://www.apple.com/business/
+                            rightBtn={<WatchTheFilm 
+                                titleMovie = 'The Underdogs: OOO (Out Of Office) | Apple at Work'
+                                src="https://www.youtube.com/embed/SbYckRAt5os" />}
+                    
+                        />
+                    </Col>
 
-                    <Col><GridCard
-                
-                     src='images/HomePage/gridImg/appleIntelligence.JPG'
-                     title='Apple Intelligence'
-                     firstText='AI for the rest of us.'
-                     text2='Coming in beta this fall'
-                            
-                     btn={<LearnMoreBtn />}
-                     rightBtn={<WatchTheFilm />}
-                
-                    /></Col>
-                </Row>
-
-                <Row>
-                    <Col><GridCard
-                        src='images/HomePage/gridImg/iPadPRO.JPG'
-                        title='iPad Pro'
-                        firstText='Unbelievably thin. Incredibly powerful'
-                        btn={<LearnMoreBtn />}
-                        rightBtn={<BuyBtn />}
-                    /></Col>
                     <Col>
-
-                    <GridCard
-                      src='images/HomePage/gridImg/watch.JPG'
-                      title='logo-WATCH'
-                      firstText='series 9'
-                      secondText='Smarter. Brighter. Mightier'
-                      btn={<LearnMoreBtn />}
-                      rightBtn={<BuyBtn />}
-                    /></Col>
+                        <GridCard
+                        src='images/HomePage/gridImg/appleIntelligence.JPG'
+                        title='Apple Intelligence'
+                        firstText='AI for the rest of us.'
+                        text2='Coming in beta this fall'
+                        btn={<LearnMoreBtn path='/apple-intelligence/'/>}
+                        rightBtn={<WatchTheFilm 
+                            titleMovie = 'Apple Intelligence in 5 minutes'
+                            src="https://www.youtube.com/embed/Q_EYoV1kZWk?start=31"/>}
+                        />
+                    </Col>
                 </Row>
 
                 <Row>
-                    <Col><GridCard className={styles.tradeInCard}
-                    src='images/HomePage/gridImg/card.JPG'
-                    title='logo-CARD'
-                    firstText='Get up to 3% Daily Cash back' 
-                    secondText='with every purchase.'
-                    btn={<LearnMoreBtn />}
-                    rightBtn={<ApplyNowBtn />}
-                    /></Col>
+                    <Col>
+                        <GridCard
+                        src='images/HomePage/gridImg/watch.JPG'
+                        title='iPhone'
+                        firstText='Our most powerful cameras yet.'
+                        secondText='Ultrafast chips. And USB-C.'
+                        btn={<LearnMoreBtn path='/iphone/' />}
+                        rightBtn={<ShopBtn 
+                            product='iPhone'
+                            path='/shop/buy-iphone/'/>}
+                        />
+                    </Col>
 
-                    <Col><GridCard className={styles.tradeInCard} id='tradeInCard'
-                    src='images/HomePage/gridImg/tradeIn.JPG'
-                    title='logo-Trade In'
-                    firstText='Get $170-$620 in credit when you'
-                    secondText=' trade in iPhone 11 or higher.'
-                    btn={<GetYourEstimateBtn />}
-                    /></Col>
+                    <Col>
+                        <GridCard
+                        src='images/HomePage/gridImg/watch.JPG'
+                        title='logo-WATCH'
+                        firstText='series 9'
+                        secondText='Smarter. Brighter. Mightier'
+                        btn={<LearnMoreBtn path='/apple-watch-series-9/'/>}
+                        rightBtn={<BuyBtn path='/shop/buy-watch/apple-watch'/>}
+                        />
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col>
+                        <GridCard className={styles.tradeInCard}
+                        src='images/HomePage/gridImg/card.JPG'
+                        title='logo-CARD'
+                        firstText='Get up to 3% Daily Cash back' 
+                        secondText='with every purchase.'
+                        btn={<LearnMoreBtn path='/apple-card/' />}
+                        rightBtn={<ApplyNowBtn path='/apple-card/signin/' />}
+                        />
+                    </Col>
+
+                    <Col>
+                        <GridCard className={styles.tradeInCard} id='tradeInCard'
+                        src='images/HomePage/gridImg/tradeIn.JPG'
+                        title='logo-Trade In'
+                        firstText='Get $170-$620 in credit when you'
+                        secondText=' trade in iPhone 11 or higher.'
+                        btn={<GetYourEstimateBtn path='/shop/trade-in'/>}
+                        />
+                    </Col>
                 </Row>
             </Container>
 
             <CarouselHomePage/>
-
+                                <h1>jjk</h1>
 
             {/* <ImgOverlayExample className={styles.child}/> */}
             {/* <Container fluid={true} className={styles.banner}>

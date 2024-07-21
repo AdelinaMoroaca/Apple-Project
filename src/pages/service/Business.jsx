@@ -4,15 +4,15 @@ import WillBeBackPage from '../WillBeBackPage'
 
 
 
-function Visionpage(){
+function Business(){
     return(
         <LayoutWhite>
             <WillBeBackPage
-                pageContent='Apple Vision Pro'
+                pageContent='Apple Business'
             />
    
         </LayoutWhite>
     )
 }
 
-export default Visionpage;
+export default Business;

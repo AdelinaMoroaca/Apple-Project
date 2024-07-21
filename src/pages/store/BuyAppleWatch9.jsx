@@ -4,15 +4,15 @@ import WillBeBackPage from '../WillBeBackPage'
 
 
 
-function Visionpage(){
+function BuyAppleWatch9(){
     return(
         <LayoutWhite>
             <WillBeBackPage
-                pageContent='Apple Vision Pro'
+                pageContent='Apple Watch Series 9 STORE'
             />
    
         </LayoutWhite>
     )
 }
 
-export default Visionpage;
+export default BuyAppleWatch9;
