@@ -1,15 +1,16 @@
 import React from "react";
-import { LayoutWhite } from "../components/Layout";
 import WillBeBackPage from './WillBeBackPage';
+import { LayoutWhite } from "../components/Layout";
 
-function WatchPage(){
+
+function AirPodsPage(){
     return(
         <LayoutWhite>
             <WillBeBackPage
-                pageContent='Apple Watch'
+                pageContent='AirPods'
             />
         </LayoutWhite>
     )
 }
 
-export default WatchPage;
+export default AirPodsPage;

@@ -17,9 +17,10 @@
 
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import styles from './watchTheFilm.module.css';
 
 function WatchTheFilm(props){
-  const {src, titleMovie} = props;
+  const {src, titleMovie, className, id } = props;
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -27,7 +28,10 @@ function WatchTheFilm(props){
 
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary"
+       id={id}
+       className={`${styles.watchTheFilm} ${className}`}
+      onClick={handleShow}>
         Watch the Film
       </Button>
 

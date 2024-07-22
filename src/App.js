@@ -5,21 +5,23 @@ import { Route, Routes } from 'react-router-dom';
 import Homepage from './pages/HomePage';
 import Storepage from './pages/StorePage';
 import Iphone from './pages/Iphone';
-import Watchpage from './pages/WatchPage';
+import WatchPage from './pages/WatchPage';
+import AirPodsPage from './pages/AirPodsPage';
+import SupportPage from './pages/SupportPage';
 import Cart from './pages/cart/Cart';
 import Page404 from './pages/Page404';
-
-import Iphonepage from './pages/product/IPhonePage';
-import Macpage from './pages/product/MacPage';
-import Ipadpage from './pages/product/IpadPage';
-import Visionpage from './pages/product/VisionPage';
+import AccessoriesPage from './pages/AccessoriesPage';
+// import Iphonepage from './pages/IPhonePage';
+import Macpage from './pages/MacPage';
+import Ipadpage from './pages/IpadPage';
+import Visionpage from './pages/VisionPage';
 import AppleCard from  './pages/service/AppleCard';
-
+import EntertainmentPage from './pages/EntertainmentPage';
 import IpadProPage from './pages/product/IpadProPage';
 import Business from './pages/service/Business';
 import Intelligence from './pages/service/Intelligence';
 import AppleWatch9Page from './pages/product/AppleWatch9Page';
-// import IpadProPage from './pages/store/IpadProPage';
+import IPhonePage from './pages/IPhonePage';
 // import IphoneList from './components/IphoneList';
 // import { BuyProduct } from './pages/storePage/BuyProduct';
 import {BuyIphone} from './pages/store/BuyIphone';
@@ -30,7 +32,7 @@ import BuyIpadPro from './pages/store/BuyIpadPro';
 import BuyAppleWatch9 from './pages/store/BuyAppleWatch9';
 import ApplyAppleCard from './pages/store/ApplyAppleCard'; 
 import LoginForm from './pages/forms/LoginForm';
-
+import TvHomePage from './pages/TvHomePage';
 import {CartProvider} from './store/Cart/context';
 import {AuthenticationProvider} from './store/Authentication/context';
 
@@ -56,12 +58,12 @@ function App() {
             <Route path='/' element={<Homepage/>}/>
             <Route path='/store/' element={<Storepage/>}/>
             <Route path='/shop/buy-ipad/' element={<BuyIpad/>}/>
-            <Route path='/store/buy-ipad/ipad-pro/' element={<BuyIpadPro/>}/>
+            <Route path='/shop/buy-ipad/ipad-pro/' element={<BuyIpadPro/>}/>
            
             <Route path='/shop/buy-watch/' element={<BuyWatch/>}/>  {/* /shop/buy-watch/ not working as expected */}
             <Route path='/shop/buy-watch/apple-watch/' element={<BuyAppleWatch9/>}/>
-            
-            <Route path='/iPhone/' element={<Iphonepage/>}/>
+            <Route path='/shop/accessories/all/' element={<AccessoriesPage/>}/>
+            <Route path='/iPhone/' element={<IPhonePage/>}/>
             <Route path='/iPhone/:id' element={<Iphone/>}/>
 
             <Route path='/mac/' element={<Macpage/>}/>
@@ -74,15 +76,16 @@ function App() {
             {/* <Route path='/store/buy-ipad/ipad-pro/' element={<BuyIpadPro/>}/> */}
             <Route path='/ipad-pro/' element={<IpadProPage/>}/>
             {/* <Route path='/store/buy-ipad/ipad-pro/' element={<IpadProPage/>}/> */}
-            
-            <Route path='/watch/' element={<Watchpage/>}/>
+            <Route path='/airpods/' element={<AirPodsPage/>}/>
+            <Route path='/watch/' element={<WatchPage/>}/>
             <Route path='/apple-watch-series-9/' element={<AppleWatch9Page/>}/>
             <Route path='/shop/signIn/' element={<LoginForm/>}/>
             <Route path='/shop/trade-in/' element={<AppleTradeIn/>}/>
             <Route path='/apple-vision-pro/' element={<Visionpage/>}/>
             
-            
-            
+            <Route path='/services/' element={<EntertainmentPage/>}/>
+            <Route path='/support/' element={<SupportPage/>}/>
+            <Route path='/tv-home/' element={<TvHomePage/>}/>
             
             {/* <Route path='/airpods/' element={<Airpodspage/>}/>
             <Route path='/tv-home/' element={<Tvhomepage/>}/>

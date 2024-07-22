@@ -7,7 +7,7 @@ function IpadProPage(){
     return(
         <LayoutWhite>
             <WillBeBackPage
-                pageContent='iPad Pro '
+                pageContent='iPad Pro'
             />
         </LayoutWhite>
     )

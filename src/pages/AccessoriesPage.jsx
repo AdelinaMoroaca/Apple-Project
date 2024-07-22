@@ -2,14 +2,14 @@ import React from "react";
 import { LayoutWhite } from "../components/Layout";
 import WillBeBackPage from './WillBeBackPage';
 
-function WatchPage(){
+function AccessoriesPage(){
     return(
         <LayoutWhite>
             <WillBeBackPage
-                pageContent='Apple Watch'
+                pageContent='Accessories'
             />
         </LayoutWhite>
     )
 }
 
-export default WatchPage;
+export default AccessoriesPage;

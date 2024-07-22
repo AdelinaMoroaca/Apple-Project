@@ -1,7 +1,7 @@
 // import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import React, { useEffect, useRef } from 'react';
-import styles from "./LargeCard.module.css";
+import styles from "./largeCard.module.css";
 // import CardImgOverlay from 'react-bootstrap/CardImgOverlay'
 
 

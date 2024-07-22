@@ -1,6 +1,6 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
-import styles from "./GridCard.module.css";
+import styles from "./gridCard.module.css";
 
 function GridCard(props) {
     const { src, title, firstText, secondText, btn, rightBtn } = props;

@@ -110,7 +110,7 @@ function Homepage(){
                         firstText='Get up to 3% Daily Cash back' 
                         secondText='with every purchase.'
                         btn={<LearnMoreBtn path='/apple-card/' />}
-                        rightBtn={<ApplyNowBtn path='/apple-card/signin/' />}
+                        rightBtn={<ApplyNowBtn className={styles.applyNowBtn} path='/apple-card/signin/' />}
                         />
                     </Col>
 

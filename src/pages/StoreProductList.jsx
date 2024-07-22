@@ -6,7 +6,7 @@ import Figure from 'react-bootstrap/Figure';
 // import { StoreProduct } from "./StoreProduct";
 // import { Card  } from 'react-bootstrap';
 
-import '../demoComponents/StoreProductList.css';
+import './../pages/StoreProductList.css';
 
 function ProductCategory(props){
     const { category } = props;

@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import { StoreProduct } from "../demoComponents/StoreProduct";
-import {StoreProductList} from "../demoComponents/StoreProductList";
+import {StoreProductList} from "./StoreProductList";
 import { LayoutWhite } from "../components/Layout";
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
