@@ -23,6 +23,8 @@ import AppleWatch9Page from './pages/product/AppleWatch9Page';
 // import IphoneList from './components/IphoneList';
 // import { BuyProduct } from './pages/storePage/BuyProduct';
 import {BuyIphone} from './pages/store/BuyIphone';
+import BuyIpad from './pages/store/BuyIpad';
+import BuyWatch from './pages/store/BuyWatch';
 import BuyAppleVisionPro from './pages/store/BuyAppleVisionPro';
 import BuyIpadPro from './pages/store/BuyIpadPro';
 import BuyAppleWatch9 from './pages/store/BuyAppleWatch9';
@@ -53,7 +55,10 @@ function App() {
           <Routes>     
             <Route path='/' element={<Homepage/>}/>
             <Route path='/store/' element={<Storepage/>}/>
+            <Route path='/shop/buy-ipad/' element={<BuyIpad/>}/>
             <Route path='/store/buy-ipad/ipad-pro/' element={<BuyIpadPro/>}/>
+           
+            <Route path='/shop/buy-watch/' element={<BuyWatch/>}/>  {/* /shop/buy-watch/ not working as expected */}
             <Route path='/shop/buy-watch/apple-watch/' element={<BuyAppleWatch9/>}/>
             
             <Route path='/iPhone/' element={<Iphonepage/>}/>

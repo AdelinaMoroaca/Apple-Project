@@ -13,7 +13,7 @@ import { BuyBtn } from '../components/buttons/buy/BuyBtn';
 import { GetYourEstimateBtn } from '../components/buttons/estimation/GetYourEstimateBtn';
 import { ApplyNowBtn } from '../components/buttons/apply/ApplyNowBtn';
 import { WatchTheFilm } from '../components/buttons/seeMovie/WatchTheFilm';
-
+import FetchExample from './../utils/hooks/FetchEx'
 
 
 import styles from "./Homepage.module.css";
@@ -25,25 +25,25 @@ function Homepage(){
     return(
         <LayoutBlack>
             <section className={styles.largeCardContainder}>
-                <LargeVideoCard 
+                <LargeVideoCard id='LargeVideoCard'
                     src='/videos/vision.mp4'
                     title='-LOGO-Vision Pro' 
                     text='You`ve never seen everything like this before.'
-                    firstBtnType = {<LearnMoreBtn path='/apple-vision-pro/' />}
-                    secondBtnType = {<BuyBtn path='/shop/buy-vision/apple-vision-pro/' />}
+                    firstBtnType = {<LearnMoreBtn className={styles.learnMoreBtn} path='/apple-vision-pro/' />}
+                    secondBtnType = {<BuyBtn className={styles.buyBtn} path='/shop/buy-vision/apple-vision-pro/' />}
                 />
                 
                 <LargeImageCard
                     src='/images/HomePage/Store.jpg' 
-                    btn = {<ShopBtn path='/store/'/>}
+                    btn = {<ShopBtn className={styles.shopBtn} path='/store/'/>}
                 />
                 
                 <LargeImageCard
-                    src='/images/HomePage/iPadPRO1.jpg' 
-                    title='iPad Pro' 
-                    text='Touch, draw, and type on one magical device.'
-                    btn = {<LearnMoreBtn path='/ipad-pro/'/>}
-                    rightBtn = {<BuyBtn path='/store/buy-ipad/ipad-pro/'/>}
+                    src='/images/HomePage/iPhoneStore.jpg' 
+                    title='iPhone' 
+                    text='Our most powerful cameras yet. Ultrafast chips. And USB-C.'
+                    btn = {<LearnMoreBtn path='/iphone/'/>}
+                    rightBtn = {<ShopBtn path='/shop/buy-iphone/'/>}
                 />
 
             </section>
@@ -80,14 +80,13 @@ function Homepage(){
                 <Row>
                     <Col>
                         <GridCard
-                        src='images/HomePage/gridImg/watch.JPG'
-                        title='iPhone'
-                        firstText='Our most powerful cameras yet.'
+                        src='images/HomePage/gridImg/iPadPRO.JPG'
+                        title='iPad Pro'
+                        firstText='Unbelievably thin. Incredibly powerful.'
                         secondText='Ultrafast chips. And USB-C.'
-                        btn={<LearnMoreBtn path='/iphone/' />}
-                        rightBtn={<ShopBtn 
-                            product='iPhone'
-                            path='/shop/buy-iphone/'/>}
+                        btn={<LearnMoreBtn path='/ipad-pro/' />}
+                        rightBtn={<BuyBtn 
+                            path='/shop/buy-ipad/ipad-pro/'/>}
                         />
                     </Col>
 
@@ -128,7 +127,8 @@ function Homepage(){
             </Container>
 
             <CarouselHomePage/>
-                                <h1>jjk</h1>
+
+            <FetchExample/>
 
             {/* <ImgOverlayExample className={styles.child}/> */}
             {/* <Container fluid={true} className={styles.banner}>

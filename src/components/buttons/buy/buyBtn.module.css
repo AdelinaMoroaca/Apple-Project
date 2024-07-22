@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.buyBtn{
+    background-color: transparent !important;
+    color: rgb(0, 102, 204) !important;
+    border: 1px solid rgb(0, 102, 204) !important;
+    border-bottom-right-radius: 980px !important;
+    border-bottom-left-radius: 980px !important;
+    border-top-left-radius: 980px !important;
+    border-top-right-radius: 980px !important;
+    padding: 11px 21px !important;
+    font-weight: 400 !important;
+    font-size: 17px !important;
+    line-height: 20px !important;
+    min-width: 28px !important;
+    letter-spacing: -0.374px !important;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    position: relative !important;
+    background-color: transparent !important;
+    color: white !important;
+    border: none !important;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid white !important;
+
+    margin: 0 0 0 13px !important;
+}
+
+.buyBtn:hover {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid white !important;
+  }

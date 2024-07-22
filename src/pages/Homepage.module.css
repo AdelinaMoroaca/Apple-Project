@@ -24,7 +24,18 @@
     /* grid-column: ; */
 }
 
-
+.learnMoreBtn{
+    font-weight: 400 !important;
+    letter-spacing: -0.374px !important;
+    line-height: 20px !important;
+    margin-top: 18px !important;
+    padding: 11px 21px !important;
+    border-bottom-right-radius: 980px !important;
+    border-bottom-left-radius: 980px !important;
+    border-top-left-radius: 980px !important;
+    border-top-right-radius: 980px !important;
+    font-size: 17px !important;
+  }
 
 
 

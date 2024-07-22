@@ -11,6 +11,11 @@ import '../demoComponents/StoreProductList.css';
 function ProductCategory(props){
     const { category } = props;
 
+    const handleCategory = (category) => {
+        console.log(`Added ${category.title} `);
+
+    }
+
     return (
         <Figure>
             <Figure.Image
@@ -20,13 +25,13 @@ function ProductCategory(props){
                 src={category.imagePath}
             />
             <Figure.Caption>
-            <Link to={`/shop/buy-iphone/`}>{category.title}</Link>
+            <Link onClick={()=> handleCategory(category)} to={`/shop/buy-${category.title}/`}>{category.title}</Link>
             </Figure.Caption>
         </Figure>
     )
 }
 
-function StoreProductList(props){
+function StoreProductList(){
     const [category, setproductCategory] = useState([]);
 
     function getAppleCategory() {
