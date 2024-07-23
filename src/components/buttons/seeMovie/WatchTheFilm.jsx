@@ -1,20 +1,3 @@
-// import Button from 'react-bootstrap/Button';
-
-// function WatchTheFilm(props) {
-//   const { url } = props;
-//   const handleClick = () => {
-//     window.location.href = url;
-//   };
-
-//   return (
-//     <Button variant="primary"
-//     onClick={handleClick}
-//     >Watch the Film</Button>
-//   );
-// }
-
-// export { WatchTheFilm };
-
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import styles from './watchTheFilm.module.css';

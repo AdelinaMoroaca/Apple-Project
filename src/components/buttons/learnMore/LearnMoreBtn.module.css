@@ -8,13 +8,15 @@
 .learnMoreBtn{
     font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     border-radius: 980px !important;
-    border: 1px solid rgb(0, 102, 204) !important;
+    /* border: 1px solid white !important; */
     font-weight: 400 !important;
     font-size: 17px !important;
     padding: 11px 21px !important;
     line-height: 20px !important;
     letter-spacing: -0.374px !important;
     min-width: 28px !important;
+    /* background-color: white !important;
+    color: black !important; */
 
     /* background-color: transparent !important;
     border-bottom-right-radius: 980px !important;
@@ -35,3 +37,8 @@
     border: 1px solid white !important; */
 }
   
+/* .learnMoreBlueBtn {
+    background-color: red !important;
+    color: black !important;
+    border: 1px solid green;
+} */

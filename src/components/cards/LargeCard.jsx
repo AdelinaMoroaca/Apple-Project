@@ -1,12 +1,9 @@
-// import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import React, { useEffect, useRef } from 'react';
 import styles from "./largeCard.module.css";
-// import CardImgOverlay from 'react-bootstrap/CardImgOverlay'
-
 
 function LargeVideoCard( props ) {
-  const { src, title, text, firstBtnType, secondBtnType } = props;
+  const { src, title, firstParagraph, leftBtn, rightBtn } = props;
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -32,97 +29,40 @@ function LargeVideoCard( props ) {
         Your browser does not support the video tag.
       </video>
       <Card.Body className={styles.cardBody}>
-        <Card.Title className={styles.cardTitle}>{title}</Card.Title>
-        <Card.Text className={styles.cardText}>
-          {text}
+ 
+        <Card.Title className={styles.cardTitle}><h2>{title}</h2></Card.Title>
+        
+        <Card.Text className={styles.firstParagraph}>
+          <p>{firstParagraph}</p>
         </Card.Text>
-        <div className={styles.btnContainer}>
-            {firstBtnType}
-            {secondBtnType}
+
+        <div  className={styles.btnContainer}>
+            {leftBtn}
+            {rightBtn}
         </div>
-        {/* <Button>{btnType}</Button> */}
-        {/* <Button variant="light" className={styles.learnMoreBtn}>{learnMoreBtnText}</Button> */}
-        {/* <Button variant="primary" className={styles.buyBtn}>{buyBtnText}</Button> */}
       </Card.Body>
     </Card>
   );
 }
 
-// LargeImageCard with 1 BTN
-// function LargeImageCard1(props) {
-//     const { src, title, text, btnType  } = props;
-
-//     return (
-//       <Card className={styles.cardContainer}>
-//         <img 
-//           src={src}
-//           alt="Background"
-//           className={styles.backgroundImage}
-//         />
-//         <Card.Body className={styles.cardBody}>
-//           <Card.Title>{title}</Card.Title>
-//           <Card.Text>
-//             {text}
-//           </Card.Text>
-//           <div>
-//         <Button>{btnType}</Button>
-      
-//         </div>
-//           <Button variant="light" className={styles.learnMoreBtn}>{learnMoreBtnText}</Button>
-//           <Button variant="primary" className={styles.buyBtn}>{buyBtnText}</Button>
-//           <Button variant="primary" className={styles.shopBtn}>{shopBtnText}</Button>
-//         </Card.Body>
-//       </Card>
-//     );
-// }
-
-// LargeImageCard with 2 BTNs
-// function LargeImageCard2(props) {
-//   const { src, title, text, firstBtnType, secondBtnType } = props;
-
-//   return (
-//     <Card className={styles.cardContainer}>
-//       <img 
-//         src={src}
-//         alt="Background"
-//         className={styles.backgroundImage}
-//       />
-//       <Card.Body className={styles.cardBody}>
-//         <Card.Title className={styles.cardTitle}>{title}</Card.Title>
-//         <Card.Text className={styles.cardText}>
-//           {text}
-//         </Card.Text>
-
-//         <div>
-//         <Button >{firstBtnType}</Button>
-//         <Button>{secondBtnType}</Button>
-//         </div>
-//         <Button variant="light" className={styles.learnMoreBtn}>{learnMoreBtnText}</Button>
-//         <Button variant="primary" className={styles.buyBtn}>{buyBtnText}</Button>
-//         <Button variant="primary" className={styles.shopBtn}>{shopBtnText}</Button>
-//       </Card.Body>
-//     </Card>
-//   );
-// }
-
 function LargeImageCard(props) {
-  const { src, title, text, btn, rightBtn } = props;
+  const { src, title, firstParagraph, secondParagraph, leftBtn, rightBtn, topBody } = props;
 
   return (
-    <Card className={styles.cardContainer}>
-      <img 
+    <Card className={`${styles.cardContainer} ${topBody ? styles.topBody : ''}`}>
+      <img
         src={src}
         alt="Background"
         className={styles.backgroundImage}
       />
       <Card.Body className={styles.cardBody}>
-        <Card.Title className={styles.cardTitle}>{title}</Card.Title>
-        <Card.Text className={styles.cardText}>{text}</Card.Text>
+        <Card.Title  className={styles.cardTitle}><h2>{title}</h2></Card.Title>
+        <Card.Text className={styles.firstParagraph}><p>{firstParagraph}</p></Card.Text>
+        <Card.Text  className={styles.secondParagraph}><p>{secondParagraph}</p></Card.Text>
 
-        <div className={styles.btnContainer}>{btn}<span>{rightBtn}</span></div>
-        {/* <Button variant="light" className={styles.learnMoreBtn}>{learnMoreBtnText}</Button> */}
-        {/* <Button variant="primary" className={styles.buyBtn}>{buyBtnText}</Button> */}
-        {/* <Button variant="primary" className={styles.shopBtn}>{shopBtnText}</Button> */}
+        <div className={styles.btnContainer}>
+          {leftBtn}<span>{rightBtn}</span>
+        </div>
       </Card.Body>
     </Card>
   );

@@ -3,25 +3,25 @@ import Card from 'react-bootstrap/Card';
 import styles from "./gridCard.module.css";
 
 function GridCard(props) {
-    const { src, title, firstText, secondText, btn, rightBtn } = props;
+    const { src, title, firstText, secondText, leftBtn, rightBtn, whiteText  } = props;
   
     return (
-      <Card className={styles.cardContainer}>
+      <Card className={`${styles.cardContainer} ${whiteText ? styles.whiteText : ''}`}>
         <img 
           src={src}
           alt="Background"
           className={styles.backgroundImage}
         />
         <Card.Body className={styles.cardBody}>
-          <Card.Title className={styles.cardTitle}>{title}</Card.Title>
+          <Card.Title className={styles.cardTitle}><h3>{title}</h3></Card.Title>
           
           <div>
-          <Card.Text className={styles.cardText}>{firstText}</Card.Text>
+          <Card.Text className={styles.cardText}><p>{firstText}</p></Card.Text>
           </div>
-          <Card.Text className={styles.cardText}>{secondText}</Card.Text>
+          <Card.Text className={styles.cardText}><p>{secondText}</p></Card.Text>
   
           <div className={styles.btnContainer}>
-            {btn}
+            {leftBtn}
             <span>{rightBtn}</span>
           </div>
          

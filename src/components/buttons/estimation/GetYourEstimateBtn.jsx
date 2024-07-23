@@ -12,7 +12,7 @@ function GetYourEstimateBtn(props) {
       id={id}
       className={`${styles.getYourEstimateBtn} ${className}`}
       onClick={() => navigate(path)}
-      >Get your estimation</Button>
+      >Get your estimate</Button>
 
   );
 }

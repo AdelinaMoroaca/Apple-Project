@@ -63,3 +63,97 @@
     border-radius: 0%;
     border: 0px !important;
 } */
+
+/* Largecard BTN */
+.learnMoreBtnBlue {
+    background-color: rgb(0, 113, 227) !important;
+    color: white !important;
+    border: 1px solid rgb(0, 113, 227) !important; 
+}
+
+.learnMoreBtnWhite{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid white !important; 
+}
+
+.buyBtnTransparent{
+    background-color: transparent !important;
+    color: white !important;
+    border: 1px solid white !important; 
+}
+
+.buyBtnTransparent:hover{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid white !important; 
+}
+
+.shopBtnBlue{
+    background-color: rgb(13, 125, 238) !important;
+    color: white !important;
+    border: 1px solid rgb(13, 125, 238) !important; 
+}
+
+.shopBtnBlue:hover{
+    background-color: transparent !important;
+    color:  rgb(13, 125, 238) !important;
+    border: 1px solid rgb(13, 125, 238) !important; 
+}
+
+.shopBtnTransparent{
+    background-color: transparent !important;
+    color: rgb(13, 125, 238) !important;
+    border: 1px solid rgb(13, 125, 238) !important; 
+}
+
+.shopBtnTransparent:hover{
+    background-color: rgb(13, 125, 238) !important;
+    color: white !important;
+    border: 1px solid rgb(13, 125, 238) !important; 
+}
+
+/* GridCard Btn */
+.WhiteBtnGrid{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid white !important; 
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem !important;
+}
+
+.TransparentBtnGrid{
+    background-color: transparent !important;
+    color: white !important;
+    border: 1px solid white !important; 
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem !important;
+}
+
+.TransparentBtnGrid:hover{
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid white !important; 
+}
+
+.BlueBtnGrid{
+    background-color: #0071e3 !important;
+    color: white !important;
+    border: 1px solid #0071e3 !important; 
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem !important;
+}
+
+.BlueTransparentBtnGrid{
+    background-color: transparent !important;
+    color: #0071e3 !important;
+    border: 1px solid #0071e3 !important; 
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem !important;
+}
+
+.BlueTransparentBtnGrid:hover{
+    background-color: #0071e3 !important;
+    color: white !important;
+    border: 1px solid #0071e3 !important; 
+}

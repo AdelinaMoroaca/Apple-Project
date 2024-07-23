@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import ExampleCarouselImage from './ExampleCarouselImage';
+import CarouselImage from './ExampleCarouselImage';
 
 function CarouselHomePage() {
   const [index, setIndex] = useState(0);
@@ -12,14 +12,14 @@ function CarouselHomePage() {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <ExampleCarouselImage text="First slide" />
+        <CarouselImage text="First slide" />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <ExampleCarouselImage text="Second slide" />
+        <CarouselImage text="Second slide" />
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -27,7 +27,7 @@ function CarouselHomePage() {
       </Carousel.Item>
 
       <Carousel.Item>
-        <ExampleCarouselImage text="Third slide" />
+        <CarouselImage text="Third slide" />
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>
@@ -37,7 +37,7 @@ function CarouselHomePage() {
       </Carousel.Item>
 
       <Carousel.Item>
-        <ExampleCarouselImage text="Third slide" />
+        <CarouselImage text="Third slide" />
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>
@@ -47,7 +47,7 @@ function CarouselHomePage() {
       </Carousel.Item>
 
       <Carousel.Item>
-        <ExampleCarouselImage text="Third slide" />
+        <CarouselImage text="Third slide" />
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>
