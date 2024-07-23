@@ -168,7 +168,7 @@ function Homepage(){
             <CarouselImage/>
 
             <FetchExample/>
-
+<p>test</p>
             
         </LayoutBlack>
         
