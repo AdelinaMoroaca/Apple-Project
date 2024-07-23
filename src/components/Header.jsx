@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import {AuthenticationContext} from '../store/Authentication/context';
+// import AppleLogoBlack from './../../public/images/';
+import styles from './Header.module.css'
 
 function HeaderBlack() {
   const { user, setUser } = useContext(AuthenticationContext);
@@ -13,35 +15,34 @@ function HeaderBlack() {
   }
 
   return (
-    <>
-    <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand as={Link} to="/">LOGO</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/store">Store</Nav.Link>
-            <Nav.Link as={Link} to="/mac">Mac</Nav.Link>
-            <Nav.Link as={Link} to="/ipad">iPad</Nav.Link>
-            <Nav.Link as={Link} to="/iphone">iPhone</Nav.Link>
-            <Nav.Link as={Link} to="/watch">Watch</Nav.Link>
-            <Nav.Link as={Link} to="/apple-vision-pro">Vision</Nav.Link>
-
-            <Nav.Link as={Link} to="/airpods">AirPods</Nav.Link>
-            <Nav.Link as={Link} to="/tv-home">TV & Home</Nav.Link>
-            <Nav.Link as={Link} to="/services">Entertainment</Nav.Link>
-            <Nav.Link as={Link} to="/shop/accessories/all">Accessories</Nav.Link>
-            <Nav.Link as={Link} to="/support">Support</Nav.Link>
-        
-
-
-            {/* <Nav.Link as={Link} to="/pricing">Pricing</Nav.Link> */}
-            <Nav.Link as={Link} to="/cart">Cart-Icon</Nav.Link>
-            <Nav.Link as={Link} to="/shop/signIn" onClick={logoutUser}>
-              {user ? 'SignOut' : 'SignIn'}
-            </Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </>
+    <Navbar className={styles.navbar} bg="dark" data-bs-theme="dark">
+      <Container className={styles.navContainer}>
+        {/* <Navbar.Brand as={Link} to="/" className={styles.navBrand}>LOGO</Navbar.Brand> */}
+          <Nav className={styles.navLinks}>
+            <Navbar.Brand as={Link} to="/" className={styles.navBrand}>
+                {/* LOGO */}
+                <svg className={styles.svg} height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"></path></svg>
+                {/* <svg height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg"><path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path></svg> */}
+                {/* <img src="your.svg"/> */}
+            </Navbar.Brand>
+            <Nav.Link as={Link} to="/store" className={styles.navLink}>Store</Nav.Link>
+            <Nav.Link as={Link} to="/mac" className={styles.navLink}>Mac</Nav.Link>
+            <Nav.Link as={Link} to="/ipad" className={styles.navLink}>iPad</Nav.Link>
+            <Nav.Link as={Link} to="/iphone" className={styles.navLink}>iPhone</Nav.Link>
+            <Nav.Link as={Link} to="/watch" className={styles.navLink}>Watch</Nav.Link>
+            <Nav.Link as={Link} to="/apple-vision-pro" className={styles.navLink}>Vision</Nav.Link>
+            <Nav.Link as={Link} to="/airpods" className={styles.navLink}>AirPods</Nav.Link>
+            <Nav.Link as={Link} to="/tv-home" className={styles.navLink}>TV & Home</Nav.Link>
+            <Nav.Link as={Link} to="/services" className={styles.navLink}>Entertainment</Nav.Link>
+            <Nav.Link as={Link} to="/shop/accessories/all" className={styles.navLink}>Accessories</Nav.Link>
+            <Nav.Link as={Link} to="/support" className={styles.navLink}>Support</Nav.Link>
+            <Nav.Link as={Link} to="/cart" className={styles.navLink}>Cart-Icon</Nav.Link>
+            <Nav.Link as={Link} to="/shop/signIn" onClick={logoutUser} className={styles.navLink}>
+                {user ? 'SignOut' : 'SignIn'}
+          </Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 }
 
@@ -50,30 +51,37 @@ function HeaderWhite() {
     const logoutUser = () => {
       setUser(null);
     }
-    return (
-        <Navbar bg="light" data-bs-theme="light">
-          <Container>
-          <Navbar.Brand as={Link} to="/">LOGO</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="/store">Store</Nav.Link>
-            <Nav.Link as={Link} to="/mac">Mac</Nav.Link>
-            <Nav.Link as={Link} to="/ipad">iPad</Nav.Link>
-            <Nav.Link as={Link} to="/iphone">iPhone</Nav.Link>
-            <Nav.Link as={Link} to="/watch">Watch</Nav.Link>
-            <Nav.Link as={Link} to="/apple-vision-pro">Vision</Nav.Link>
 
-            <Nav.Link as={Link} to="/airpods">AirPods</Nav.Link>
-            <Nav.Link as={Link} to="/tv-home">TV & Home</Nav.Link>
-            <Nav.Link as={Link} to="/services">Entertainment</Nav.Link>
-            <Nav.Link as={Link} to="/shop/accessories/all">Accessories</Nav.Link>
-            <Nav.Link as={Link} to="/support">Support</Nav.Link>
-            <Nav.Link as={Link} to="/cart">Cart-Icon</Nav.Link>
-            <Nav.Link as={Link} to="/shop/signIn" onClick={logoutUser}>
+    return (
+    <Navbar className={styles.navbar} bg="light" data-bs-theme="light">
+      <Container className={styles.navContainer}>
+          {/* <Navbar.Brand as={Link} to="/" className={styles.navBrand}>LOGO</Navbar.Brand> */}
+          <Nav className={styles.navLinks}>
+            <Navbar.Brand as={Link} to="/" className={styles.navBrand}>
+            {/* LOGO */}
+            <svg height="48" viewBox="0 0 17 48" width="17" xmlns="http://www.w3.org/2000/svg">
+                <path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path></svg>
+            {/* <img src='./images/AppleLogoBlack.png' alt="Logo" className={styles.logoImage} /> */}
+            </Navbar.Brand>
+
+            <Nav.Link as={Link} to="/store" className={styles.navLink}>Store</Nav.Link>
+            <Nav.Link as={Link} to="/mac" className={styles.navLink}>Mac</Nav.Link>
+            <Nav.Link as={Link} to="/ipad" className={styles.navLink}>iPad</Nav.Link>
+            <Nav.Link as={Link} to="/iphone" className={styles.navLink}>iPhone</Nav.Link>
+            <Nav.Link as={Link} to="/watch" className={styles.navLink}>Watch</Nav.Link>
+            <Nav.Link as={Link} to="/apple-vision-pro" className={styles.navLink}>Vision</Nav.Link>
+            <Nav.Link as={Link} to="/airpods" className={styles.navLink}>AirPods</Nav.Link>
+            <Nav.Link as={Link} to="/tv-home" className={styles.navLink}>TV & Home</Nav.Link>
+            <Nav.Link as={Link} to="/services" className={styles.navLink}>Entertainment</Nav.Link>
+            <Nav.Link as={Link} to="/shop/accessories/all" className={styles.navLink}>Accessories</Nav.Link>
+            <Nav.Link as={Link} to="/support" className={styles.navLink}>Support</Nav.Link>
+            <Nav.Link as={Link} to="/cart" className={styles.navLink}>Cart-Icon</Nav.Link>
+            <Nav.Link as={Link} to="/shop/signIn" onClick={logoutUser} className={styles.navLink}>
               {user ? 'SignOut' : 'SignIn'}
             </Nav.Link>
           </Nav>
-        </Container>
-        </Navbar>
+      </Container>
+    </Navbar>
     
     );
   }

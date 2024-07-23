@@ -20,9 +20,6 @@ import FetchExample from './../utils/hooks/FetchEx'
 import styles from './Homepage.module.css';
 
 function Homepage(){
-
-  
-    
     return(
         <LayoutBlack>
             <section className={styles.largeCardContainder}>
@@ -71,9 +68,11 @@ function Homepage(){
                             src='images/HomePage/gridImg/outOfOffice.JPG'
                             title='Out of Office'
                             firstText='Apple at Work works from anywhere'
+                            
                             leftBtn={<LearnMoreBtn 
                                 className={styles.WhiteBtnGrid}
-                                path='/business/'/>} //https://www.apple.com/business/
+                                path='/business/'/>}
+
                             rightBtn={<WatchTheFilm 
                                 className={styles.TransparentBtnGrid}
                                 titleMovie = 'The Underdogs: OOO (Out Of Office) | Apple at Work'
@@ -168,7 +167,6 @@ function Homepage(){
             <CarouselImage/>
 
             <FetchExample/>
-<p>test</p>
             
         </LayoutBlack>
         
