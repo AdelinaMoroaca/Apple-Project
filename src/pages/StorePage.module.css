@@ -1,29 +1,74 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-
-
+    
 }
 
-.newStyle{
-    /* border: 2px solid black; */
+.storeIntro {
     display: flex;
     flex-direction: column;
-    background-color: rgb(245, 245, 247);
-    /* coloare si la navbar alb #fafafc;, la nav negru e #161617 */
+    justify-content: center;
+    align-items: center;
+    /* background-color: #F5F5F7 !important; */
+    /* background: linear-gradient(180deg, #ffffff, #f8f8f8); */
+    /* background-blend-mode: overlay; */
+    padding: 1rem 0;
+    /* opacity: 0.1; */
+    /* background-image: linear-gradient(180deg, #F5F5F7 70%, #E6E6E6 80%) !important; */
+    /* background-image: linear-gradient(180deg, #F5F5F7 0%, #F5F6FA 70%) !important; */
+    background-image: linear-gradient(180deg, #F5F5F7 20%, #E6E6E6 95%) !important;
+    /* opacity: 0.98; */
+/* background-color: ; */
 }
 
-/* const newStyle = {
-    border: '2px solid gray',
-    width: '1500px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'blue',
-    // height: '300px',
-    padding: '10px',
-    gap: '20px',
-} */
+.containerIntro {
+    width: 100% !important; /* Force full width */
+    display: flex;
+    /* max-width: none !important;  */
+    /* Remove any max-width constraint */
+    max-width: 95vw !important;
+    flex-direction: column;
+    /* align-items: center; */
+    /* border: 1px solid magenta; */
+    padding: 0rem 0rem 2rem  !important; /* Ensure no padding */
+    margin: 0 !important; /* Ensure no margin */
+    gap: 2rem; /* Space between elements */
+}
+
+.rowContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    /* background-color: rgba(0, 255, 255, 0.249); */
+}
+
+.aboutIntro {
+    width: 100% !important; /* Force full width */
+    margin: 0 !important; /* Ensure no margin */
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    padding: 5rem 4rem 4rem 5rem;
+    gap: 20rem; /* Adjust the gap as needed */
+}
+
+.leftIntro{
+    /* padding: 0rem !important; */
+    text-align: left;
+}
+
+.colourText{
+    color: #08827c;
+}
+
+.classicText{
+    color: #6e6e73;
+}
+
+.rightIntro{
+    /* padding: 0rem !important; */
+    text-align: right;
+}

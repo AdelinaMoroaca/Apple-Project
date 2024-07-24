@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.categoryContainer{
+    /* background-color: rgba(0, 255, 255, 0.311); */
+    max-width: 95vw !important;
+    display: flex;
+    padding: 0rem 2rem 0rem 5rem !important;
+}
+
+.figureCategory{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.2rem;
+    margin-bottom: 0rem;
+}
+
+.roundedImage{
+    border-radius: 5px; 
+}

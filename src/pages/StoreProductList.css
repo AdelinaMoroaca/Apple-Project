@@ -1,9 +1,0 @@
-#storeProductList{
-    background-color: aquamarine;
-    border: 1px solid pink;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    padding: 1rem;
-}
