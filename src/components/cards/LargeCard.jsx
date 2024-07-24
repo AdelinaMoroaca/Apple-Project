@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import React, { useEffect, useRef } from 'react';
-import styles from "./largeCard.module.css";
+import styles from "./LargeCard.module.css";
 
 function LargeVideoCard( props ) {
   const { src, title, firstParagraph, leftBtn, rightBtn } = props;
