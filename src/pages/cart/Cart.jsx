@@ -1,9 +1,9 @@
 import React, {useContext} from "react";
 import { CartContext } from "../../store/Cart/context";
-import { removeFromCart } from "../../store/Cart/actions";
+// import { removeFromCart } from "../../store/Cart/actions";
 import { LayoutWhite } from '../../components/Layout';
-import { Button, Container, ListGroup, ListGroupItem } from "react-bootstrap";
-import styles from "./Cart.module.css";
+import {  Container } from "react-bootstrap";
+// import styles from "./Cart.module.css";
 
 function Cart() {
   const { cartState } = useContext(CartContext); 
