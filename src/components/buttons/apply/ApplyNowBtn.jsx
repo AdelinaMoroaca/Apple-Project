@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
-import styles from './applyNowBtn.module.css';
+import styles from './ApplyNowBtn.module.css';
 
 function ApplyNowBtn(props) {
   const { path, className, id } = props;

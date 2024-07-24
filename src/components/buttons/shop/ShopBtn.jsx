@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
-import styles from './shopBtn.module.css';
+import styles from './ShopBtn.module.css';
 
 function ShopBtn(props) {
   const { path, product, className, id } = props;

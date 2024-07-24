@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import styles from './watchTheFilm.module.css';
+import styles from './WatchTheFilm.module.css';
 
 function WatchTheFilm(props){
   const {src, titleMovie, className, id } = props;

@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
-import styles from './getYourEstimateBtn.module.css';
+import styles from './GetYourEstimateBtn.module.css';
 
 function GetYourEstimateBtn(props) {
   const { path, className, id } = props;
