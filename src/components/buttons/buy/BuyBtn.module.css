@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.buyBtn{
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    /* margin: 0 0 0 13px !important; */
+    border-radius: 980px !important;
+    border: 1px solid rgb(0, 102, 204) !important;
+    font-weight: 400 !important;
+    font-size: 17px !important;
+    padding: 11px 21px !important;
+    line-height: 20px !important;
+    letter-spacing: -0.374px !important;
+    min-width: 28px !important;
+
+
+    /* background-color: transparent !important; */
+    /* color: rgb(0, 102, 204) !important; */
+    /* position: relative !important; */
+    /* background-color: transparent !important; */
+    /* color: white !important; */
+    /* border: none !important; */
+    /* transition: background-color 0.3s, color 0.3s; */
+    /* border: 1px solid white !important; */
+}
+
+.buyBtnFirstCard {
+    background-color: transparent !important;
+    color: white !important;
+    border: 1px solid white !important;
+}
+
+/* .buyBtn:hover {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid white !important;
+} */
