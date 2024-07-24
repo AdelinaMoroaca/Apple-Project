@@ -14,6 +14,7 @@
     width: 100% !important;
     z-index: 10 !important;
     /* margin: 0px 238px 0px 238px !important; */
+    height: 50px !important;
 }
 
 .navContainer {
