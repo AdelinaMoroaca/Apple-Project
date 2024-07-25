@@ -1,0 +1,22 @@
+/* Add this CSS in a separate file or within a <style> tag in your index.html */
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  flex: 1;
+  margin: 0 10px;
+  max-width: 18rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+}
+
+.carousel {
+  margin-top: 20px;
+}
