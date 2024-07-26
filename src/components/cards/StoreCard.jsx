@@ -26,14 +26,17 @@ function StoreCard(props) {
         width: '25rem',
         minWidth: '19rem',
         position: 'relative', 
-        overflow: 'hidden' }}>
+        overflow: 'hidden', 
+        padding: '0rem',
+        }}>
       <Card.Img 
         // variant="top" 
         src={src} 
         style={{ 
             height: '500px', 
             width: '400px', 
-            objectFit: 'contain' 
+            objectFit: 'cover',
+            // margin: '0px', 
           }}
       />
       <Card.Body style={{ padding:'0rem' }}>
@@ -55,7 +58,7 @@ function StoreCard(props) {
         >
           <h3 style={{fontSize:'12px', margin: '0',paddingRight: '10px' }}>GET A {giftValue} GIFT CARD</h3>
 
-          <Spinner style={{ width: '1rem', height: '1rem' }} animation="grow" variant="warning" />
+          <Spinner style={{ width: '1rem', height: '1rem' }} animation="grow" variant="success" />
         </div>
 
         <Card.Title style={{ paddingTop: '0px',

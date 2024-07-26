@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { LayoutWhite } from "../components/Layout";
+import FetchExample from './../utils/hooks/FetchEx';
 import Card from 'react-bootstrap/Card';
 
 function Iphones() {
@@ -98,6 +99,7 @@ function Iphones() {
             </Card>
         </div>
         <h3>To be continued</h3>
+        <FetchExample/>
     </LayoutWhite>
 
   );

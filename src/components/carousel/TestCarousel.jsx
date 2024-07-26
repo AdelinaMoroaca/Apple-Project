@@ -76,4 +76,4 @@ const TestCarousel = () => {
 };
 
 export default TestCarousel;
-;
+

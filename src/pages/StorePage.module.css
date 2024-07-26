@@ -100,15 +100,23 @@
     /* padding: 5rem 0rem 4rem 7.3rem; */
     /* border: 1px solid peru; */
     background-color: rgba(205, 134, 63, 0.548);
-    display: flex;
     /* flex-direction: row; */
     /* flex-direction: column; */
-    justify-content: space-between;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
     /* max-width: 95vw !important; */
     /* padding: 0rem 15rem 0rem 7rem !important; */
     margin: 0rem !important;
 }
+
+.bestClassRow{
+    background-color: #3f088247;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem;
+}
+
+
+
 
 /* educationStore */
 .educationStore{
@@ -167,6 +175,13 @@
 }
 
 
+/* Section 3 */
+/* .bestClassRow{
+    background-color: #3f08827c;
+    display: flex;
+    justify-content: space-between;
+  
+} */
 
 
 

@@ -134,7 +134,7 @@ function Storepage(){
                 </h2>
 
                 <Container className={styles.bestClassContainer}>
-                    <Row xs={6} md={4}>
+                    <Row xs={6} md={4} className={styles.bestClassRow}>
                     <StoreCard 
                         src='images/StorePage/education/store-card.JPG'
                         giftValue='$150'
@@ -234,43 +234,43 @@ function Storepage(){
             </section>
 
             <section className={styles.bestClassStore}>
-                <h2>Advanced tools for advanced studies.
-                    <span>Choose from a best-in-class lineup.</span>
+                <h2>Endless potential.
+                    <span>Take teaching and learning further with Apple.</span>
                 </h2>
 
                 <Container className={styles.bestClassContainer}>
-                    <Row xs={6} md={4}>
-                    <StoreCard 
-                        src='images/StorePage/education/store-card.JPG'
-                        giftValue='$150'
-                        title='MacBook Air'
-                        fullPrice='$899'
-                        monthlyPrice='$74.91/mo.'
-                    />
+                    <Row className={styles.bestClassRow} xs={6} md={4}>
+                        <StoreCard 
+                            src='images/StorePage/endlessPotential/college-card.JPG'
+                            giftValue='$150'
+                            title='MacBook Air'
+                            fullPrice='$899'
+                            monthlyPrice='$74.91/mo.'
+                        />
 
-                    <StoreCard
-                        src='images/StorePage/education/ipad-card.JPG'
-                        giftValue='$100'
-                        title='iPad Air'
-                        fullPrice='$549'
-                        monthlyPrice='$45.75/mo.'
-                    />
+                        <StoreCard
+                            src='images/StorePage/endlessPotential/todayatapple-card.JPG'
+                            giftValue='$100'
+                            title='iPad Air'
+                            fullPrice='$549'
+                            monthlyPrice='$45.75/mo.'
+                        />
 
-                    <StoreCard
-                        src='images/StorePage/education/macbook-pro-card.JPG'
-                        giftValue='$150'
-                        title='MacBook Pro'
-                        fullPrice='$1499'
-                        monthlyPrice='$124.91/mo.'
-                    />
+                        <StoreCard
+                            src='images/StorePage/education/macbook-pro-card.JPG'
+                            giftValue='$150'
+                            title='MacBook Pro'
+                            fullPrice='$1499'
+                            monthlyPrice='$124.91/mo.'
+                        />
 
-                    <StoreCard
-                        src='images/StorePage/education/ipad-pro-card.JPG'
-                        giftValue='$100'
-                        title='iPad Pro'
-                        fullPrice='$899'
-                        monthlyPrice='$74.91/mo.'                         
-                    />
+                        <StoreCard
+                            src='images/StorePage/education/ipad-pro-card.JPG'
+                            giftValue='$100'
+                            title='iPad Pro'
+                            fullPrice='$899'
+                            monthlyPrice='$74.91/mo.'                         
+                        />
                     </Row>
             
 
