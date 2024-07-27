@@ -1,9 +1,9 @@
 import { Container, ListGroup, ListGroupItem, Spinner, Button } from "react-bootstrap";
-import { useFetch } from "./useFetch";
+import { useFetchData } from "./useFetch";
 import { useLocalStorage } from "./useLocalStorage";
 
 function FetchExample() {
-  const { data, loading } = useFetch(
+  const { data, loading } = useFetchData(
     "https://json-server-deployment-5til.onrender.com/iPhone"
   );
 

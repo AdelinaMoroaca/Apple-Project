@@ -1,23 +1,32 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { CartContext } from '../../store/Cart/context';
 import { LayoutBlack } from "../../components/Layout";
-import {Container, Card, Carousel, Button, Col, Row } from 'react-bootstrap';
+import {Container, Card, Carousel, Button, Col, Row, Spinner } from 'react-bootstrap';
 import { addToCart } from '../../store/Cart/actions';
+import { Link } from "react-router-dom";
+import { useFetchData } from '../../utils/hooks/useFetch';
 import styles from './BuyIphone.module.css'; 
+
 
 function BuyIphone(){
     const { cartState, cartDispatch } = useContext(CartContext);
-    const [products, setProducts] = React.useState([]);
+    // const [products, setProducts] = React.useState([]);
     const [selectedOptions, setSelectedOptions] = useState({});
 
-    useEffect(() => {
-        fetch('https://json-server-deployment-5til.onrender.com/iPhone')
-            .then(response => response.json())
-            .then(data => {
-                setProducts(data);
-            })
-            .catch(error => console.error('Error fetching data:', error));
-    }, []);
+    const { data, loading } = useFetchData(
+        "https://json-server-deployment-5til.onrender.com/iPhone"
+    );
+    
+    // useEffect(() => {
+    //     fetch('https://json-server-deployment-5til.onrender.com/iPhone')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             setProducts(data);
+    //         })
+    //         .catch(error => console.error('Error fetching data:', error));
+    // }, []);
+
+
 
     const handleAddToCart = (product) => {
         const selected = selectedOptions[product.id] || {};
@@ -59,6 +68,8 @@ function BuyIphone(){
         justifyContent: 'center'
     }
 
+
+
     return (
         <LayoutBlack>
             <section style={{
@@ -69,15 +80,18 @@ function BuyIphone(){
                 padding: '2rem'
                 }}>
                     <h1><b>iPhone STORE</b></h1>
+                    {loading && <Spinner />}
                      <Container>
                         <Row>
-                            {products.map((product) => ( 
+                            {data &&
+                            data.map((product) => ( 
                                 <Col xs={12} sm={6} className="mb-4" key={product.id}>
                                 {/* xs={12} sm={6} md={4} lg={3} */}
                                     <Card style={{ width: '100%' }}>
-                                        <Card.Body>
+                                        <Card.Body>                                      
                                             <h1 style={{textAlign: 'left'}}>Buy {product.category}{product.model}</h1>
                                             <p style={{textAlign: 'left'}}>From {product.countryValue}{product.price} or ${product.priceMo}/mo for 24 mo.*</p>
+                                        
                                         <Row>
                                             <Col Col xs={12} md={6} className="mb-3 mb-md-0"
                                             style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}
@@ -158,9 +172,32 @@ function BuyIphone(){
                                                     <h6>Price: {product.countryValue}{product.price}</h6>
                                                 </Card.Text>
 
-                                                <Button onClick={()=>handleAddToCart(product)}>
-                                                    Add to Cart
-                                                </Button>                                    
+                                                <div>
+                                                    <Button onClick={()=>handleAddToCart(product)}>
+                                                        Add to Cart
+                                                    </Button>  
+
+
+                                                    <div>
+                                                        <h6 style={{fontSize: '0.8rem'}}>Need a moment?</h6>
+                                                        <p style={{fontSize: '0.6rem'}}>Keep all your selections by saving this device to Your Saves, then come back anytime and pick up right where you left off.</p>
+                                                        <Link>
+                                                        <svg 
+                                                            className={styles.signInLightSvg} 
+                                                            height="30" 
+                                                            viewBox="0 0 17 27" 
+                                                            width="17" 
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <path d="M12.8 4.25a1.202 1.202 0 0 1 1.2 1.2v10.818l-2.738-2.71a1.085 1.085 0 0 0-1.524 0L7 16.269V5.45a1.202 1.202 0 0 1 1.2-1.2h4.6m0-1H8.2A2.2 2.2 0 0 0 6 5.45v11.588a.768.768 0 0 0 .166.522.573.573 0 0 0 .455.19.644.644 0 0 0 .38-.128 5.008 5.008 0 0 0 .524-.467l2.916-2.885a.084.084 0 0 1 .118 0l2.916 2.886a6.364 6.364 0 0 0 .52.463.628.628 0 0 0 .384.131.573.573 0 0 0 .456-.19.768.768 0 0 0 .165-.522V5.45a2.2 2.2 0 0 0-2.2-2.2Z"></path>
+                                                        </svg>
+                                                    
+                                                        <span>Save for later</span>
+                                                        
+                                                        </Link>
+                                                    </div>
+                                                </div>            
+                                  
                                             </Col>
                                         </Row>
                                         </Card.Body>
@@ -173,5 +210,8 @@ function BuyIphone(){
         </LayoutBlack>
     );
 };
+
+
+
 
 export { BuyIphone };
