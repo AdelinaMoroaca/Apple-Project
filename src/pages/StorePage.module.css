@@ -3,10 +3,13 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    
+    /* background-image: linear-gradient(180deg, #F5F5F7 20%, #E6E6E6 95%) !important; */
+
 }
 
 .storeIntro {
+    width: 100% !important;
+    max-width: 95vw !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,13 +17,14 @@
     /* background-color: #F5F5F7 !important; */
     /* background: linear-gradient(180deg, #ffffff, #f8f8f8); */
     /* background-blend-mode: overlay; */
-    padding: 1rem 0rem 3.9rem 0rem;
+    /* padding: 1rem 0rem 3.9rem 0rem; */
+    padding: 1rem 2rem 3.9rem 2rem;   
+    /* padding: 2rem 4rem 4rem 7.3rem; */
     /* opacity: 0.1; */
     /* background-image: linear-gradient(180deg, #F5F5F7 70%, #E6E6E6 80%) !important; */
     /* background-image: linear-gradient(180deg, #F5F5F7 0%, #F5F6FA 70%) !important; */
-    background-image: linear-gradient(180deg, #F5F5F7 20%, #E6E6E6 95%) !important;
-    /* opacity: 0.98; */
-/* background-color: ; */
+    /* background-image: linear-gradient(180deg, #F5F5F7 20%, #E6E6E6 95%) !important; */
+
 }
 
 .containerIntro {
@@ -30,11 +34,9 @@
     /* Remove any max-width constraint */
     max-width: 95vw !important;
     flex-direction: column;
-    /* align-items: center; */
-    /* border: 1px solid magenta; */
-    padding: 0rem 0rem 2rem 0rem !important; /* Ensure no padding */
-    margin: 0 !important; /* Ensure no margin */
-    gap: 2rem; /* Space between elements */
+    padding: 0rem 0rem 2rem 0rem !important; 
+    margin: 0 !important; 
+    gap: 2rem; 
 }
 
 .rowContainer{
@@ -46,8 +48,8 @@
 }
 
 .aboutIntro {
-    width: 100% !important; /* Force full width */
-    margin: 0 !important; /* Ensure no margin */
+    width: 100% !important; 
+    margin: 0 !important;
     display: flex;
     /* align-items: flex-start; */
     justify-content: space-between;
@@ -83,40 +85,31 @@
     /* padding: 5rem 4rem 4rem 7.3rem; */
     padding: 2rem 0rem 4rem 7.3rem;
 
-
+    /* background-color: rgba(48, 81, 213, 0.639); */
     max-width: 95vw !important;
     width: 100% !important;
     margin: 0 !important;
 }
 
 .bestClassStore > h2{
-    background-color: rgba(37, 78, 78, 0.057);
+    /* background-color: rgba(37, 78, 78, 0.057); */
     text-align: left;
 }
 
 .bestClassContainer{
+    /* background-color: rgba(205, 134, 63, 0.548); */
     max-width: 95vw !important;
     width: 100% !important;
-    /* padding: 5rem 0rem 4rem 7.3rem; */
-    /* border: 1px solid peru; */
-    background-color: rgba(205, 134, 63, 0.548);
-    /* flex-direction: row; */
-    /* flex-direction: column; */
-    /* gap: 0.5rem; */
-    /* max-width: 95vw !important; */
-    /* padding: 0rem 15rem 0rem 7rem !important; */
+
     margin: 0rem !important;
 }
 
 .bestClassRow{
-    background-color: #3f088247;
+    /* background-color: #3f088247; */
     display: flex;
     justify-content: space-between;
     padding: 0rem;
 }
-
-
-
 
 /* educationStore */
 .educationStore{
@@ -126,14 +119,13 @@
     /* align-items: center; */
     /* padding: 1rem 0rem 3.9rem 0rem; */
     padding: 2rem 4rem 4rem 7.3rem;
-    background-color: rgba(0, 255, 255, 0.418);
     max-width: 95vw !important;
     width: 100% !important;
     margin: 0 !important;
 }
 
 .educationStore > h2{
-    background-color: rgba(37, 78, 78, 0.057);
+    /* background-color: rgba(37, 78, 78, 0.057); */
     text-align: left;
 
     /* text-align: left;
@@ -144,7 +136,7 @@
   
 .educationContainer {
     /* border: 1px solid peru; */
-    background-color: rgba(205, 134, 63, 0.548);
+    /* background-color: rgba(205, 134, 63, 0.548); */
     display: flex;
     flex-direction: column;
     /* justify-content: flex-start; */
@@ -155,7 +147,7 @@
 }
   
 .rightContainer {
-    background-color: #3f0882;
+    /* background-color: #3f0882; */
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -165,13 +157,7 @@
 
 .leftContainer {
     padding: 0rem 0.75rem 0rem 0rem !important;
-    background-color: #08827c;
-    /* height: 100%; */
-    /* width: 100%; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    /* background-color: #08827c; */
 }
 
 
@@ -232,3 +218,17 @@
       margin-bottom: 10px;
     }
 }  */
+
+
+@media (max-width: 320px) {
+    /* .img-fluid {
+        width: 100%;
+        height: auto;
+    } */
+
+
+    .classicText {
+        font-size: 1.2rem;
+        /* color: red; */
+    }
+}

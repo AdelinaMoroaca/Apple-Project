@@ -38,7 +38,13 @@ function Storepage(){
                 <Container className={styles.containerIntro}>
                     <Row className={styles.rowContainer}>
                         <Col xs={6} md={4}>
-                        <Image src="/images/StorePage/top-img.JPG" width='509px' height='193px' rounded />
+                            <Image 
+                            id="img-fluid"
+                            src='/images/StorePage/top-img.JPG'
+                            alt='509/193'
+                            className='img-fluid'
+                            // className={styles.imgFluid}
+                            rounded />
                         </Col>
                     </Row>
                     <Row className={styles.aboutIntro}>
@@ -57,76 +63,10 @@ function Storepage(){
                 
                 </Container>
                         
-                <StoreProductList category={category} />               
+                <StoreProductList 
+                    category={category} 
+                />               
             </section>
-
-            {/* <section >
-                <h2>Advanced tools for advanced studies.<span>Choose from a best-in-class lineup.</span></h2>
-                <Container>
-                    <h2>Advanced tools for advanced studies.<span>Choose from a best-in-class lineup.</span></h2>
-                    <section style={{display: 'flex'}}>
-                    <StoreCard/>
-                    <StoreCard/>
-                    <StoreCard/>
-                    </section>
-                </Container>
-             
-            </section> */}
-
-            {/* <section className={styles.educationStore}>
-                    <h2>Max out your credits.<span>Add even more exclusive education offers.</span></h2>
-                    <Container className={styles.educationContainer}>
-                        <Col className={styles.leftContainer}> 
-                                <BasicCard
-                                    title = 'See all the ways to get set for college.'
-                                    src='/images/StorePage/main.JPG'
-                                    width='400px'
-                                    height='500px'
-                                    alt='400x500'
-                                />
-                        </Col>
-
-                        <Container className={styles.rightContainer}>
-                                <Row className={styles.firstRow}>
-                                    <Col>
-                                        <SmallCard
-                                        title = 'Education savings for students, faculty, and more.'
-                                        src='/images/StorePage/4.JPG'
-                                        width='300px'
-                                        height='200px'
-                                        />
-                                    </Col>
-                                    <Col>
-                                        <SmallCard
-                                        title = 'Apple Music Student Plan with free Apple TV+.'
-                                        src='/images/StorePage/3.JPG'
-                                        width='300px'
-                                        height='200px'
-                                        />
-                                    </Col>
-                                </Row>
-                                <Row className={styles.secondRow}>
-                                    <Col>
-                                        <SmallCard
-                                            title = '20% off AppleCare+.'
-                                            src='/images/StorePage/2.JPG'
-                                            width='300px'
-                                            height='200px'
-                                        />
-                                    </Col>    
-
-                                    <Col>
-                                        <SmallCard
-                                            title = 'Get the Pro Apps Bundle for $199.99 .'
-                                            src='/images/StorePage/1.JPG'
-                                            width='300px'
-                                            height='200px'
-                                        />
-                                    </Col>
-                                </Row>
-                        </Container>
-                    </Container>
-            </section> */}
 
             <section className={styles.bestClassStore}>
                 <h2>Advanced tools for advanced studies.
@@ -276,10 +216,7 @@ function Storepage(){
 
                 </Container>
             </section>
- 
-       
-
-     
+   
         </LayoutWhite>
     )
 

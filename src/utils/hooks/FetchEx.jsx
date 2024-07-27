@@ -1,8 +1,8 @@
-import { Container, ListGroup, ListGroupItem, Spinner } from "react-bootstrap";
-
+import { Container, ListGroup, ListGroupItem, Spinner, Button } from "react-bootstrap";
 import { useFetch } from "./useFetch";
+import { useLocalStorage } from "./useLocalStorage";
 
-export default function FetchExample() {
+function FetchExample() {
   const { data, loading } = useFetch(
     "https://json-server-deployment-5til.onrender.com/iPhone"
   );
@@ -24,3 +24,27 @@ export default function FetchExample() {
     </Container>
   );
 }
+
+function LocalStorageExample() {
+  const [theme, setTheme] = useLocalStorage('theme', 'light');
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  }
+
+  return (
+    <Container style={{
+      background: theme === 'light' ? '#fff' : '#333',
+      color: theme === 'light' ? '#000' : '#fff',
+      }}>
+      <h1>{theme} Theme</h1>
+
+      <Button 
+        variant='warning'
+        onClick={toggleTheme}
+        >Toggle Theme</Button>
+    </Container>
+  );
+}
+
+export { FetchExample, LocalStorageExample};

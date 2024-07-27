@@ -56,10 +56,22 @@
     height: 14px;
 }
 
-.svg{
+.logoSvg, .cartSvg, .signInDarkSvg {
     fill:rgba(255, 255, 255, 0.55);
 }
 
-.svg:hover{
+.logoSvg:hover, 
+.cartSvg:hover,
+.signInDarkSvg:hover{
     fill:rgba(255, 255, 255, 0.765);
 }
+
+.cartLightSvg,.signInLightSvg{
+    fill:rgba(0, 0, 0, 0.562);
+}
+
+.cartLightSvg:hover,
+.signInLightSvg:hover{
+    fill:rgba(0, 0, 0, 0.65);
+}
+

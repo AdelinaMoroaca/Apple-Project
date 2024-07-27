@@ -2,6 +2,7 @@ import './App.css';
 import './index.css';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+//main pages
 import Homepage from './pages/HomePage';
 import Storepage from './pages/StorePage';
 import Iphone from './pages/Iphone';
@@ -15,12 +16,15 @@ import AccessoriesPage from './pages/AccessoriesPage';
 import Macpage from './pages/MacPage';
 import Ipadpage from './pages/IpadPage';
 import Visionpage from './pages/VisionPage';
+//service pages
 import AppleCard from  './pages/service/AppleCard';
-import EntertainmentPage from './pages/EntertainmentPage';
-import IpadProPage from './pages/product/IpadProPage';
 import Business from './pages/service/Business';
 import Intelligence from './pages/service/Intelligence';
+//product pages
+import EntertainmentPage from './pages/EntertainmentPage';
+import IpadProPage from './pages/product/IpadProPage';
 import AppleWatch9Page from './pages/product/AppleWatch9Page';
+//store pages
 import IPhonePage from './pages/IPhonePage';
 // import IphoneList from './components/IphoneList';
 // import { BuyProduct } from './pages/storePage/BuyProduct';
