@@ -13,8 +13,6 @@ import { BuyBtn } from '../components/buttons/buy/BuyBtn';
 import { GetYourEstimateBtn } from '../components/buttons/estimation/GetYourEstimateBtn';
 import { ApplyNowBtn } from '../components/buttons/apply/ApplyNowBtn';
 import { WatchTheFilm } from '../components/buttons/seeMovie/WatchTheFilm';
-import {FetchExample, LocalStorageExample } from './../utils/hooks/FetchEx';
-
 import styles from './Homepage.module.css';
 
 function Homepage(){
@@ -163,8 +161,6 @@ function Homepage(){
 
             <CarouselImage/>     
 
-            <FetchExample/>
-            <LocalStorageExample/>
         </LayoutBlack>
     )
 }

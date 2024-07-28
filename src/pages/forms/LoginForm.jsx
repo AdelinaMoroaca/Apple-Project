@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import { useState, useContext } from "react";
 import { LayoutWhite } from '../../components/Layout';
 import {AuthenticationContext} from '../../store/Authentication/context';
+import styles from './LoginForm.module.css'
 
 function LoginForm() {
     const {setUser} = useContext(AuthenticationContext);
@@ -28,45 +29,49 @@ function LoginForm() {
 
     return (
             <LayoutWhite>
-                <Container>
-                    <h1>
-                        Sign in for faster checkout.
+                <section className={styles.formPage}>
+                    <h1 className={styles.pageTitle}>
+                       <b>Sign in for faster checkout.</b> 
                     </h1>
-                    <Form onSubmit={handleSubmit}>
-                        <h2>Sign in to Apple Store</h2>
-                        <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control 
-                                value={formValues.email}
-                                onChange={(event) => {
-                                    setFormValues({
-                                        ...formValues,
-                                        email: event.target.value,
-                                    })
-                                }}
-                                type="email" 
-                                placeholder="Enter email" />
-                        </Form.Group>
 
-                        <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control 
-                                value={formValues.password}
-                                onChange={(event) => {
-                                    setFormValues({
-                                        ...formValues,
-                                        password: event.target.value,
-                                    })
-                                }}
-                                type="password" 
-                                placeholder="Password" />
-                        </Form.Group>
+                    <Container className={styles.formContainer}>
+                        <Form onSubmit={handleSubmit}>
+                            <h2><b>Sign in to Apple Store</b></h2>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Email address:</Form.Label>
+                                <Form.Control 
+                                    value={formValues.email}
+                                    onChange={(event) => {
+                                        setFormValues({
+                                            ...formValues,
+                                            email: event.target.value,
+                                        })
+                                    }}
+                                    type="email" 
+                                    placeholder="Enter email" />
+                            </Form.Group>
 
-                        <Button variant="primary" type="submit">
-                            Submit
-                        </Button>
-                    </Form>
-                </Container>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control 
+                                    value={formValues.password}
+                                    onChange={(event) => {
+                                        setFormValues({
+                                            ...formValues,
+                                            password: event.target.value,
+                                        })
+                                    }}
+                                    type="password" 
+                                    placeholder="Password" />
+                            </Form.Group>
+
+                            <Button variant="primary" type="submit">
+                                Submit
+                            </Button>
+                        </Form>
+                    </Container>
+                </section>
+
             </LayoutWhite>
     );
 }

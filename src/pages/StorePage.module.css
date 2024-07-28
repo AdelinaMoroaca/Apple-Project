@@ -47,6 +47,17 @@
     /* background-color: rgba(0, 255, 255, 0.249); */
 }
 
+.imageCol{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.imgFluid {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important; 
+}
+
 .aboutIntro {
     width: 100% !important; 
     margin: 0 !important;
@@ -151,7 +162,7 @@
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    gap: 1.5rem;
+    /* gap: 1.5rem; */
     justify-content: space-between;
 }
 
@@ -160,14 +171,6 @@
     /* background-color: #08827c; */
 }
 
-
-/* Section 3 */
-/* .bestClassRow{
-    background-color: #3f08827c;
-    display: flex;
-    justify-content: space-between;
-  
-} */
 
 
 
@@ -232,3 +235,4 @@
         /* color: red; */
     }
 }
+

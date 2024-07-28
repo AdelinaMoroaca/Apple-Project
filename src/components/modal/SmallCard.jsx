@@ -16,24 +16,15 @@ function SmallCard(props) {
       <Card variant="primary" 
         onClick={handleShow} 
         className={styles.smallCard}>
-        {/* {title} */}
-        <Figure.Caption>
-        {title}
-        </Figure.Caption>
+        <h1 className={styles.titleCard}><b>{title}</b></h1>
         <Figure className={styles.figureStyle}>
-              {/* <Figure.Caption>
-                A caption for the image.
-              </Figure.Caption> */}
               <Figure.Image
                 width={width}
                 height={height}
                 alt={alt}
-                src={src} // Use an actual image URL or path
-                className={styles.roundedImage} // Apply the CSS module class
+                src={src} 
+                className={styles.backgroundImage}
               />
-              {/* <Figure.Caption>
-                A caption for the image.
-              </Figure.Caption> */}
         </Figure>
       </Card>
 

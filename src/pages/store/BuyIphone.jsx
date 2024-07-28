@@ -68,8 +68,6 @@ function BuyIphone(){
         justifyContent: 'center'
     }
 
-
-
     return (
         <LayoutBlack>
             <section style={{

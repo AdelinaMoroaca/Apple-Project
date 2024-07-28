@@ -5,6 +5,7 @@ import styles from './WillBeBackPage.module.css'
 function WillBeBackPage(props){
     const { pageContent } = props;
     return(
+        <div className={styles.WillBeBackPage}>
         <Container className={styles.Container}>
             <h3 className={styles.logo}>LOGO</h3>
             <h1 className={styles.title}>We'll be back.</h1>
@@ -12,6 +13,8 @@ function WillBeBackPage(props){
             <h3 className={styles.topic}>{pageContent} website</h3>
             <h6 className={styles.secondPara}>and will be back soon</h6>
         </Container>
+        </div>
+
     )
 }
 

@@ -2,9 +2,9 @@ import { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Modal from 'react-bootstrap/Modal';
 import Figure from 'react-bootstrap/Figure';
-import styles from './BasicCard.module.css'
+import styles from './BasicEduStoreCard.module.css'
 
-function BasicCard(props) {
+function BasicEduStoreCard(props) {
   const { title, src, width, height, alt } = props;
   const [show, setShow] = useState(false);
 
@@ -16,22 +16,16 @@ function BasicCard(props) {
       <Card variant="primary" 
         onClick={handleShow} 
         className={styles.frontCard}>
-        {title}
+        <h1 className={styles.titleCard}><b>{title}</b></h1>
 
         <Figure className={styles.figureStyle}>
-              {/* <Figure.Caption>
-                A caption for the image.
-              </Figure.Caption> */}
               <Figure.Image
                 width={width}
                 height={height}
                 alt={alt}
-                src={src} // Use an actual image URL or path
-                className={styles.roundedImage} // Apply the CSS module class
+                src={src} 
+                className={styles.backgroundImage}
               />
-              {/* <Figure.Caption>
-                A caption for the image.
-              </Figure.Caption> */}
         </Figure>
       </Card>
 
@@ -151,4 +145,4 @@ function BasicCard(props) {
   );
 }
 
-export default BasicCard;
+export default BasicEduStoreCard;

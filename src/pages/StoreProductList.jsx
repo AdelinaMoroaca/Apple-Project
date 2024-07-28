@@ -26,7 +26,7 @@ function ProductCategory(props){
                 src={category.imagePath}
             />
             <Figure.Caption>
-                <Link onClick={()=> handleCategory(category)} to={`/shop/buy-${category.title}/`}>{category.title}</Link>
+                <Link className={styles.figureLink} onClick={()=> handleCategory(category)} to={`/shop/buy-${category.title}/`}>{category.title}</Link>
             </Figure.Caption>
         </Figure>
     )

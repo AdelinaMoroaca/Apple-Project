@@ -1,168 +1,63 @@
 {
-  "Mac": [
-    { "id": "1", 
-      "title": "iPhone 15 Pro", 
-      "category": "iPhone",
-      "model": "15 Pro",
-      "finishesNumber": "4",
-      "finishesColor": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
-      "storageSize": ["128", "256", "512", "1"],
-      "storageType": ["GB", "TB"],
-      "price": 999,
-      "priceMo": 41.42,
-      "countryValue": "$",
-      "details": [
-        "6.1-inch Super Retina XDR display footnote ¹ featuring ProMotion, Always-On, and Dynamic Island",
-        "Strong and light titanium design with Action button — a fast track to your favorite feature",
-        "48MP Main camera for super-high-resolution photos and 3x Telephoto camera",
-        "A17 Pro chip delivers a massive leap in graphics performance, transforming mobile gaming",
-        "USB-C connector with USB 3 for up to 20x faster transfer speeds footnote ² and new pro workflows"
-      ],
-
-      "views": 100,  
-      "img": "",
-      "description": "",
-      "otherImgs": ["OtherImgs1", "OtherImgs2"],
-      "weight": "15kg",
-      "size": "150cm x 70cm"
-    },
-
-    { "id": "2", 
-    "title": "iPhone 15 Pro Max", 
-    "category": "iPhone",
-    "model": "15 Pro Max",
-    "finishesNumber": "4",
-    "finishesColor": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
-    "storageSize": ["256", "512", "1"],
-    "storageType": ["GB", "TB"],
-    "price": 1199,
-    "priceMo": 49.95,
-    "countryValue": "$",
-    "details": [
-      "6.7-inch Super Retina XDR display footnote ¹ featuring ProMotion, Always-On, and Dynamic Island",
-      "Strong and light titanium design with Action button — a fast track to your favorite feature",
-      "48MP Main camera for super-high-resolution photos and 5x Telephoto camera, the longest optical zoom in iPhone ever",
-      "A17 Pro chip delivers a massive leap in graphics performance, transforming mobile gaming",
-      "USB-C connector with USB 3 for up to 20x faster transfer speeds footnote ² and new pro workflows"
-    ]
-    },
-    { "id": "3", 
-    "title": "iPhone 15", 
-    "category": "iPhone",
-    "model": "15",
-    "finishesNumber": "5",
-    "finishesColor": ["Blue", "Pink", "Yellow", "Green", "Black"],
-    "storageSize": ["128", "256", "512"],
-    "storageType": ["GB"],
-    "price": 799,
-    "priceMo": 33.29,
-    "countryValue": "$",
-    "details": [
-      "6.1-inch durable color-infused glass and aluminum design footnote ◊ with Ceramic Shield front",
-      "Dynamic Island bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else",
-      "48MP Main camera with 2x Telephoto captures breathtaking detail up close or far away",
-      "A16 Bionic powers computational photography and smooth gaming performance with great efficiency for all-day battery life",
-      "Connect and charge with USB-C"
-    ]
-
-  
-    },
-    { "id": "4", 
-    "title": "iPhone 15 Plus", 
-    "category": "iPhone",
-    "model": "15 Plus",
-    "finishesNumber": "5",
-    "finishesColor": ["Blue", "Pink", "Yellow", "Green", "Black"],
-    "storageSize": ["128", "256", "512"],
-    "storageType": ["GB"],
-    "price": 899,
-    "priceMo": 37.45,
-    "countryValue": "$",
-    "details": [
-      "6.7-inch durable color-infused glass and aluminum design footnote ◊ with Ceramic Shield front",
-      "Dynamic Island bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else",
-      "48MP Main camera with 2x Telephoto captures breathtaking detail up close or far away",
-      "A16 Bionic powers computational photography and smooth gaming performance with great efficiency for all-day battery life",
-      "Connect and charge with USB-C"
-    ]
-    },
-    { "id": "5", 
-    "title": "iPhone 14", 
-    "category": "iPhone",
-    "model": "14",
-    "finishesNumber": "6",
-    "finishesColor": ["Blue", "Purple", "Yellow", "Midnight", "Starlight", "Red"],
-    "storageSize": ["128", "256", "512"],
-    "storageType": ["GB"],
-    "price": 699,
-    "priceMo": 29.12,
-    "countryValue": "$",
-    "details": [
-      "6.1-inch durable design footnote 1 with Ceramic Shield and water and dust resistance",
-      "All-day battery life with up to 20 hours of video playback footnote 2",
-      "Vital safety features like Roadside Assistance via satellite, footnote 3 Emergency SOS via satellite, footnote 3 and Crash Detection footnote 4",
-      "A Pro-level Main camera and advanced image processing for sensational shots in all kinds of light",
-      "A15 Bionic, the same superspeedy chip that’s in iPhone 13 Pro"
-    ]
-    },
-    { "id": "6", 
-    "title": "iPhone 14 Plus", 
-    "category": "iPhone",
-    "model": "14 Plus",
-    "finishesNumber": "5",
-    "finishesColor": ["Blue", "Purple", "Yellow", "Midnight", "Starlight", "Red"],
-    "storageSize": ["128", "256", "512"],
-    "storageType": ["GB"],
-    "price": 799,
-    "priceMo": 33.29,
-    "countryValue": "$",
-    "details": [
-      "6.7-inch durable design footnote ¹ with Ceramic Shield and water and dust resistance",
-      "All-day battery life with up to 26 hours of video playback²",
-      "Vital safety features like Roadside Assistance via satellite, footnote 3 Emergency SOS via satellite, footnote 3 and Crash Detection footnote 4",
-      "A Pro-level Main camera and advanced image processing for sensational shots in all kinds of light",
-      "A15 Bionic, the same superspeedy chip that’s in iPhone 13 Pro"
-    ]
-    },
-    { "id": "7", 
-    "title": "iPhone 13", 
-    "category": "iPhone",
-    "model": "13",
-    "finishesNumber": "6",
-    "finishesColor": ["Blue", "Pink", "Midnight", "Starlight", "Red"],
-    "storageSize": ["128", "256", "512"],
-    "storageType": ["GB"],
-    "price": 599,
-    "priceMo": 24.95,
-    "countryValue": "$",
-    "details": [
-      "6.1-inch Super Retina XDR display footnote ¹",
-      "Dual-camera system for incredible low-light photos and videos",
-      "A15 Bionic with 4-core GPU for lightning-fast performance",
-      "Ceramic Shield, and water and dust resistance footnote ²",
-      "5G for superfast downloads and high-quality streaming footnote ³"
-    ]
-    },
-    { "id": "8", 
-    "title": "iPhone SE", 
-    "category": "iPhone",
-    "model": "SE",
-    "finishesNumber": "6",
-    "finishesColor": ["Midnight", "Starlight", "Red"],
-    "storageSize": [ "64","128", "256"],
-    "storageType": ["GB"],
-    "price": 429,
-    "priceMo": 17.87,
-    "countryValue": "$",
-    "details": [
-      "4.7-inch Retina HD display footnote ¹ that’s bright, colorful, and sharp",
-      "A15 Bionic, the same superpowerful chip that’s in iPhone 13",
-      "5G for fast downloads and high-quality streaming footnote ²",
-      "Smarter camera makes automatic adjustments so faces, places, everything looks fabulous",
-      "Home button with Touch ID — securely unlock, sign in to apps, and use Apple Pay"
-    ]
-    }
-  ],
+"iphoneProducts": 
+    [
+        {
+            "details": 
+            {
+                "id": 1,
+                "title": "iPhone 15 Pro",
+                "category": {
+                    "id": 1,
+                    "name": "iPhone"
+                },
+                "model": "15 Pro",
+                "productDesign": {
+                    "id": 4,
+                    "design": "Natural Titanium",
+                    "image": "/images/iPhone/15Pro/15pro.JPG",
+                    "alt-image": ""
+                },
+                "storageDetails": {
+                    "id": 1,
+                    "size": "128",
+                    "type": "GB"
+                },
+                "basePrice": "999",
+                "currency": "$",
+                "description": "6.1-inch Super Retina XDR display footnote ¹ featuring ProMotion, Always-On, and Dynamic Island.\nStrong and light titanium design with Action button — a fast track to your favorite feature",
+                "weight": "0.1kg",
+                "size": "150cm x 70cm"
+            }
+        },
+        {
+            "details": 
+            {
+                "id": 2,
+                "title": "iPhone 15",
+                "category": {
+                    "id": 1,
+                    "name": "iPhone"
+                },
+                "model": "iPhone 15",
+                "productDesign": {
+                    "id": 3,
+                    "design": "Green Titanium",
+                    "image": "/images/iPhone/15/15.JPG",
+                    "alt-image": ""
+                },
+                "storageDetails": {
+                    "id": 1,
+                    "size": "128",
+                    "type": "GB"
+                },
+                "basePrice": "1090",
+                "currency": "$",
+                "description": "6.1-inch Super Retina XDR display footnote ¹ featuring ProMotion, Always-On, and Dynamic Island.\nStrong and light titanium design with Action button — a fast track to your favorite feature",
+                "weight": "0.05kg",
+                "size": "150cm x 70cm"
+            }
+        }
+    ],
   "iPad": [
     { "id": "1", 
       "title": "iPhone 15 Pro", 

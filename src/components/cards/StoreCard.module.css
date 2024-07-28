@@ -1,0 +1,64 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.storeCardLayout{
+    width: 25rem !important;
+    min-width: 19rem !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 0rem !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+    border-radius: 1.12rem !important;
+    cursor: pointer !important;
+}
+
+.storeImg{
+    height: 500px !important;
+    width: 400px !important;
+    object-fit: cover !important;
+    margin: 0px !important;
+}
+
+.giftCard, .storeCardTitle, .storeCardText{
+    position: absolute !important;
+    width: 90% !important;
+    left: 1.25rem !important;
+    padding: 0.6rem !important;
+}
+
+.storeCardTitle, .storeCardText{
+    text-align: left !important;
+}
+
+.giftCard {
+    top: 1.25rem !important;
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.giftCard > h3{
+    color: #b64400;
+}
+
+.storeCardTitle{
+    font-size: 1.8rem !important;
+    top: 3.4rem !important; /*  top: '55px', */
+    text-align: left !important;
+    padding: 0.4rem 0rem 0rem 0.6rem !important;
+}
+
+.storeCardText{
+    top: 6rem !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.storeCardText > p {
+    margin: 0rem !important;
+    font-size: 1rem !important;
+}

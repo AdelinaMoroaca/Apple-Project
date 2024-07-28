@@ -3,14 +3,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    
 }
 
-
-.smallCard{
+.frontCard{
     position: relative !important;
     overflow: hidden !important;
-    padding: 1.5rem !important;
+    padding: 0.5rem !important;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
     border-radius: 1.12rem !important;
     cursor: pointer !important;
@@ -18,10 +16,6 @@
 
 .figureStyle{
     margin-bottom: 0rem !important;
-    /* padding: 2rem; */
-    /* object-fit: cover !important; */
-    /* width: 100%; */
-    /* position: absolute !important; */
 }
 
 .backgroundImage{
@@ -31,12 +25,7 @@
 .titleCard{
     position: absolute !important;
     text-align: left;
-    padding: 1.5rem 10rem 7rem 1rem;
-    font-size: 1.4rem;
+    padding: 2.8rem 4rem 8rem 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
-    
-    /* width: 90% !important; */
-    /* left: 1.25rem !important; */
-    /* padding: 0.6rem !important; */
-    /* font-size: 10px; */
 }
