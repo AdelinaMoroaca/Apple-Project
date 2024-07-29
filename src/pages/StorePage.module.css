@@ -118,6 +118,7 @@
 .bestClassRow{
     /* background-color: #3f088247; */
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 0rem;
 }

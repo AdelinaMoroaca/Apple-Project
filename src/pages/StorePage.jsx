@@ -75,7 +75,7 @@ function Storepage(){
                 <Container className={styles.bestClassContainer}>
                     <Row className={styles.bestClassRow}>
 
-                    <Col xs={12} sm={6} md={4} lg={3}>
+                    {/* <Col xs={12} sm={6}> */}
                         <StoreCard 
                             src='images/StorePage/education/store-card.JPG'
                             giftValue='$150'
@@ -83,9 +83,9 @@ function Storepage(){
                             fullPrice='$899'
                             monthlyPrice='$74.91/mo.'
                         />
-                    </Col>    
+                    {/* </Col>     */}
 
-                    <Col xs={12} sm={6} md={4} lg={3}>
+                    {/* <Col xs={6} md={4}> */}
                         <StoreCard
                             src='images/StorePage/education/ipad-card.JPG'
                             giftValue='$100'
@@ -93,10 +93,10 @@ function Storepage(){
                             fullPrice='$549'
                             monthlyPrice='$45.75/mo.'
                         />
-                    </Col> 
+                    {/* </Col>  */}
 
 
-                    <Col xs={12} sm={6} md={4} lg={3}>
+                    {/* <Col xs={6} md={4}> */}
                         <StoreCard
                             src='images/StorePage/education/macbook-pro-card.JPG'
                             giftValue='$150'
@@ -104,9 +104,9 @@ function Storepage(){
                             fullPrice='$1499'
                             monthlyPrice='$124.91/mo.'
                         />
-                    </Col> 
+                    {/* </Col>  */}
 
-                    <Col xs={12} sm={6} md={4} lg={3}>
+                    {/* <Col xs={6} md={4}> */}
                     <StoreCard
                         src='images/StorePage/education/ipad-pro-card.JPG'
                         giftValue='$100'
@@ -114,7 +114,7 @@ function Storepage(){
                         fullPrice='$899'
                         monthlyPrice='$74.91/mo.'                         
                     />
-                    </Col>
+                    {/* </Col> */}
 
 
                     </Row>

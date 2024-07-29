@@ -31,10 +31,20 @@ function HeaderBlack() {
           <Nav.Link as={Link} to="/services" className={styles.navLink}>Entertainment</Nav.Link>
           <Nav.Link as={Link} to="/shop/accessories/all" className={styles.navLink}>Accessories</Nav.Link>
           <Nav.Link as={Link} to="/support" className={styles.navLink}>Support</Nav.Link>
-          <Nav.Link as={Link} to="/cart" className={styles.navLink}>
+          <Nav.Link as={Link} to="/bag" className={styles.navLink}>
             <svg className={styles.cartSvg} height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg">
             <path d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"></path></svg>
           </Nav.Link>
+
+          {user ? (
+            <Nav.Link as={Link} to="/favorites" className={styles.navLink} >
+                <svg viewBox="0 0 40 40" className={styles.favouritesDarkSvg} class="as-svgicon as-svgicon-heart as-svgicon-base as-svgicon-heartbase" 
+                role="img" aria-hidden="true" width="28" height="28">
+                  <path fill="none" d="M0 1.213h35v35H0z"></path>
+                  <path  className={styles.favouritesDarkSvg} d="M17.5 29.263a1.194 1.194 0 0 1-.85-.352L6.967 19.2a6.531 6.531 0 0 1 .46-9.617 6.708 6.708 0 0 1 8.943.647l1.13 1.133 1.13-1.133a6.706 6.706 0 0 1 8.943-.647 6.531 6.531 0 0 1 .46 9.617l-9.683 9.711a1.192 1.192 0 0 1-.85.352Zm-6.06-20a5.154 5.154 0 0 0-3.31 1.167 5.352 5.352 0 0 0-1.948 3.913 5.424 5.424 0 0 0 1.564 4.081l9.684 9.711.53.388-.39-.388 9.684-9.711a5.424 5.424 0 0 0 1.564-4.081 5.352 5.352 0 0 0-1.948-3.913 5.6 5.6 0 0 0-7.461.577l-1.7 1.7a.3.3 0 0 1-.425 0l-1.7-1.7a5.89 5.89 0 0 0-4.144-1.741Z"></path></svg>            
+            </Nav.Link>
+           ): '' } 
+
           <Nav.Link as={Link} to="/shop/signIn" onClick={logoutUser} className={styles.navLink} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '0.2rem'}} >
             <svg 
               className={styles.signInDarkSvg} 
@@ -62,7 +72,7 @@ function HeaderWhite() {
     }
 
     return (
-    <Navbar className={styles.navbar} bg="light" data-bs-theme="light">
+    <Navbar className={styles.navbar} bg='light' data-bs-theme="light">
       <Container className={styles.navContainer}>
         <Nav className={styles.navLinks}>
           <Navbar.Brand as={Link} to="/" className={styles.navBrand}>
@@ -80,10 +90,19 @@ function HeaderWhite() {
           <Nav.Link as={Link} to="/services" className={styles.navLink}>Entertainment</Nav.Link>
           <Nav.Link as={Link} to="/shop/accessories/all" className={styles.navLink}>Accessories</Nav.Link>
           <Nav.Link as={Link} to="/support" className={styles.navLink}>Support</Nav.Link>
-          <Nav.Link as={Link} to="/cart" className={styles.navLink}>
+          <Nav.Link as={Link} to="/bag" className={styles.navLink}>
             <svg className={styles.cartLightSvg} height="44" viewBox="0 0 14 44" width="14" xmlns="http://www.w3.org/2000/svg">
             <path d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"></path></svg>
           </Nav.Link>
+
+          {user ? (
+            <Nav.Link as={Link} to="/favorites" className={styles.navLink} >
+                <svg viewBox="0 0 40 40" className={styles.favouritesSvg} class="as-svgicon as-svgicon-heart as-svgicon-base as-svgicon-heartbase" 
+                role="img" aria-hidden="true" width="28" height="28">
+                  <path fill="none" d="M0 1.213h35v35H0z"></path>
+                  <path  d="M17.5 29.263a1.194 1.194 0 0 1-.85-.352L6.967 19.2a6.531 6.531 0 0 1 .46-9.617 6.708 6.708 0 0 1 8.943.647l1.13 1.133 1.13-1.133a6.706 6.706 0 0 1 8.943-.647 6.531 6.531 0 0 1 .46 9.617l-9.683 9.711a1.192 1.192 0 0 1-.85.352Zm-6.06-20a5.154 5.154 0 0 0-3.31 1.167 5.352 5.352 0 0 0-1.948 3.913 5.424 5.424 0 0 0 1.564 4.081l9.684 9.711.53.388-.39-.388 9.684-9.711a5.424 5.424 0 0 0 1.564-4.081 5.352 5.352 0 0 0-1.948-3.913 5.6 5.6 0 0 0-7.461.577l-1.7 1.7a.3.3 0 0 1-.425 0l-1.7-1.7a5.89 5.89 0 0 0-4.144-1.741Z"></path></svg>            
+            </Nav.Link>
+           ): '' } 
 
           <Nav.Link as={Link} to="/shop/signIn" onClick={logoutUser} className={styles.navLink} style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '0.2rem'}}>
               <svg 
@@ -95,6 +114,7 @@ function HeaderWhite() {
               >
                 <path d="M15.09,12.5a7.1,7.1,0,1,1-7.1-7.1A7.1077,7.1077,0,0,1,15.09,12.5ZM7.99,6.6a5.89,5.89,0,0,0-4.4609,9.7471c.6069-.9658,2.48-1.6787,4.4609-1.6787s3.8545.7129,4.4615,1.6787A5.89,5.89,0,0,0,7.99,6.6ZM7.99,8.4A2.5425,2.5425,0,0,0,5.5151,11,2.5425,2.5425,0,0,0,7.99,13.6,2.5424,2.5424,0,0,0,10.4653,11,2.5424,2.5424,0,0,0,7.99,8.4Z"></path>
               </svg>
+              
               {user ? (
               <span>Sign Out Adelina</span>          
             ): '' } 

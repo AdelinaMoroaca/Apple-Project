@@ -18,7 +18,9 @@
 
 .storeImg{
     height: 500px !important;
+    /* min-height: 17rem !important; */
     width: 400px !important;
+    min-width: 19rem !important;
     object-fit: cover !important;
     margin: 0px !important;
 }

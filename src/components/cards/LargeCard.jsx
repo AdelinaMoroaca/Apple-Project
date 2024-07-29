@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import React, { useEffect, useRef } from 'react';
+
 import styles from "./LargeCard.module.css";
 
 // function LargeVideoCard( props ) {
@@ -72,13 +73,14 @@ function LargeVideoCard(props) {
   return (
     <Card className={styles.cardContainer}>
       <video 
-        ref={videoRef}
+        // ref={videoRef}
         className={styles.backgroundVideo}
         loop
         muted
         playsInline
         autoPlay
       >
+
         <source src={src} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -113,6 +115,9 @@ function LargeVideoCard(props) {
   );
 }
 
+
+
+
 function LargeImageCard(props) {
   const { src, title, firstParagraph, secondParagraph, leftBtn, rightBtn, topBody } = props;
 
@@ -135,6 +140,8 @@ function LargeImageCard(props) {
     </Card>
   );
 }
+
+
 
 export { LargeVideoCard, LargeImageCard };
 

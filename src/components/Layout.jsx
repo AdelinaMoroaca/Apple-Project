@@ -13,7 +13,7 @@ function LayoutBlack({ children }) {
 function LayoutWhite({ children }) {
     return(
         <div className={styles.LayoutWhiteContainer}>
-            <HeaderWhite/>
+            <HeaderWhite state/>
             <main>{children}</main>
         </div>
     )

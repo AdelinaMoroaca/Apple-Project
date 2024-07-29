@@ -42,13 +42,9 @@
     line-height: 1 !important;
 }
   
-/* .navBrand {
-    margin: 0px -100px 0px 10px   !important; Adjust as needed
-    padding-left: 9rem !important;
-} */
-  
 .navLink {
-    margin: 0 10px; /* Adjust as needed */
+    margin: 0 10px;
+
 }
 
 .logoImage{
@@ -56,22 +52,36 @@
     height: 14px;
 }
 
-.logoSvg, .cartSvg, .signInDarkSvg {
-    fill:rgba(255, 255, 255, 0.55);
+.logoSvg, .cartSvg, .signInDarkSvg, .favouritesDarkSvg{
+    fill:rgba(255, 255, 255, 0.55) !important;
 }
 
+/* for dark nav */
 .logoSvg:hover, 
 .cartSvg:hover,
-.signInDarkSvg:hover{
-    fill:rgba(255, 255, 255, 0.765);
+.signInDarkSvg:hover,
+.favouritesDarkSvg:hover{
+    fill:rgba(255, 255, 255, 0.765) !important;
 }
 
-.cartLightSvg,.signInLightSvg{
-    fill:rgba(0, 0, 0, 0.562);
+/* for color light nav */
+.cartLightSvg,.signInLightSvg, .favouritesSvg{
+    fill:rgba(0, 0, 0, 0.562) !important;
 }
 
 .cartLightSvg:hover,
-.signInLightSvg:hover{
-    fill:rgba(0, 0, 0, 0.65);
+.signInLightSvg:hover,
+.favouritesSvg:hover{
+    fill:rgba(0, 0, 0, 0.65) !important;
 }
 
+
+
+/* .favouritesSvg .heart-path {
+    fill: rgba(255, 255, 255, 0.195) !important;
+  
+}
+
+.favouritesSvg:hover .heart-path {
+    fill: rgba(0, 0, 0, 0.65) !important;
+} */

@@ -1,22 +1,24 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { CartContext } from '../../store/Cart/context';
 import { LayoutBlack } from "../../components/Layout";
-import {Container, Card, Carousel, Button, Col, Row, Spinner } from 'react-bootstrap';
-import { addToCart } from '../../store/Cart/actions';
-import { Link } from "react-router-dom";
 import { useFetchData } from '../../utils/hooks/useFetch';
+import { addToBag } from '../../store/Shopping/actions';
+import { addToFavorite } from '../../store/Favorites/actions';
+import { BagContext } from '../../store/Shopping/context';
+import { FavoriteContext } from '../../store/Favorites/context';
+import {Container, Card, Carousel, Button, Col, Row, Spinner } from 'react-bootstrap';
 import styles from './BuyIphone.module.css'; 
 
 
 function BuyIphone(){
-    const { cartState, cartDispatch } = useContext(CartContext);
-    // const [products, setProducts] = React.useState([]);
+    const { bagState, bagDispatch } = useContext(BagContext);
+    const { favoriteState, favoriteDispatch } = useContext(FavoriteContext);
     const [selectedOptions, setSelectedOptions] = useState({});
 
     const { data, loading } = useFetchData(
         "https://json-server-deployment-5til.onrender.com/iPhone"
     );
-    
+
+    // const [products, setProducts] = React.useState([]);
     // useEffect(() => {
     //     fetch('https://json-server-deployment-5til.onrender.com/iPhone')
     //         .then(response => response.json())
@@ -26,9 +28,7 @@ function BuyIphone(){
     //         .catch(error => console.error('Error fetching data:', error));
     // }, []);
 
-
-
-    const handleAddToCart = (product) => {
+    const handleAddToBag = (product) => {
         const selected = selectedOptions[product.id] || {};
 
         if (!selected.finish || !selected.storage) {
@@ -36,7 +36,7 @@ function BuyIphone(){
             return;
         }
 
-        cartDispatch(addToCart({
+        bagDispatch(addToBag({
             ...product,
             finish: selected.finish,
             storage: selected.storage,
@@ -46,8 +46,33 @@ function BuyIphone(){
     };
 
     useEffect(() => {
-        console.log(cartState)
-    }, [cartState])
+        console.log(bagState)
+    }, [bagState])
+
+    const handleAddToFavorites = (product) =>{
+        const selected = selectedOptions[product.id] || {};
+
+        // if (!selected.finish || !selected.storage) {
+        //     alert('Please select both finish and storage options before adding to cart.');
+        //     return;
+        // }
+
+        // favoriteDispatch(addToBag({
+        //     ...product,
+        //     finish: selected.finish,
+        //     storage: selected.storage,
+        // }));
+
+        favoriteDispatch(addToFavorite(product));
+        console.log(`Added to Favorite ${product.title} with  ${product.price},  ${selected.finish} finish and ${selected.storage} storage to cart`);    
+
+    }
+
+    useEffect(() => {
+        console.log(favoriteState)
+    }, [favoriteState])
+
+
 
     const handleOptionChange = (iPhoneId, type, value) => {
         setSelectedOptions(prevState => ({
@@ -58,6 +83,7 @@ function BuyIphone(){
             },
         }));
     };
+
 
     const imgStyle= {
         width: '100%',
@@ -171,15 +197,15 @@ function BuyIphone(){
                                                 </Card.Text>
 
                                                 <div>
-                                                    <Button onClick={()=>handleAddToCart(product)}>
-                                                        Add to Cart
+                                                    <Button onClick={()=>handleAddToBag(product)}>
+                                                        Add to Bag
                                                     </Button>  
 
 
                                                     <div>
                                                         <h6 style={{fontSize: '0.8rem'}}>Need a moment?</h6>
                                                         <p style={{fontSize: '0.6rem'}}>Keep all your selections by saving this device to Your Saves, then come back anytime and pick up right where you left off.</p>
-                                                        <Link>
+                                                        <Button onClick={()=>handleAddToFavorites(product)}>
                                                         <svg 
                                                             className={styles.signInLightSvg} 
                                                             height="30" 
@@ -190,9 +216,9 @@ function BuyIphone(){
                                                             <path d="M12.8 4.25a1.202 1.202 0 0 1 1.2 1.2v10.818l-2.738-2.71a1.085 1.085 0 0 0-1.524 0L7 16.269V5.45a1.202 1.202 0 0 1 1.2-1.2h4.6m0-1H8.2A2.2 2.2 0 0 0 6 5.45v11.588a.768.768 0 0 0 .166.522.573.573 0 0 0 .455.19.644.644 0 0 0 .38-.128 5.008 5.008 0 0 0 .524-.467l2.916-2.885a.084.084 0 0 1 .118 0l2.916 2.886a6.364 6.364 0 0 0 .52.463.628.628 0 0 0 .384.131.573.573 0 0 0 .456-.19.768.768 0 0 0 .165-.522V5.45a2.2 2.2 0 0 0-2.2-2.2Z"></path>
                                                         </svg>
                                                     
-                                                        <span>Save for later</span>
+                                                        <span>Add To Favorites</span>
                                                         
-                                                        </Link>
+                                                        </Button>
                                                     </div>
                                                 </div>            
                                   
