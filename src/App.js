@@ -6,20 +6,18 @@ import { Route, Routes } from 'react-router-dom';
 import { FavoriteProvider } from './store/Favorites/context';
 import { BagProvider } from './store/Shopping/context';
 import { AuthenticationProvider } from './store/Authentication/context';
-//main pages
+//nav - main pages
 import Homepage from './pages/HomePage';
 import Storepage from './pages/StorePage';
-import Iphone from './pages/Iphone';
-import WatchPage from './pages/WatchPage';
-import AirPodsPage from './pages/AirPodsPage';
+import {WatchPage} from './pages/WatchPage';
+import {AirPodsPage} from './pages/AirPodsPage';
 import SupportPage from './pages/SupportPage';
-import Bag from './pages/Shopping/Bag';
-import Page404 from './pages/Page404';
+
 import AccessoriesPage from './pages/AccessoriesPage';
-// import Iphonepage from './pages/IPhonePage';
-import Macpage from './pages/MacPage';
-import Ipadpage from './pages/IpadPage';
+import {MacPage} from './pages/MacPage';
+import {IpadPage} from './pages/IpadPage';
 import Visionpage from './pages/VisionPage';
+import {TvHomePage} from './pages/TvHomePage';
 //service pages
 import AppleCard from  './pages/service/AppleCard';
 import Business from './pages/service/Business';
@@ -40,12 +38,14 @@ import BuyIpadPro from './pages/store/BuyIpadPro';
 import BuyAppleWatch9 from './pages/store/BuyAppleWatch9';
 import ApplyAppleCard from './pages/store/ApplyAppleCard'; 
 import LoginForm from './pages/forms/LoginForm';
-import TvHomePage from './pages/TvHomePage';
+
+import Bag from './pages/Shopping/Bag';
 
 import AppleTradeIn from './pages/service/AppleTradeIn';
 //userPages
 import Favorites from './pages/user/Favourites';
-
+//other pages
+import Page404 from './pages/Page404';
 
 
 
@@ -66,18 +66,16 @@ function App() {
               <Route path='/shop/buy-watch/' element={<BuyWatch/>}/>  {/* /shop/buy-watch/ not working as expected */}
               <Route path='/shop/buy-watch/apple-watch/' element={<BuyAppleWatch9/>}/>
               <Route path='/shop/accessories/all/' element={<AccessoriesPage/>}/>
-
-              {/* exercitiu */}
               <Route path='/iPhone/' element={<IPhonePage/>}/>
-              <Route path='/iPhone/:id' element={<Iphone/>}/> {/**nu cred ca mai imi trebuie */}
+              {/* <Route path='/iPhone/:id' element={<Iphone/>}/> */} {/* exercitiu */}
 
-              <Route path='/mac/' element={<Macpage/>}/>
+              <Route path='/mac/' element={<MacPage/>}/>
               <Route path='/business/' element={<Business/>}/>
               <Route path='/apple-intelligence/' element={<Intelligence/>}/>
               <Route path='/apple-card/' element={<AppleCard/>}/>
               <Route path='/apple-card/signin/' element={<ApplyAppleCard/>}/>
               
-              <Route path='/iPad/' element={<Ipadpage/>}/>
+              <Route path='/iPad/' element={<IpadPage/>}/>
               {/* <Route path='/store/buy-ipad/ipad-pro/' element={<BuyIpadPro/>}/> */}
               <Route path='/ipad-pro/' element={<IpadProPage/>}/>
               {/* <Route path='/store/buy-ipad/ipad-pro/' element={<IpadProPage/>}/> */}

@@ -1,15 +1,18 @@
-import React from "react";
+import React from 'react';
+import PresentationLargeCard from '../components/cards/PresentationLargeCard';
 import { LayoutWhite } from "../components/Layout";
-import WillBeBackPage from './WillBeBackPage';
 
-function WatchPage(){
-    return(
+function WatchPage() {
+    return (
         <LayoutWhite>
-            <WillBeBackPage
-                pageContent='Apple Watch'
-            />
+            <section style={{marginTop: '4rem', padding: '0', width: '100%'}}>
+                <PresentationLargeCard 
+                    selectedId={'94'} 
+                    firstAboutText='To wear it is to love it.'
+                />
+            </section>
         </LayoutWhite>
-    )
+    );
 }
 
-export default WatchPage;
+export { WatchPage };

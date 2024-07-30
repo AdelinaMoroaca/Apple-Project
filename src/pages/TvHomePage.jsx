@@ -1,15 +1,19 @@
-import React from "react";
+import React from 'react';
+import PresentationLargeCard from '../components/cards/PresentationLargeCard';
 import { LayoutWhite } from "../components/Layout";
-import WillBeBackPage from './WillBeBackPage';
 
-function TvHomePage(){
-    return(
+function TvHomePage() {
+    return (
         <LayoutWhite>
-            <WillBeBackPage
-                pageContent='TV & Home'
-            />
+            <section style={{marginTop: '4rem', padding: '0', width: '100%'}}>
+                <PresentationLargeCard 
+                    selectedId={'97'} 
+                    firstAboutText='The future hits home.'
+                    secondAboutText='On the big screen.'
+                />
+            </section>
         </LayoutWhite>
-    )
+    );
 }
 
-export default TvHomePage;
+export { TvHomePage };

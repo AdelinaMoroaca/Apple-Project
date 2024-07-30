@@ -1,15 +1,19 @@
-import React from "react";
+import React from 'react';
+import PresentationLargeCard from '../components/cards/PresentationLargeCard';
 import { LayoutWhite } from "../components/Layout";
-import WillBeBackPage from './WillBeBackPage';
 
-function Ipadpage(){
-    return(
+function IpadPage() {
+    return (
         <LayoutWhite>
-            <WillBeBackPage
-                pageContent='iPad'
-            />
+            <section style={{padding: '4rem 0rem 0rem 0rem', width: '100%'}}>
+                <PresentationLargeCard 
+                    selectedId={'92'} 
+                    firstAboutText='Touch, draw, and type'
+                    secondAboutText='on one magical device.'
+                />
+            </section>
         </LayoutWhite>
-    )
+    );
 }
 
-export default Ipadpage;
+export { IpadPage };
