@@ -1,4 +1,6 @@
 import { HeaderBlack, HeaderWhite } from "./Header";
+// import Accordion from 'react-bootstrap/Accordion';
+import { Footer } from "./Footer";
 import styles from "./Layout.module.css"
 
 function LayoutBlack({ children }) {
@@ -6,6 +8,7 @@ function LayoutBlack({ children }) {
         <div className={styles.LayoutBlackContainer}>
             <HeaderBlack/>
             <main>{children}</main>
+            <Footer/>
         </div>
     )
 }
@@ -15,6 +18,7 @@ function LayoutWhite({ children }) {
         <div className={styles.LayoutWhiteContainer}>
             <HeaderWhite state/>
             <main>{children}</main>
+            <Footer/>
         </div>
     )
 }

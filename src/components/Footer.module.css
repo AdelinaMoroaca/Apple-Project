@@ -1,0 +1,39 @@
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+}
+
+.footer {
+    background-color: rgb(245, 245, 247);
+    color: rgba(0, 0, 0, 0.88);
+    padding: 1.3rem 0 !important;
+  }
+  
+  .footer h6 {
+    margin-bottom: 0.6rem;
+  }
+  
+  .footer ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .footer ul li {
+    margin-bottom: 0.6rem;
+  }
+  
+  .footer ul li a {
+    color: rgba(0, 0, 0, 0.56);
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+  
+  .footer ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer .text-center {
+    text-align: center;
+  }
+  

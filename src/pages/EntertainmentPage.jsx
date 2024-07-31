@@ -1,14 +1,14 @@
 import React from "react";
-import { LayoutWhite } from "../components/Layout";
+import { LayoutBlack } from "../components/Layout";
 import WillBeBackPage from './WillBeBackPage';
 
 function EntertainmentPage(){
     return(
-        <LayoutWhite>
+        <LayoutBlack>
             <WillBeBackPage
                 pageContent='Entertainment'
             />
-        </LayoutWhite>
+        </LayoutBlack>
     )
 }
 

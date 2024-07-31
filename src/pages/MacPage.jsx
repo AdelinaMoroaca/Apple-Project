@@ -1,11 +1,12 @@
 import React from 'react';
 import PresentationLargeCard from '../components/cards/PresentationLargeCard';
 import { LayoutWhite } from "../components/Layout";
+import styles from './MacPage.module.css';
 
 function MacPage() {
     return (
         <LayoutWhite>
-            <section style={{padding: '4rem 0rem 0rem 0rem', width: '100%'}}>
+            <section className={styles.introSection}>
                 <PresentationLargeCard 
                     selectedId={'91'} 
                     firstAboutText='If you can dream it,'

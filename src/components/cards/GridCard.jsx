@@ -1,5 +1,5 @@
 import React from "react";
-import Card from 'react-bootstrap/Card';
+import {Card } from 'react-bootstrap';
 import styles from "./GridCard.module.css";
 
 function GridCard(props) {
@@ -13,12 +13,12 @@ function GridCard(props) {
           className={styles.backgroundImage}
         />
         <Card.Body className={styles.cardBody}>
-          <Card.Title className={styles.cardTitle}><h3>{title}</h3></Card.Title>
+          <Card.Title className={styles.cardTitle}><h3><b>{title}</b></h3></Card.Title>
           
           <div>
-          <Card.Text className={styles.cardText}><p>{firstText}</p></Card.Text>
+            <Card.Text className={styles.firstText}><p>{firstText}</p></Card.Text>
+            <Card.Text className={styles.secondText}><p>{secondText}</p></Card.Text>
           </div>
-          <Card.Text className={styles.cardText}><p>{secondText}</p></Card.Text>
   
           <div className={styles.btnContainer}>
             {leftBtn}
@@ -27,6 +27,8 @@ function GridCard(props) {
          
         </Card.Body>
       </Card>
+  
+
     );
 }
 

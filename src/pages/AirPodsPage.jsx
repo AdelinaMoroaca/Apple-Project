@@ -1,11 +1,12 @@
 import React from 'react';
 import PresentationLargeCard from '../components/cards/PresentationLargeCard';
-import { LayoutWhite } from "../components/Layout";
+import { LayoutWhite } from '../components/Layout';
+import styles from './AirPodsPage.module.css';
 
 function AirPodsPage() {
     return (
         <LayoutWhite>
-            <section style={{marginTop: '4rem', padding: '0', width: '100%'}}>
+            <section className={styles.introSection}>
                 <PresentationLargeCard 
                     selectedId={'95'} 
                     firstAboutText='A magical connection'

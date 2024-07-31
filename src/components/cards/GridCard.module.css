@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 
-/* Video and Image LargeCard*/
 .cardContainer {
     position: relative;
     border: none !important;
     border-radius: 0 !important;
     width: 100%;  
+    min-width: 17rem !important;
     max-width: 100%; 
     margin: 0 auto;
     overflow: hidden;
@@ -17,7 +17,6 @@
   
 .backgroundImage, .backgroundVideo {
     width: 100%;
-    /* height: auto !important; */
     object-fit: contain;
     display: block;
 }
@@ -28,41 +27,126 @@
     left: 0;
     top: 0;
     width: 100%;
-    /* color: rgb(245, 245, 247) !important; */
-    /* background: rgba(0, 0, 0, 0.09); */
+    
+    background: rgba(0, 0, 0, 0.09);
     padding-top: 2.6rem !important;
     box-sizing: border-box;
 }
   
-.cardTitle{
-    font-size: 32px !important;
+.cardTitle > h3 > b{
+    font-size: 2.8rem !important;
     font-weight: 600 !important;
     letter-spacing: -0.096px !important;
-    /* line-height: 52px !important; */
-    color: black !important;
 }
   
-.cardText{
-    font-size: 19px !important;
+.cardText > p, .firstText > p, .secondText > p{
+    font-size: 1.4rem !important;
     font-weight: 400 !important;
     letter-spacing: 0.2px !important;
-    /* line-height: 28px !important; */
-    margin-top: 5px !important;
-    color: black !important;
+    margin-top: 0.3 !important;
 }
   
-
 .btnContainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.6rem !important;
+    padding-top: 1rem !important;
 }
 
 .whiteText .cardTitle,
-.whiteText .cardText {
+.whiteText .firstText{
   color: white !important;
 }
 
+.firstText p {
+    margin-bottom: -1.2rem !important;
+}
+
+.secondText p {
+    margin-bottom: 0.2rem !important;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1030px){
+    .cardContainer{
+        height: 31rem !important;
+    }
+
+    .backgroundImage{
+        height: 31rem !important;
+        object-fit: cover !important;
+    }
+
+    .cardBody {
+        padding: 2.6rem 1.5rem 1rem 1.5rem !important;
+    }
   
+    .cardTitle > h3{
+      font-size: 2rem !important;
+    }
   
+    h3, p, .firstText{
+        margin-bottom: 0rem !important; 
+    }
+  
+    .secondText {
+        margin-bottom: 0.6rem !important; 
+    }
+  
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
+    .cardContainer{
+        height: 31rem !important;
+    }
+
+    .backgroundImage{
+        height: 31rem !important;
+        object-fit: cover !important;
+    }
+
+    .cardBody {
+        padding: 1.6rem 1.5rem 1rem 1.5rem !important;
+    }
+  
+    .cardTitle > h3 > b{
+      font-size: 1.8rem !important;
+    }
+  
+    .firstText > p, .secondText > p{
+        font-size: 1.2rem !important;
+    }
+  
+    .firstText p{
+        margin-bottom: -0.8rem !important;
+    }
+  
+}
+
+@media (max-width: 320px) {
+    .cardContainer{
+        height: 31rem !important;
+    }
+
+    .backgroundImage{
+        height: 31rem !important;
+        object-fit: cover !important;
+    }
+
+    .cardBody {
+        padding: 1.6rem 1.5rem 1rem 1.5rem !important;
+    }
+  
+    .cardTitle, .cardText{
+        margin-bottom: 0rem !important;
+    }
+
+    .cardTitle > h3 > b{
+      font-size: 1.4rem !important;
+    }
+  
+    .secondText > p, .firstText > p{
+        font-size: 1rem !important;
+    }
+  
+}

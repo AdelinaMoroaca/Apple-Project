@@ -1,10 +1,9 @@
-// import Geolocation from '../demoComponents/Geolocation';
-// import { Counter } from '../demoComponents/Counter';
+import React from "react";
 import { LayoutBlack } from '../components/Layout';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import CarouselImage from '../components/carousel/Carousel';
+import ControlledCarousel from '../components/carousel/Carousel';
 import { LargeImageCard, LargeVideoCard } from "../components/cards/LargeCard";
 import { GridCard } from '../components/cards/GridCard'
 import { LearnMoreBtn } from '../components/buttons/learnMore/LearnMore';
@@ -13,7 +12,7 @@ import { BuyBtn } from '../components/buttons/buy/BuyBtn';
 import { GetYourEstimateBtn } from '../components/buttons/estimation/GetYourEstimateBtn';
 import { ApplyNowBtn } from '../components/buttons/apply/ApplyNowBtn';
 import { WatchTheFilm } from '../components/buttons/seeMovie/WatchTheFilm';
-import styles from './Homepage.module.css';
+import styles from './HomePage.module.css';
 
 function Homepage(){
     return(
@@ -114,9 +113,8 @@ function Homepage(){
                     <Col xs={12} md={6}>
                         <GridCard
                         src='images/HomePage/gridImg/watch.JPG'
-                        title='logo-WATCH'
-                        firstText='series 9'
-                        secondText='Smarter. Brighter. Mightier'
+                        title='Apple WATCH'
+                        firstText='Smarter. Brighter. Mightier'
                         leftBtn={<LearnMoreBtn 
                             className={styles.BlueBtnGrid}
                             path='/apple-watch-series-9/'/>}
@@ -133,9 +131,10 @@ function Homepage(){
                         <GridCard 
                         className={styles.tradeInCard}
                         src='images/HomePage/gridImg/card.JPG'
-                        title='logo-CARD'
+                        title='Apple CARD'
                         firstText='Get up to 3% Daily Cash back' 
                         secondText='with every purchase.'
+        
                         leftBtn={<LearnMoreBtn 
                             className={styles.BlueBtnGrid}
                             path='/apple-card/' />}
@@ -148,7 +147,7 @@ function Homepage(){
                     <Col xs={12} md={6}>
                         <GridCard className={styles.tradeInCard} id='tradeInCard'
                         src='images/HomePage/gridImg/tradeIn.JPG'
-                        title='logo-Trade In'
+                        title='Apple Trade In'
                         firstText='Get $170-$620 in credit when you'
                         secondText=' trade in iPhone 11 or higher.'
                         leftBtn={<GetYourEstimateBtn 
@@ -159,7 +158,7 @@ function Homepage(){
                 </Row>
             </Container>
 
-            <CarouselImage/>     
+            <ControlledCarousel/>     
 
         </LayoutBlack>
     )

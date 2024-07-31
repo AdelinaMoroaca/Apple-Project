@@ -12,6 +12,9 @@ import Storepage from './pages/StorePage';
 import {WatchPage} from './pages/WatchPage';
 import {AirPodsPage} from './pages/AirPodsPage';
 import SupportPage from './pages/SupportPage';
+import LoginForm from './pages/LoginPage';
+import Bag from './pages/Shopping/Bag';
+
 
 import AccessoriesPage from './pages/AccessoriesPage';
 import {MacPage} from './pages/MacPage';
@@ -37,9 +40,7 @@ import BuyAppleVisionPro from './pages/store/BuyAppleVisionPro';
 import BuyIpadPro from './pages/store/BuyIpadPro';
 import BuyAppleWatch9 from './pages/store/BuyAppleWatch9';
 import ApplyAppleCard from './pages/store/ApplyAppleCard'; 
-import LoginForm from './pages/forms/LoginForm';
 
-import Bag from './pages/Shopping/Bag';
 
 import AppleTradeIn from './pages/service/AppleTradeIn';
 //userPages

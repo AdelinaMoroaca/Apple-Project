@@ -8,21 +8,6 @@ function StoreCard(props) {
   const { src, giftValue, title, fullPrice, monthlyPrice } = props;
 
   return (
-    // <Card style={{ width: '25rem' }}>
-    //   {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
-    //   <Card.Body>
-    //     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-    //         <Card.Text>GET A $150 GIFT CARD</Card.Text>
-    //         <Spinner animation="grow" variant="warning" />
-    //     </div>
-    //     <Card.Title>MacBook Air</Card.Title>
-    //     <Card.Text>
-    //     From $899 or $74.91/mo.per month for 12 mo.monthsFootnote† with education savings
-    //     </Card.Text>
-    //     <Card.Img variant="top" src="images/StorePage/store-card.JPG" />
-    //   </Card.Body>
-    // </Card>
-
     <Card className={styles.storeCardLayout} >
 
       <Card.Img 
