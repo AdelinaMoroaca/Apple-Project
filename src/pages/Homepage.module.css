@@ -25,44 +25,7 @@
     /* grid-column: ; */
 }
 
-/* .learnMoreBtn{
-    font-weight: 400 !important;
-    letter-spacing: -0.374px !important;
-    line-height: 20px !important;
-    margin-top: 18px !important;
-    padding: 11px 21px !important;
-    border-bottom-right-radius: 980px !important;
-    border-bottom-left-radius: 980px !important;
-    border-top-left-radius: 980px !important;
-    border-top-right-radius: 980px !important;
-    font-size: 17px !important;
-} */
 
-
-
-/* .banner {
-    padding: 0px !important;
-    background-color: rgba(127, 255, 212, 0.171);
-    height: 75vh;
-}
-
-.bannerRow{
-  
-    height: 100%;
- 
-    margin: 0px !important;
-    padding: 0;
-}
-
-.bannerCol{
-    padding: 0 !important;
-}
-
-.child{
-    width: 100%;
-    border-radius: 0%;
-    border: 0px !important;
-} */
 
 /* Largecard BTN */
 .learnMoreBtnBlue {

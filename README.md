@@ -1,4 +1,19 @@
-https://choose-apple-by-adelina-moroaca.netlify.app/
+Apple Clone Pixel Perfect : https://choose-apple-by-adelina-moroaca.netlify.app/
+
+Project Overview
+This project is a pixel-perfect clone of Apple's website, built with React. It replicates the entire Apple experience, from product design pages to purchasing from the Apple Store. The project includes a custom API that provides all necessary media files, such as images, videos, product and services data.
+
+Tech Stack
+Frontend:
+React
+React Bootstrap and CSS Modules
+State management
+
+Backend:
+JSON Server (for mock API)
+Deployment: https://json-server-deployment-5til.onrender.com/
+
+Netlify: https://choose-apple-by-adelina-moroaca.netlify.app/
 
 # Getting Started with Create React App
 

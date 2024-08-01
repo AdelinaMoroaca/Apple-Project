@@ -1,5 +1,4 @@
 import { HeaderBlack, HeaderWhite } from "./Header";
-// import Accordion from 'react-bootstrap/Accordion';
 import { Footer } from "./Footer";
 import styles from "./Layout.module.css"
 

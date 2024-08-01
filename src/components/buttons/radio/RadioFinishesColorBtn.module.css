@@ -1,0 +1,24 @@
+.test-radio {
+  /* display: flex;
+  align-items: center !important;
+  cursor: pointer  !important;
+  position: relative;
+  padding-left: 90px;
+  margin-right: 10px; */
+  cursor: pointer !important;
+  background-color: red !important;
+}
+
+input[type="radio"] {
+  display: none;
+  cursor: pointer !important;
+  background-color: red !important;
+}
+
+.test-radio-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer !important;
+  height: 0;
+  width: 0;
+}

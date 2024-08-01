@@ -7,13 +7,10 @@
 
 .pageContainer{
     margin-top: 2rem !important;
-    padding: 3rem !important;
-    display: flex;
+    padding: 3rem 3rem !important;
+    display: flex !important;
+    flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
 }
 
-/* .pageTitle{
-    display: flex !important;
-    justify-content: space-between !important;
-} */
