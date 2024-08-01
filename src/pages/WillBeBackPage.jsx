@@ -7,7 +7,7 @@ function WillBeBackPage(props){
     return(
         <div className={styles.WillBeBackPage}>
         <Container className={styles.Container}>
-            <h3 className={styles.logo}>LOGO</h3>
+            {/* <h3 className={styles.logo}>LOGO</h3> */}
             <h1 className={styles.title}>We'll be back.</h1>
             <h6 className={styles.para}>We're busy updating the</h6>
             <h3 className={styles.topic}>{pageContent} website</h3>

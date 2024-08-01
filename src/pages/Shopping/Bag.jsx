@@ -21,37 +21,43 @@ function Bag() {
         <Container className={styles.pageContainer}>
             <Row className={styles.pageTitle}>
                 <Col>
-                <h1>Your bag has these {`${bagState.bag.length}`} products:</h1>
+                    <h1>Your bag has these {`${bagState.bag.length}`} products:</h1>
                 </Col>
             </Row>
 
-            <Table striped bordered hover>
-                <thead>
-                    <tr>
-                        <th>Product Title</th>
-                        <th>Finishes Color</th>
-                        <th>Storage Size</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {bagState.bag.map((product) => (
-                    <tr key={product.id}>
-                        <td>{product.title}</td>
-                        <td>{product.finish}</td>
-                        <td>{product.storage}</td>
-                        <td>1</td>
-                        <td>{product.price}{product.countryValue}</td>
-                    </tr>
-                    ))}
-                </tbody>
-            </Table>
-            <Row className={styles.pageTitle}>
-                <Col>
-                    <h3>Total Cost: ${totalCost.toFixed(2)}</h3>
-                </Col>
-            </Row>
+            {
+                bagState.bag.length === 0 ?
+                <p>Your bag is empty.</p> : 
+                <>
+                <Table striped bordered hover> 
+                    <thead>
+                        <tr>
+                            <th>Product Title</th>
+                            <th>Finishes Color</th>
+                            <th>Storage Size</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {bagState.bag.map((product) => (
+                        <tr key={product.id}>
+                            <td>{product.title}</td>
+                            <td>{product.finish}</td>
+                            <td>{product.storage}</td>
+                            <td>1</td>
+                            <td>{product.price}{product.countryValue}</td>
+                        </tr>
+                        ))}
+                    </tbody>
+                </Table>
+                <Row className={styles.pageTitle}>
+                    <Col>
+                        <h3>Total Cost: ${totalCost.toFixed(2)}</h3>
+                    </Col>
+                </Row>
+                </>
+            }
         </Container>
   </LayoutWhite>
   )
