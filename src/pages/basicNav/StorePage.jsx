@@ -6,7 +6,7 @@ import StoreCard from "../../components/cards/StoreCard";
 import BasicEduStoreCard from "../../components/modal/BasicEduStoreCard";
 import SmallCard from "../../components/modal/SmallCard";
 import { useFetchData } from '../../utils/hooks/useFetch';
-import CarouselSwiper from '../../demo/CarouselSwiper';
+// import CarouselSwiper from '../../demo/CarouselSwiper';
 import styles from './../basicNav/StorePage.module.css';
 
 function Storepage(){
@@ -68,7 +68,7 @@ function Storepage(){
 
             </section>
 
-            <CarouselSwiper/>
+            {/* <CarouselSwiper/> */}
             <section className={styles.bestClassStore}>
                 <h2>Advanced tools for advanced studies.
                     <span> Choose from a best-in-class lineup.</span>
