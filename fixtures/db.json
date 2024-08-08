@@ -1215,6 +1215,70 @@
           }],
           "videoPath": "/videos/iPhone.mp4"
         }
+    },
+    {
+      "details": 
+        {
+          "id": 2,
+          "title": "Mac",
+          "productMotto": "If you can dream it, Mac can do it.",
+          "models": [{
+            "id": 1,
+            "modelName": "MacBook Air",
+            "image": "/images/productPages/mac/navSVG/macbookair_light__dfypt7o3xfgy_large.svg"
+          },
+          {
+            "id": 2,
+            "modelName": "MacBook Pro",
+            "image": "/images/productPages/mac/navSVG/macbook_pro_light__bvnmtmeikj1e_large.svg"
+          },
+          {
+            "id": 3,
+            "modelName": "iMac",
+            "image": "/images/productPages/mac/navSVG/imac_light__cx5ex9nbqxme_large.svg"
+          },
+          {
+            "id": 4,
+            "modelName": "Mac mini",
+            "image": "/images/productPages/mac/navSVG/mac_mini_light__e7ojhup2ezau_large.svg"
+          },
+          {
+            "id": 5,
+            "modelName": "Mac Studio",
+            "image": "/images/productPages/mac/navSVG/mac_studio_light__fcr3455qk0i2_large.svg"
+          },
+          {
+            "id": 6,
+            "modelName": "Mac Pro",
+            "image": "/images/productPages/mac/navSVG/mac_pro_light__bly2b0ua4seq_large.svg"
+          },
+          {
+            "id": 7,
+            "modelName": "Compare",
+            "image": "/images/productPages/mac/navSVG/mac_compare_light__capy8s4wrbhy_large.svg"
+          },
+          {
+            "id": 8,
+            "modelName": "Displays",
+            "image": "/images/productPages/mac/navSVG/displays_light__d67yrnk0qsa6_large.svg"
+          },
+          {
+            "id": 9,
+            "modelName": "Accessories",
+            "image": "/images/productPages/mac/navSVG/mac_accessories_light__esnwbnk4bxqq_large.svg"
+          },
+          {
+            "id": 10,
+            "modelName": "Sequoia",
+            "image": "/images/productPages/mac/navSVG/mac_os_light__6mb5pqhztcie_large.svg"
+          },
+          {
+            "id": 11,
+            "modelName": "Shop Mac",
+            "image": "/images/productPages/mac/navSVG/mac_shop_light__f0m72gc7jguq_large.svg"
+          }],
+          "videoPath": "/videos/Mac.mp4"
+        }
     }
   ],    
 
