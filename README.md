@@ -13,7 +13,7 @@ Backend:
 JSON Server (for mock API)
 Deployment: https://json-server-deployment-5til.onrender.com/
 
-Netlify: https://choose-apple-by-adelina-moroaca.netlify.app/
+Netlify: https://feel-the-apple-experience.netlify.app/
 
 # Getting Started with Create React App
 
