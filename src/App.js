@@ -13,7 +13,7 @@ import {WatchPage} from './pages/basicNav/WatchPage';
 import {AirPodsPage} from './pages/basicNav/AirPodsPage';
 import SupportPage from './pages/basicNav/SupportPage';
 import LoginForm from './pages/basicNav/LoginPage';
-// import Bag from './pages/shopping/Bag';
+import Bag from './pages/shopping/Bag';
 import AccessoriesPage from './pages/basicNav/AccessoriesPage';
 import {MacPage} from './pages/basicNav/MacPage';
 import {IpadPage} from './pages/basicNav/IpadPage';
