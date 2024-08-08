@@ -2,8 +2,8 @@ import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState, useContext } from "react";
-import { LayoutWhite } from '../components/Layout';
-import {AuthenticationContext} from '../store/Authentication/context';
+import { LayoutWhite } from '../../components/Layout';
+import {AuthenticationContext} from '../../store/Authentication/context';
 import styles from './LoginPage.module.css'
 
 function LoginPage() {

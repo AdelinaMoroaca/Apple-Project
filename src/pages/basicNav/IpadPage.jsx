@@ -1,6 +1,6 @@
 import React from 'react';
-import PresentationLargeCard from '../components/cards/PresentationLargeCard';
-import { LayoutWhite } from "../components/Layout";
+import PresentationLargeCard from '../../components/cards/PresentationLargeCard';
+import { LayoutWhite } from "../../components/Layout";
 import styles from './IpadPage.module.css';
 
 function IpadPage() {

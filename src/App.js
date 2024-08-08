@@ -7,28 +7,28 @@ import { FavoriteProvider } from './store/Favorites/context';
 import { BagProvider } from './store/Shopping/context';
 import { AuthenticationProvider } from './store/Authentication/context';
 //nav - main pages
-import Homepage from './pages/HomePage';
-import Storepage from './pages/StorePage';
-import {WatchPage} from './pages/WatchPage';
-import {AirPodsPage} from './pages/AirPodsPage';
-import SupportPage from './pages/SupportPage';
-import LoginForm from './pages/LoginPage';
-import Bag from './pages/Shopping/Bag';
-import AccessoriesPage from './pages/AccessoriesPage';
-import {MacPage} from './pages/MacPage';
-import {IpadPage} from './pages/IpadPage';
-import Visionpage from './pages/VisionPage';
-import {TvHomePage} from './pages/TvHomePage';
+import Homepage from './pages/basicNav/HomePage';
+import Storepage from './pages/basicNav/StorePage';
+import {WatchPage} from './pages/basicNav/WatchPage';
+import {AirPodsPage} from './pages/basicNav/AirPodsPage';
+import SupportPage from './pages/basicNav/SupportPage';
+import LoginForm from './pages/basicNav/LoginPage';
+import Bag from './pages/shopping/Bag';
+import AccessoriesPage from './pages/basicNav/AccessoriesPage';
+import {MacPage} from './pages/basicNav/MacPage';
+import {IpadPage} from './pages/basicNav/IpadPage';
+import Visionpage from './pages/basicNav/VisionPage';
+import {TvHomePage} from './pages/basicNav/TvHomePage';
 //service pages
 import AppleCard from  './pages/service/AppleCard';
 import Business from './pages/service/Business';
 import Intelligence from './pages/service/Intelligence';
 //product pages
-import EntertainmentPage from './pages/EntertainmentPage';
+import EntertainmentPage from './pages/basicNav/EntertainmentPage';
 import IpadProPage from './pages/product/IpadProPage';
 import AppleWatch9Page from './pages/product/AppleWatch9Page';
 //store pages
-import {IPhonePage} from './pages/IPhonePage';
+import {IPhonePage} from './pages/basicNav/IPhonePage';
 // import IphoneList from './components/IphoneList';
 // import { BuyProduct } from './pages/storePage/BuyProduct';
 import {BuyIphone} from './pages/store/BuyIphone';
@@ -40,9 +40,15 @@ import BuyAppleWatch9 from './pages/store/BuyAppleWatch9';
 import ApplyAppleCard from './pages/store/ApplyAppleCard'; 
 import AppleTradeIn from './pages/service/AppleTradeIn';
 //userPages
-import Favorites from './pages/user/Favourites';
+import Favorites from './pages/userNav/Favourites';
 //other pages
 import Page404 from './pages/Page404';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/a11y';
 
 
 
@@ -93,6 +99,8 @@ function App() {
           </BagProvider>   
         </FavoriteProvider>
       </AuthenticationProvider> 
+
+      
     </div>
   );
 }

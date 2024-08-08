@@ -1,12 +1,13 @@
 import React from "react";
 import {StoreProductList} from "./StoreProductList";
-import { LayoutWhite } from "../components/Layout";
+import { LayoutWhite } from "../../components/Layout";
 import {Container, Image, Col, Row, Spinner } from 'react-bootstrap';
-import StoreCard from "../components/cards/StoreCard";
-import BasicEduStoreCard from "../components/modal/BasicEduStoreCard";
-import SmallCard from "../components/modal/SmallCard";
-import { useFetchData } from '../utils/hooks/useFetch';
-import styles from "./../pages/StorePage.module.css";
+import StoreCard from "../../components/cards/StoreCard";
+import BasicEduStoreCard from "../../components/modal/BasicEduStoreCard";
+import SmallCard from "../../components/modal/SmallCard";
+import { useFetchData } from '../../utils/hooks/useFetch';
+import CarouselSwiper from '../../demo/CarouselSwiper';
+import styles from './../basicNav/StorePage.module.css';
 
 function Storepage(){
     // const [category, setproductCategory] = useState([]);
@@ -67,6 +68,7 @@ function Storepage(){
 
             </section>
 
+            <CarouselSwiper/>
             <section className={styles.bestClassStore}>
                 <h2>Advanced tools for advanced studies.
                     <span> Choose from a best-in-class lineup.</span>

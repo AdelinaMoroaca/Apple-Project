@@ -1,17 +1,17 @@
 import React from "react";
-import { LayoutBlack } from '../components/Layout';
+import { LayoutBlack } from '../../components/Layout';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ControlledCarousel from '../components/carousel/Carousel';
-import { LargeImageCard, LargeVideoCard } from "../components/cards/LargeCard";
-import { GridCard } from '../components/cards/GridCard'
-import { LearnMoreBtn } from '../components/buttons/learnMore/LearnMore';
-import { ShopBtn } from '../components/buttons/shop/ShopBtn';
-import { BuyBtn } from '../components/buttons/buy/BuyBtn';
-import { GetYourEstimateBtn } from '../components/buttons/estimation/GetYourEstimateBtn';
-import { ApplyNowBtn } from '../components/buttons/apply/ApplyNowBtn';
-import { WatchTheFilm } from '../components/buttons/seeMovie/WatchTheFilm';
+import ControlledCarousel from '../../components/carousel/Carousel';
+import { LargeImageCard, LargeVideoCard } from "../../components/cards/LargeCard";
+import { GridCard } from '../../components/cards/GridCard'
+import { LearnMoreBtn } from '../../components/buttons/learnMore/LearnMore';
+import { ShopBtn } from '../../components/buttons/shop/ShopBtn';
+import { BuyBtn } from '../../components/buttons/buy/BuyBtn';
+import { GetYourEstimateBtn } from '../../components/buttons/estimation/GetYourEstimateBtn';
+import { ApplyNowBtn } from '../../components/buttons/apply/ApplyNowBtn';
+import { WatchTheFilm } from '../../components/buttons/seeMovie/WatchTheFilm';
 import styles from './HomePage.module.css';
 
 function Homepage(){
@@ -158,8 +158,7 @@ function Homepage(){
                 </Row>
             </Container>
 
-            <ControlledCarousel/>     
-
+            <ControlledCarousel/>  
         </LayoutBlack>
     )
 }

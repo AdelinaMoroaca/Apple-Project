@@ -1,0 +1,28 @@
+/* CarouselSwiper.module.css */
+.swiperButtonNext, .swiperButtonPrev {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+.swiperButtonNext {
+  right: 10px;
+}
+/* 
+.swiper-pagination-bullet{
+  display: none;
+} */
+
+.swiperButtonPrev {
+  left: 10px;
+}
