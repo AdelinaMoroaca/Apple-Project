@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 // import {StoreProductList} from "./StoreProductList";
 import { LayoutWhite } from "../../components/Layout";
 import {Container, Image, Col, Row } from 'react-bootstrap';
@@ -12,6 +12,20 @@ import styles from './../basicNav/StorePage.module.css';
 
 
 function Storepage(){
+    const [userInteraction, setUserInteraction] = useState(false);
+
+    useEffect(() => {
+        // Clean up the effect if needed
+        return () => {
+            window.removeEventListener('resize', handleInteraction);
+        };
+    }, []);
+
+    const handleInteraction = () => {
+        if (window.innerWidth <= 1540) {
+            setUserInteraction(true);
+        }
+    };
     // const [category, setproductCategory] = useState([]);
 
     // function getAppleCategory() {
@@ -66,22 +80,30 @@ function Storepage(){
 
                         </Col>
                     </Row>
-
-                
                 </Container>
 
                 {/* INITIAL DESIGN */}
                 {/* {loading && <Spinner />} 
                 {data && <StoreProductList category={data} /> } */}
              
-
+           
 
             </section>
 
    
-            <CarouselSwiperList/>
-       
 
+            {/* <section className={styles.storeCarouselSwiperList}>
+                <CarouselSwiperList/>
+            <section/> */}
+
+            <section 
+                    className={`${styles.storeCarouselSwiperList} 
+                    ${userInteraction ? styles.noPadding : ''}`} 
+                    onClick={handleInteraction}
+                    onTouchStart={handleInteraction}
+            >
+                <CarouselSwiperList/>
+            </section>
 
             {/* <CarouselSwiper/> */}
             <section className={styles.bestClassStore}>
