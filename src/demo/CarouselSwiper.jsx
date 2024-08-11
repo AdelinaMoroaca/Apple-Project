@@ -1,55 +1,82 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/a11y';
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import StoreCard from "../components/cards/StoreCard";
 import { useFetchData } from '../utils/hooks/useFetch';
-import styles from './CarouselSwiper.module.css'; // Import your CSS module
+import styles from './CarouselSwiper.module.css';
 
 function CarouselSwiper() {
+  const [showSwiperBtn, setShowSwiperBtn] = useState(false);
+  const [swiperBtn, setSwiperBtnClick] = useState(false);
   const { data, loading } = useFetchData(
     "https://json-server-deployment-5til.onrender.com/category"
   );
 
-  if (loading) {return <div>Loading...</div>}
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div className="carousel-container" style={{
-      width: '100%',
-      maxWidth: '90vw',
-      margin: '0 auto',
-      paddingTop: '50px',
-      position: 'relative'
-    }}>
+    <div 
+      className={`${styles.swiper}
+      ${swiperBtn ? styles.displaySwiperClicked : styles.swiper}
+      `}
+      onMouseEnter={() => setShowSwiperBtn(true)}
+      onMouseLeave={() => setShowSwiperBtn(false)}
+    >
       <Swiper
-        spaceBetween={30}
-        slidesPerView={3}  // Adjusted to fit three cards per slide
+        spaceBetween={0}
+        slidesPerView={4.1}
         loop={true}
         navigation={{
           nextEl: `.${styles.swiperButtonNext}`,
           prevEl: `.${styles.swiperButtonPrev}`,
         }}
-        // pagination={{ clickable: true }}
+        pagination={{ clickable: true }}
         modules={[Navigation, Scrollbar, A11y]}
-        style={{
-          borderRadius: '10px',
-          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
-          position: 'relative'
-        }}
       >
         {data && data.map((item, index) => (
-          <SwiperSlide key={index} style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            background: '#fff',
-            borderRadius: '10px',
-            overflow: 'hidden'
-          }}>
+          <SwiperSlide  style={{display: 'flex'}}
+          key={index}
+          >
+              {/* <StoreCard 
+                            src='images/StorePage/education/store-card.JPG'
+                            giftValue='$150'
+                            title='MacBook Air'
+                            fullPrice='$899'
+                            monthlyPrice='$74.91/mo.'
+                        /> */}
+
+                        {/* <StoreCard
+                            src='images/StorePage/education/ipad-card.JPG'
+                            giftValue='$100'
+                            title='iPad Air'
+                            fullPrice='$549'
+                            monthlyPrice='$45.75/mo.'
+                        /> */}
+
+
+                        {/* <StoreCard
+                            src='images/StorePage/education/macbook-pro-card.JPG'
+                            giftValue='$150'
+                            title='MacBook Pro'
+                            fullPrice='$1499'
+                            monthlyPrice='$124.91/mo.'
+                        /> */}
+
+                    {/* <StoreCard
+                        src='images/StorePage/education/ipad-pro-card.JPG'
+                        giftValue='$100'
+                        title='iPad Pro'
+                        fullPrice='$899'
+                        monthlyPrice='$74.91/mo.'                         
+                    /> */}
+
             <StoreCard 
               key={index}
               src='images/StorePage/education/store-card.JPG'
@@ -58,14 +85,28 @@ function CarouselSwiper() {
               fullPrice='$899'
               monthlyPrice='$74.91/mo.'
             />
+
+            
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* Add the navigation buttons manually */}
-      {/* This will show for small screens only */}
-      {/* <div className={styles.swiperButtonPrev}>‹</div> */}
-      <div className={styles.swiperButtonNext}>›</div>
+      <div
+        className={`${styles.swiperButtonPrev} 
+        ${swiperBtn ? styles.visible : styles.hidden}`}
+
+      >
+        ‹
+      </div>
+      <div
+        onClick={() => setSwiperBtnClick(true)}
+        className={`
+          ${styles.swiperButtonNext} ${showSwiperBtn ? styles.visible : styles.hidden}
+    
+        `}
+      >
+        ›
+      </div>
     </div>
   );
 }

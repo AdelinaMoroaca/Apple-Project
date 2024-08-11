@@ -7,7 +7,8 @@
 
 .storeCardLayout{
     width: 25rem !important;
-    min-width: 19rem !important;
+    /* width: auto !important; */
+    min-width: 17rem !important;
     position: relative !important;
     overflow: hidden !important;
     padding: 0rem !important;
@@ -18,7 +19,7 @@
 
 .storeImg{
     height: 500px !important;
-    /* min-height: 17rem !important; */
+    min-height: 17rem !important;
     width: 400px !important;
     min-width: 19rem !important;
     object-fit: cover !important;
@@ -49,7 +50,7 @@
 
 .storeCardTitle{
     font-size: 1.8rem !important;
-    top: 3.4rem !important; /*  top: '55px', */
+    top: 3.4rem !important;
     text-align: left !important;
     padding: 0.4rem 0rem 0rem 0.6rem !important;
 }

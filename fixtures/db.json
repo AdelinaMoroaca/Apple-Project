@@ -1,8 +1,7 @@
 {
   "iphoneProducts": 
   [
-        {
-            "details": 
+  
             {
                 "id": 1,
                 "title": "iPhone 15 Pro",
@@ -27,8 +26,7 @@
                 "description": "6.1-inch Super Retina XDR display footnote ¹ featuring ProMotion, Always-On, and Dynamic Island.\nStrong and light titanium design with Action button — a fast track to your favorite feature",
                 "weight": "0.1kg",
                 "size": "150cm x 70cm"
-            }
-        },
+            },
         {
             "details": 
             {
@@ -1148,8 +1146,6 @@
   "categoryProducts": 
   [
     {
-      "details": 
-        {
           "id": 1,
           "title": "iPhone",
           "productMotto": "Designed to be loved.",
@@ -1214,7 +1210,6 @@
             "image": "/images/productPages/iPhone/navSVG/shop_iphone_light__b2toggskllle_large.svg"
           }],
           "videoPath": "/videos/iPhone.mp4"
-        }
     },
     {
       "details": 
@@ -1278,6 +1273,233 @@
             "image": "/images/productPages/mac/navSVG/mac_shop_light__f0m72gc7jguq_large.svg"
           }],
           "videoPath": "/videos/Mac.mp4"
+        }
+    },
+    {
+      "details": 
+        {
+          "id": 3,
+          "title": "iPad",
+          "productMotto": "Touch, draw, and type on one magical device.",
+          "models": [{
+            "id": 1,
+            "modelName": "iPad Pro",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 2,
+            "modelName": "iPad Air",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 3,
+            "modelName": "iPad",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 4,
+            "modelName": "iPad mini",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 5,
+            "modelName": "Compare",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 6,
+            "modelName": "Apple Pencil",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 7,
+            "modelName": "Keyboards",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 8,
+            "modelName": "Accessories",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 9,
+            "modelName": "iPadOS 18",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 10,
+            "modelName": "Shop iPad",
+            "image": "/images/productPages/iPad/navSVG/"
+          }],
+          "videoPath": "/videos/iPad.mp4"
+        }
+    },
+    {
+      "details": 
+        {
+          "id": 4,
+          "title": "Apple Watch",
+          "productMotto": "To wear it is to love it.",
+          "models": [{
+            "id": 1,
+            "modelName": "Apple Watch Series 9",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 2,
+            "modelName": "Apple Watch Ultra 2",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 3,
+            "modelName": "Apple Watch SE",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 4,
+            "modelName": "Apple Watch Nike",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 5,
+            "modelName": "Apple Watch Hermes",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 6,
+            "modelName": "Apple Watch Studio",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 7,
+            "modelName": "Compare",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 8,
+            "modelName": "Bands",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 9,
+            "modelName": "AirPods",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 10,
+            "modelName": "Accessories",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 11,
+            "modelName": "Apple Fitness+",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 12,
+            "modelName": "watchOS 11",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 13,
+            "modelName": "Shop Watch",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          }],
+          "videoPath": "/videos/watch.mp4"
+        }
+    },
+    {
+      "details": 
+        {
+          "id": 5,
+          "title": "Apple Vision Pro",
+          "productMotto": "Touch, draw, and type on one magical device.",
+          "models": [{
+            "id": 1,
+            "modelName": "iPad Pro",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 2,
+            "modelName": "iPad Air",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 3,
+            "modelName": "iPad",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 4,
+            "modelName": "iPad mini",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 5,
+            "modelName": "Compare",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 6,
+            "modelName": "Apple Pencil",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 7,
+            "modelName": "Keyboards",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 8,
+            "modelName": "Accessories",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 9,
+            "modelName": "iPadOS 18",
+            "image": "/images/productPages/iPad/navSVG/"
+          },
+          {
+            "id": 10,
+            "modelName": "Shop iPad",
+            "image": "/images/productPages/iPad/navSVG/"
+          }],
+          "videoPath": "/videos/iPad.mp4"
+        }
+    },
+    {
+      "details": 
+        {
+          "id": 6,
+          "title": "AirPods",
+          "productMotto": "To wear it is to love it. ~ AirPods",
+          "models": [{
+            "id": 1,
+            "modelName": "AirPods 2nd Generation",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 2,
+            "modelName": "AirPods 3rd Generation",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 3,
+            "modelName": "AirPods Pro 2nd Generation",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 4,
+            "modelName": "Compare",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          },
+          {
+            "id": 5,
+            "modelName": "Apple Music",
+            "image": "/images/productPages/appleWatch/navSVG/"
+          }],
+          "videoPath": "/videos/AirPods.mp4"
+
         }
     }
   ],    

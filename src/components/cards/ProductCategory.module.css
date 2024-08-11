@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+
+.figureCategory{
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    margin: 0rem 0.7rem 0rem 0rem;
+    cursor: pointer;
+}
+
+.figureLink{
+    text-decoration: none !important;
+    color: #1d1d1f !important;
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    letter-spacing: -.016em !important;
+}
+
+.figureLink:hover{
+    text-decoration: underline !important;
+}
+
+.roundedImage{
+    border-radius: 5px; 
+}
+
+span{
+    color: #6e6e73;
+}

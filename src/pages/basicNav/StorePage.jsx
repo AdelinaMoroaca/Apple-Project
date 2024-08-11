@@ -1,13 +1,15 @@
 import React from "react";
-import {StoreProductList} from "./StoreProductList";
+// import {StoreProductList} from "./StoreProductList";
 import { LayoutWhite } from "../../components/Layout";
-import {Container, Image, Col, Row, Spinner } from 'react-bootstrap';
+import {Container, Image, Col, Row } from 'react-bootstrap';
 import StoreCard from "../../components/cards/StoreCard";
 import BasicEduStoreCard from "../../components/modal/BasicEduStoreCard";
 import SmallCard from "../../components/modal/SmallCard";
-import { useFetchData } from '../../utils/hooks/useFetch';
+// import { useFetchData } from '../../utils/hooks/useFetch';
 // import CarouselSwiper from '../../demo/CarouselSwiper';
+import {CarouselSwiperList} from "../../components/carousel/CarouselSwiperList";
 import styles from './../basicNav/StorePage.module.css';
+
 
 function Storepage(){
     // const [category, setproductCategory] = useState([]);
@@ -25,9 +27,9 @@ function Storepage(){
     //     getAppleCategory();
     // },[]);
 
-    const { data, loading } = useFetchData(
-        "https://json-server-deployment-5til.onrender.com/category"
-    );
+    // const { data, loading } = useFetchData(
+    //     "https://json-server-deployment-5til.onrender.com/category"
+    // );
 
 
     return(
@@ -52,21 +54,34 @@ function Storepage(){
                             </h1>
                         </Col>
                         <Col xs={12} md={4} className={styles.rightIntro}>
-                            <h1 className={styles.classicText}>Section</h1>
+                            <div>
+                                <h6 className={styles.classicText}>Need shopping help?</h6>
+                                <h6 className={styles.classicText}>Ask a specialist</h6>
+                            </div>
+
+                            <div>
+                                <h6 className={styles.classicText}>Visit an Apple Store</h6>
+                                <h6 className={styles.classicText}>Find one near you</h6>
+                            </div>
+
                         </Col>
                     </Row>
 
                 
                 </Container>
 
-
-                {loading && <Spinner />} 
-
-                {data && <StoreProductList category={data} /> }
-                {/* <StoreProductList category={category} /> */}
+                {/* INITIAL DESIGN */}
+                {/* {loading && <Spinner />} 
+                {data && <StoreProductList category={data} /> } */}
+             
 
 
             </section>
+
+   
+            <CarouselSwiperList/>
+       
+
 
             {/* <CarouselSwiper/> */}
             <section className={styles.bestClassStore}>
@@ -77,7 +92,6 @@ function Storepage(){
                 <Container className={styles.bestClassContainer}>
                     <Row className={styles.bestClassRow}>
 
-                    {/* <Col xs={12} sm={6}> */}
                         <StoreCard 
                             src='images/StorePage/education/store-card.JPG'
                             giftValue='$150'
@@ -85,9 +99,7 @@ function Storepage(){
                             fullPrice='$899'
                             monthlyPrice='$74.91/mo.'
                         />
-                    {/* </Col>     */}
 
-                    {/* <Col xs={6} md={4}> */}
                         <StoreCard
                             src='images/StorePage/education/ipad-card.JPG'
                             giftValue='$100'
@@ -95,10 +107,8 @@ function Storepage(){
                             fullPrice='$549'
                             monthlyPrice='$45.75/mo.'
                         />
-                    {/* </Col>  */}
 
 
-                    {/* <Col xs={6} md={4}> */}
                         <StoreCard
                             src='images/StorePage/education/macbook-pro-card.JPG'
                             giftValue='$150'
@@ -106,9 +116,7 @@ function Storepage(){
                             fullPrice='$1499'
                             monthlyPrice='$124.91/mo.'
                         />
-                    {/* </Col>  */}
 
-                    {/* <Col xs={6} md={4}> */}
                     <StoreCard
                         src='images/StorePage/education/ipad-pro-card.JPG'
                         giftValue='$100'
@@ -116,7 +124,6 @@ function Storepage(){
                         fullPrice='$899'
                         monthlyPrice='$74.91/mo.'                         
                     />
-                    {/* </Col> */}
 
 
                     </Row>
