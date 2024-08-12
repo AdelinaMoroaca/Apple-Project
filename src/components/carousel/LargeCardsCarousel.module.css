@@ -1,0 +1,51 @@
+.swiper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  /* padding-top: 50px; */
+  border: 2px solid red; /* For debugging */
+  /* padding-left: 10rem; */
+}
+
+.displaySwiperClicked {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  /* padding-top: 50px; */
+  border: 2px solid red;
+  padding-left: 0rem;
+}
+
+.swiperButtonNext, .swiperButtonPrev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+  opacity: 0; 
+  background-color: rgba(0, 0, 0, 0.064); 
+  color: rgba(0, 0, 0, 0.865);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; 
+  cursor: pointer;
+}
+
+.swiperButtonNext {
+  right: 10px;
+}
+
+.swiperButtonPrev {
+  left: 10px;
+}
+
+.visible {
+  opacity: 1; 
+}
+
+.hidden {
+  opacity: 0;
+}
