@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import {StoreProductList} from "./StoreProductList";
 import { LayoutWhite } from "../../components/Layout";
 import {Container, Image, Col, Row } from 'react-bootstrap';
-import StoreCard from "../../components/cards/StoreCard";
+// import StoreCard from "../../components/cards/StoreCard";
 import BasicEduStoreCard from "../../components/modal/BasicEduStoreCard";
 import SmallCard from "../../components/modal/SmallCard";
 
