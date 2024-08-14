@@ -1,39 +1,44 @@
-*{
-    padding: 0px;
+ * {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
-.storeCardLayout{
-    width: 25rem !important;
-    /* width: auto !important; */
-    min-width: 17rem !important;
+.storeCardLayout {
+    width: 100% !important;
+    max-width: 100% !important;
     position: relative !important;
     overflow: hidden !important;
     padding: 0rem !important;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
     border-radius: 1.12rem !important;
     cursor: pointer !important;
+    margin: 0.5rem !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.storeImg{
-    height: 500px !important;
-    min-height: 17rem !important;
-    width: 400px !important;
-    min-width: 19rem !important;
+.storeCardLayout:hover{
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.365); 
+}
+
+.storeImg {
+    width: 100% !important;
+    height: auto !important; 
+    max-width: 100% !important;  
     object-fit: cover !important;
-    margin: 0px !important;
+    margin: 0 !important;
 }
 
-.giftCard, .storeCardTitle, .storeCardText{
-    position: absolute !important;
+.giftCard, .storeCardTitle, .storeCardText {
+    position: absolute;
     width: 90% !important;
-    left: 1.25rem !important;
     padding: 0.6rem !important;
+    left: 1.25rem !important;
 }
 
-.storeCardTitle, .storeCardText{
+.storeCardTitle, .storeCardText {
     text-align: left !important;
 }
 
@@ -44,24 +49,86 @@
     align-items: center !important;
 }
 
-.giftCard > h3{
+.giftCard > h3 {
     color: #b64400;
 }
 
-.storeCardTitle{
+.storeCardTitle {
     font-size: 1.8rem !important;
     top: 3.4rem !important;
     text-align: left !important;
-    padding: 0.4rem 0rem 0rem 0.6rem !important;
+    padding: 0.4rem 0 0 0.6rem !important;
 }
 
-.storeCardText{
+.storeCardText {
     top: 6rem !important;
     display: flex;
     flex-direction: column;
 }
 
 .storeCardText > p {
-    margin: 0rem !important;
+    margin: 0 !important;
     font-size: 1rem !important;
 }
+
+/* Responsive  */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+    .storeImg {
+        width: 100% !important; 
+        height: auto !important;
+        /* max-height: 28rem !important; */
+        max-width: 100% !important;  
+        object-fit: cover !important;
+        margin: 0 !important;    
+    }
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 480px) {
+    .storeImg {
+        width: 100% !important; 
+        height: auto !important; 
+        max-width: 100% !important;  
+        object-fit: cover !important;
+        margin: 0 !important;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 360px) {
+    .storeCardTitle {
+        font-size: 1.2rem !important;
+    }
+
+    .storeCardText > p {
+        font-size: 0.9rem !important;
+    }
+
+    .storeImg {
+        width: 100% !important;  
+        height: 26rem !important; 
+        max-width: 100% !important;  
+        object-fit: cover !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .storeCardTitle {
+        font-size: 1rem !important;
+    }
+
+    .storeCardText > p {
+        font-size: 0.8rem !important;
+    }
+
+    .storeImg {
+        width: 100% !important; 
+        height: 24rem !important; 
+        max-width: 16rem !important;  
+        object-fit: cover !important;
+        margin: 0 !important;
+    }
+}
+
+

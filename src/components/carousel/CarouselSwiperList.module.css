@@ -1,5 +1,6 @@
 .swiper {
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  max-width: 100%; /* Ensure it doesn't overflow the viewport */
+  overflow: hidden;
 }

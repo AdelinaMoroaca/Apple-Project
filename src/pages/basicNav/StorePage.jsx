@@ -6,10 +6,11 @@ import {Container, Image, Col, Row } from 'react-bootstrap';
 import StoreCard from "../../components/cards/StoreCard";
 import BasicEduStoreCard from "../../components/modal/BasicEduStoreCard";
 import SmallCard from "../../components/modal/SmallCard";
+
 // import { useFetchData } from '../../utils/hooks/useFetch';
 // import CarouselSwiper from '../../demo/CarouselSwiper';
 import LargeCardsCarousel from "../../components/carousel/LargeCardsCarousel";
-import {CarouselSwiperList} from "../../components/carousel/CarouselSwiperList";
+import { CarouselSwiperList } from "../../components/carousel/CarouselSwiperList";
 import styles from './StorePage.module.css';
 
 
@@ -64,11 +65,12 @@ function Storepage(){
                            
                         </Col>
                     </Row>
+                    
                     <Row className={`${styles.aboutIntro} mt-4`}>
                         <Col xs={12} md={6} lg={4} className={styles.leftIntro}>
                             <h1 className={styles.classicText}>
                                 <span className={styles.colourText}><b>Education Store.</b></span>
-                                <span className={styles.grayText}><b>The most powerful tools for learning.</b> </span>
+                                <span className={styles.grayText}><b>The most<wbr /> powerful tools for learning.</b></span>
                                
                             </h1>
                         </Col>
@@ -144,58 +146,20 @@ function Storepage(){
             </section>
    
             <section
-                className={`${styles.bestClassStore} 
-                ${userInteraction ? styles.noPadding : ''}`} 
-                onClick={handleInteraction}
-                onTouchStart={handleInteraction}
+                className={`${styles.bestClassStore}  `} 
+                // ${userInteraction ? styles.noPadding : ''}`} 
+                // onClick={handleInteraction}
+                // onTouchStart={handleInteraction}
             >
-                <h2>Advanced tools for advanced studies.
+                <h2 className={styles.aboutBestClassStore}>Advanced tools for advanced studies.
                     <span> Choose from a best-in-class lineup.</span>
                 </h2>
-                <LargeCardsCarousel/>
-                {/* <Container className={styles.bestClassContainer}>
-                    <Row className={styles.bestClassRow}>
 
-                        <StoreCard 
-                            src='images/StorePage/education/store-card.JPG'
-                            giftValue='$150'
-                            title='MacBook Air'
-                            fullPrice='$899'
-                            monthlyPrice='$74.91/mo.'
-                        />
-
-                        <StoreCard
-                            src='images/StorePage/education/ipad-card.JPG'
-                            giftValue='$100'
-                            title='iPad Air'
-                            fullPrice='$549'
-                            monthlyPrice='$45.75/mo.'
-                        />
-
-
-                        <StoreCard
-                            src='images/StorePage/education/macbook-pro-card.JPG'
-                            giftValue='$150'
-                            title='MacBook Pro'
-                            fullPrice='$1499'
-                            monthlyPrice='$124.91/mo.'
-                        />
-
-                    <StoreCard
-                        src='images/StorePage/education/ipad-pro-card.JPG'
-                        giftValue='$100'
-                        title='iPad Pro'
-                        fullPrice='$899'
-                        monthlyPrice='$74.91/mo.'                         
-                    />
-
-
-                    </Row>
-            
-
-                </Container> */}
+                <LargeCardsCarousel />
             </section>
 
+
+            
             <section className={styles.educationStore}>
                 <h2>
                     Max out your credits.
@@ -256,7 +220,7 @@ function Storepage(){
                 </Container>
             </section>
 
-            <section className={styles.bestClassStore}>
+            {/* <section className={styles.bestClassStore}>
                 <h2>Endless potential.
                     <span> Take teaching and learning further with Apple.</span>
                 </h2>
@@ -298,7 +262,7 @@ function Storepage(){
             
 
                 </Container>
-            </section>
+            </section> */}
 
         </LayoutWhite>
     )

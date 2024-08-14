@@ -13,16 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: #F5F5F7 !important; */
-    /* background: linear-gradient(180deg, #ffffff, #f8f8f8); */
-    /* background-blend-mode: overlay; */
-    /* padding: 1rem 0rem 3.9rem 0rem; */
     padding: 1.5rem 1rem 2rem 1rem !important;   
-    /* padding: 2rem 4rem 4rem 7.3rem; */
-    /* opacity: 0.1; */
-    /* background-image: linear-gradient(180deg, #F5F5F7 70%, #E6E6E6 80%) !important; */
-    /* background-image: linear-gradient(180deg, #F5F5F7 0%, #F5F6FA 70%) !important; */
-    /* background-image: linear-gradient(180deg, #F5F5F7 20%, #E6E6E6 95%) !important; */
 }
 
 .educationStoreImg {
@@ -31,74 +22,6 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 1440px) {
-    .educationStoreImg {
-        max-width: 30% !important; 
-    }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1440px){
-    .educationStoreImg {
-        max-width: 45% !important; 
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px){
-    .educationStoreImg {
-        max-width: 60% !important; /* Reduce size on larger screens */
-    }
-}
-
-@media screen and (min-width: 320px) and (max-width: 768px){
-    .educationStoreImg {
-        margin-top: 0.6rem !important;
-        max-width: 70% !important; /* Reduce size on larger screens */
-    }
-
-    .storeIntro{
-        padding-bottom: 1.2rem !important;
-    }
-
-    .aboutIntro{
-        padding: 0.8rem 0.8rem 0rem 0rem !important;
-    }
-
-    /* .storeCarouselSwiperList{
-        padding-left: 3rem !important;
-    } */
-
-    .leftIntro{
-        padding: 0rem !important;
-    }
-
-    .classicText{
-        display: flex !important;
-        flex-direction: column !important;
-        text-align: left !important;
-        /* padding: 0rem 0.2rem !important; */
-    }
-
-    .colourText, .grayText{
-        font-size: 26px !important;
-    }
-
-    .rightIntro{
-        display: none !important;
-    }
-}
-
-@media (max-width: 320px){
-    .storeIntro{
-        padding-bottom: 1rem !important;
-    }
-    .educationStoreImg {
-        max-width: 90% !important;
-    }
-
-    .aboutIntro{
-        padding: 0.2rem !important;
-    }
-}
 
 
 .aboutIntro {
@@ -138,6 +61,7 @@
 .rightIntro{
     gap: 1rem;
 }
+
 .textContainer{
     width: 10rem;
 }
@@ -157,31 +81,11 @@
     padding-left: 0;
 }
 
-
-
-
-
 /* Advanced tools store*/
 .bestClassStore{
     width: 100%;
     padding-left: 9rem;
 }
-
-
-/* .bestClassStore{ */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
-
-    /* padding: 5rem 4rem 4rem 7.3rem; */
-    /* padding: 2rem 0rem 4rem 7.3rem; */
-
-    /* background-color: rgba(48, 81, 213, 0.639); */
-    /* max-width: 95vw !important; */
-    /* width: 100% !important; */
-    /* margin: 0 !important; */
-/* } */
 
 .bestClassStore > h2{
     /* background-color: rgba(37, 78, 78, 0.057); */
@@ -253,93 +157,143 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .rightContainer .row {
-    margin-bottom: 24px;
-} */
-
-/* .rowContainer{
-    margin: 0px;
-}
-
-.firstRow{
-    margin-bottom: 0.5rem !important;
-}
-
-.secondRow{
-    margin-top: 0.5rem !important;
-    margin-bottom: 0rem !important;
-} */
-
-/* @media (min-width: 768px) {
-    .educationContainer {
-      flex-direction: row;
-      align-items: stretch;
-    }
-  
-    .leftContainer {
-      flex: 1;
-    }
-  
-    .rightContainer {
-      flex: 2;
-    }
-  
-    .firstRow,
-    .secondRow {
-      margin-bottom: 10px;
-    }
-}  */
-
-
 /* media */
+@media screen and (min-width: 1440px) {
+    .storeCarouselSwiperList {
+        padding-bottom: 4rem !important;
+    }
+
+    .educationStoreImg {
+        max-width: 30% !important; 
+    }
+
+    .colourText, .grayText{
+        text-wrap: nowrap !important;
+    }
+}
+
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
     .storeCarouselSwiperList {
-        padding-left: 10rem;
+        padding-left: 8.6rem;
+        padding-bottom: 3rem !important;
     }
 
     .noPadding {
         padding-left: 0;
     }
+
+    .educationStoreImg {
+        max-width: 45% !important; 
+    }
+
+    .colourText, .grayText{
+        text-wrap: nowrap !important;
+    }
+
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .storeCarouselSwiperList {
-        padding-left: 8rem;
+        padding-left: 6rem;
+        padding-bottom: 2rem !important;
     }
 
     .noPadding {
         padding-left: 0;
-    }      
+    }
+    
+    .educationStoreImg {
+        max-width: 60% !important;
+    }
+
+    .aboutIntro{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 5rem 2.5rem 1.4rem 2.5rem !important;
+    }
+
+
+    .shoppingHelp, .shoppingStore{
+        display: flex;
+        justify-content: flex-start !important;
+        padding: 0rem !important;
+        
+    }
+
+    .colourText, .grayText{
+        text-wrap: nowrap !important;
+        overflow: hidden;
+    }
+
+    .bestClassStore{
+        padding-left: 6rem;
+    }
 }
 
 
 @media screen and (min-width: 421px) and (max-width: 768px) {
     .storeCarouselSwiperList {
-        padding-left: 3rem;
+        padding-left: 2.4rem;
+        padding-bottom: 1.6rem !important;
     }
 
     .noPadding {
         padding-left: 0;
-    }    
+    } 
+    
+    .bestClassStore{
+        padding-left: 2.4rem;
+    }
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .educationStoreImg {
+        margin-top: 0.6rem !important;
+        max-width: 70% !important; /* Reduce size on larger screens */
+    }
+
+    .storeIntro{
+        padding-bottom: 1.2rem !important;
+    }
+
+    .aboutIntro{
+        padding: 0.8rem 0.8rem 0rem 0rem !important;
+    }
+
+    /* .storeCarouselSwiperList{
+        padding-left: 3rem !important;
+    } */
+
+    .leftIntro{
+        padding: 0rem !important;
+    }
+
+    .classicText{
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: left !important;
+        /* padding: 0rem 0.2rem !important; */
+    }
+
+    .colourText, .grayText{
+        font-size: 26px !important;
+    }
+
+    .rightIntro{
+        display: none !important;
+    }
+
+    .bestClassStore{
+        padding-left: 2.4rem;
+    }
+}
 
 @media screen and (min-width: 321px) and (max-width: 420px) {
     .storeCarouselSwiperList {
         padding-left: 2rem;
+        padding-bottom: 1rem !important;
     }
 
     .noPadding {
@@ -356,8 +310,84 @@
         padding-left: 2rem;
     }
     
+    .aboutBestClassStore{
+        display: flex;
+        flex-direction: column;
+    }
+
     .noPadding {
         padding-left: 0;
     }
+
+    .storeIntro{
+        padding-bottom: 1rem !important;
+    }
+    .educationStoreImg {
+        max-width: 90% !important;
+    }
+
+    .aboutIntro{
+        padding: 0.2rem !important;
+    }
 }
 
+/* @media screen and (min-width: 1440px) {
+    .educationStoreImg {
+        max-width: 30% !important; 
+    }
+
+    .colourText, .grayText{
+        text-wrap: nowrap !important;
+    }
+} */
+
+/* @media screen and (min-width: 1024px) and (max-width: 1440px){
+    .educationStoreImg {
+        max-width: 45% !important; 
+    }
+
+    .colourText, .grayText{
+        text-wrap: nowrap !important;
+    }
+} */
+
+/* @media screen and (min-width: 768px) and (max-width: 1024px){
+    .educationStoreImg {
+        max-width: 60% !important;
+    }
+
+    .aboutIntro{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 5rem 2.5rem 1.4rem 2.5rem !important;
+    }
+
+
+    .shoppingHelp, .shoppingStore{
+        display: flex;
+        justify-content: flex-start !important;
+        padding: 0rem !important;
+        
+    }
+
+    .colourText, .grayText{
+        text-wrap: nowrap !important;
+        overflow: hidden;
+    }
+} */
+
+
+
+/* @media (max-width: 320px){
+    .storeIntro{
+        padding-bottom: 1rem !important;
+    }
+    .educationStoreImg {
+        max-width: 90% !important;
+    }
+
+    .aboutIntro{
+        padding: 0.2rem !important;
+    }
+} */

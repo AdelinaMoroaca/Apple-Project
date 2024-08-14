@@ -1,51 +1,49 @@
-.swiper {
+.carouselContainer {
   position: relative;
   width: 100%;
-  margin: 0 auto;
-  /* padding-top: 50px; */
-  border: 2px solid red; /* For debugging */
-  /* padding-left: 10rem; */
+  max-width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
 }
 
-.displaySwiperClicked {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  /* padding-top: 50px; */
-  border: 2px solid red;
-  padding-left: 0rem;
-}
 
-.swiperButtonNext, .swiperButtonPrev {
+.swiperButtonPrev,
+.swiperButtonNext {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  transition: opacity 0.3s ease;
-  opacity: 0; 
-  background-color: rgba(0, 0, 0, 0.064); 
-  color: rgba(0, 0, 0, 0.865);
-  width: 3.5rem;
-  height: 3.5rem;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   border-radius: 50%;
+  width: 35px;
+  height: 35px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 10; 
+  align-items: center;
   cursor: pointer;
-}
-
-.swiperButtonNext {
-  right: 10px;
 }
 
 .swiperButtonPrev {
   left: 10px;
 }
 
-.visible {
-  opacity: 1; 
+.swiperButtonNext {
+  right: 10px;
 }
 
-.hidden {
-  opacity: 0;
+@media (max-width: 768px) {
+  .swiperButtonPrev,
+  .swiperButtonNext {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiperButtonPrev,
+  .swiperButtonNext {
+    width: 25px;
+    height: 25px;
+  }
 }

@@ -35,6 +35,14 @@ function CarouselSwiperList() {
                       slidesPerView: 2.6,
                       spaceBetween: 10
                   },
+                  360: {
+                    slidesPerView: 3.6,
+                    spaceBetween: 10
+                  },
+                  400: {
+                    slidesPerView: 4.2,
+                    spaceBetween: 10
+                  },
                   480: {
                       slidesPerView: 5.3,
                       spaceBetween: 18
