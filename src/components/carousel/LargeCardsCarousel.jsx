@@ -8,58 +8,60 @@ import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import StoreCard from "../cards/StoreCard";
 import styles from './LargeCardsCarousel.module.css';
 
-function LargeCardsCarousel() {
-  const staticCards = [
-    {
-      src: 'images/StorePage/education/store-card.JPG',
-      giftValue: '$150',
-      title: 'MacBook Air',
-      fullPrice: '$899',
-      monthlyPrice: '$74.91/mo.',
-    },
-    {
-      src: 'images/StorePage/education/ipad-card.JPG',
-      giftValue: '$100',
-      title: 'iPad Air',
-      fullPrice: '$549',
-      monthlyPrice: '$45.75/mo.',
-    },
-    {
-      src: 'images/StorePage/education/macbook-pro-card.JPG',
-      giftValue: '$150',
-      title: 'MacBook Pro',
-      fullPrice: '$1499',
-      monthlyPrice: '$124.91/mo.',
-    },
-    {
-      src: 'images/StorePage/education/ipad-pro-card.JPG',
-      giftValue: '$100',
-      title: 'iPad Pro',
-      fullPrice: '$899',
-      monthlyPrice: '$74.91/mo.',
-    },
-    {
-      src: 'images/StorePage/education/imac-card.JPG',
-      giftValue: '$150',
-      title: 'iMac',
-      fullPrice: '$1249',
-      monthlyPrice: '$104.08/mo.',
-    },
-    {
-      src: 'images/StorePage/education/mac-mini-card.JPG',
-      giftValue: '$100',
-      title: 'Mac mini',
-      fullPrice: '$499',
-      monthlyPrice: '$41.58/mo.',
-    },
-  ];
+function LargeCardsCarousel({ cards = [], slidesPerView, spaceBetween }) {
+  // const staticCards = [
+  //   {
+  //     src: 'images/StorePage/education/store-card.JPG',
+  //     giftValue: '$150',
+  //     title: 'MacBook Air',
+  //     fullPrice: '$899',
+  //     monthlyPrice: '$74.91/mo.',
+  //   },
+  //   {
+  //     src: 'images/StorePage/education/ipad-card.JPG',
+  //     giftValue: '$100',
+  //     title: 'iPad Air',
+  //     fullPrice: '$549',
+  //     monthlyPrice: '$45.75/mo.',
+  //   },
+  //   {
+  //     src: 'images/StorePage/education/macbook-pro-card.JPG',
+  //     giftValue: '$150',
+  //     title: 'MacBook Pro',
+  //     fullPrice: '$1499',
+  //     monthlyPrice: '$124.91/mo.',
+  //   },
+  //   {
+  //     src: 'images/StorePage/education/ipad-pro-card.JPG',
+  //     giftValue: '$100',
+  //     title: 'iPad Pro',
+  //     fullPrice: '$899',
+  //     monthlyPrice: '$74.91/mo.',
+  //   },
+  //   {
+  //     src: 'images/StorePage/education/imac-card.JPG',
+  //     giftValue: '$150',
+  //     title: 'iMac',
+  //     fullPrice: '$1249',
+  //     monthlyPrice: '$104.08/mo.',
+  //   },
+  //   {
+  //     src: 'images/StorePage/education/mac-mini-card.JPG',
+  //     giftValue: '$100',
+  //     title: 'Mac mini',
+  //     fullPrice: '$499',
+  //     monthlyPrice: '$41.58/mo.',
+  //   },
+  // ];
 
   return (
     <div className={styles.carouselContainer}>
       <Swiper
         modules={[Navigation, Scrollbar, A11y]}
-        spaceBetween={10}
-        slidesPerView={1.2}
+        // spaceBetween={10}
+        // slidesPerView={1.2}
+        spaceBetween={spaceBetween}
+        slidesPerView={slidesPerView}
         navigation={{
           nextEl: `.${styles.swiperButtonNext}`,
           prevEl: `.${styles.swiperButtonPrev}`,
@@ -111,7 +113,7 @@ function LargeCardsCarousel() {
           swiper.navigation.update();
         }}
       >
-        {staticCards.map((card, index) => (
+        {cards.map((card, index) => (
           <SwiperSlide key={index}>
             <StoreCard 
               src={card.src}

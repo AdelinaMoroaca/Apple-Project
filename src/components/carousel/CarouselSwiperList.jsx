@@ -12,7 +12,7 @@ import styles from './CarouselSwiperList.module.css';
 
 function CarouselSwiperList() {
   const { data, loading } = useFetchData(
-      "https://json-server-deployment-5til.onrender.com/category"
+      'https://json-server-deployment-5til.onrender.com/storeCategory'
   );
 
   if (loading) {

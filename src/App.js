@@ -32,6 +32,7 @@ import {IPhonePage} from './pages/basicNav/IPhonePage';
 // import IphoneList from './components/IphoneList';
 // import { BuyProduct } from './pages/storePage/BuyProduct';
 import {BuyIphone} from './pages/store/BuyIphone';
+import {BuyMac} from './pages/store/BuyMac';
 import BuyIpad from './pages/store/BuyIpad';
 import BuyWatch from './pages/store/BuyWatch';
 import BuyAppleVisionPro from './pages/store/BuyAppleVisionPro';
@@ -91,6 +92,8 @@ function App() {
               <Route path='/tv-home/' element={<TvHomePage/>}/>
 
               <Route path='/shop/buy-vision/apple-vision-pro/' element={<BuyAppleVisionPro/>}/>
+              
+              <Route path='/shop/buy-mac/' element={<BuyMac />} />
               <Route path='/shop/buy-iphone/' element={<BuyIphone />} />
               <Route path='/favorites/' element={<Favorites />} />
               <Route path='/bag/' element={<Bag />} />

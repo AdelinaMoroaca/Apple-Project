@@ -105,7 +105,7 @@ function BuyIphone(){
                 alignItems: 'center',
                 padding: '3rem'
                 }}>
-                    <h1 style={{paddingBottom: '2rem'}}><b>Choose your iPhone</b></h1>
+                    <h1 style={{paddingBottom: '2rem'}}><b>Shop iPhone for Education</b></h1>
                     {loading && <Spinner />}
                      <Container>
                         <Row>
