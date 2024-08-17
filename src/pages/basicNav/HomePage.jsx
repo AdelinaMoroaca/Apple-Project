@@ -9,9 +9,6 @@ import { GridCard } from '../../components/cards/GridCard'
 import { LearnMoreBtn } from '../../components/buttons/learnMore/LearnMore';
 import { ShopBtn } from '../../components/buttons/shop/ShopBtn';
 import { BuyBtn } from '../../components/buttons/buy/BuyBtn';
-import { GetYourEstimateBtn } from '../../components/buttons/estimation/GetYourEstimateBtn';
-import { ApplyNowBtn } from '../../components/buttons/apply/ApplyNowBtn';
-import { WatchTheFilm } from '../../components/buttons/seeMovie/WatchTheFilm';
 import styles from './HomePage.module.css';
 
 function Homepage(){
@@ -63,15 +60,19 @@ function Homepage(){
                             title='Out of Office'
                             firstText='Apple at Work works from anywhere'
                             
-                            leftBtn={<LearnMoreBtn 
-                                className={styles.WhiteBtnGrid}
-                                path='/business/'/>}
-
-                            rightBtn={<WatchTheFilm 
-                                className={styles.TransparentBtnGrid}
-                                titleMovie = 'The Underdogs: OOO (Out Of Office) | Apple at Work'
-                                src="https://www.youtube.com/embed/SbYckRAt5os" />}
-                            whiteText={true}    
+                            leftBtn={{ 
+                                variantType:'light',
+                                navigatePath:'/business/', 
+                                text: 'Learn More' 
+                            }}
+                            
+                            modalBtn={{ 
+                                variantType: 'outline-light',
+                                text: 'Watch the Film',
+                                src: "https://www.youtube.com/embed/asKvPLmjxXY?si=lbazm4Z58Hrz_Z-l",
+                                titleMovie: "The Underdogs: OOO (Out Of Office) | Apple at Work", 
+                            }} 
+                            whiteText={true} 
                         />
                     </Col>
 
@@ -79,16 +80,21 @@ function Homepage(){
                         <GridCard
                         src='images/HomePage/gridImg/appleIntelligence.JPG'
                         title='Apple Intelligence'
-                        firstText='AI for the rest of us.'
-                        secondText='Coming in beta this fall'
-                        text2='Coming in beta this fall'
-                        leftBtn={<LearnMoreBtn 
-                            className={styles.BlueBtnGrid}
-                            path='/apple-intelligence/'/>}
-                        rightBtn={<WatchTheFilm 
-                            className={styles.BlueTransparentBtnGrid}
-                            titleMovie = 'Apple Intelligence in 5 minutes'
-                            src="https://www.youtube.com/embed/Q_EYoV1kZWk?start=31"/>}
+                        firstText='AI for the rest of us. Coming in beta this fall'
+
+                        leftBtn={{ 
+                            variantType: 'primary',
+                            navigatePath: "/apple-intelligence/", 
+                            text: 'Learn More' 
+                        }}
+                        
+                        modalBtn={{ 
+                            variantType: 'outline-primary',
+                            navigatePath: '/apple-card/signin/', 
+                            text: 'Watch the Film' ,
+                            titleMovie: 'Apple Intelligence in 5 minutes', 
+                            src:'https://www.youtube.com/embed/Q_EYoV1kZWk?si=A14MGZjC4IwEIYW1'
+                        }} 
                         />
                     </Col>
                 </Row>
@@ -99,12 +105,18 @@ function Homepage(){
                         src='images/HomePage/gridImg/iPadPRO.JPG'
                         title='iPad Pro'
                         firstText='Unbelievably thin. Incredibly powerful.'
-                        leftBtn={<LearnMoreBtn
-                            className={styles.BlueBtnGrid}
-                            path='/ipad-pro/' />}
-                        rightBtn={<BuyBtn 
-                            className={styles.BlueTransparentBtnGrid}
-                            path='/shop/buy-ipad/ipad-pro/'/>}
+
+                        leftBtn={{ 
+                            variantType: 'primary',
+                            navigatePath: "/ipad-pro/", 
+                            text: 'Learn More' 
+                        }}
+                        
+                        rightBtn={{ 
+                            variantType: 'outline-primary',
+                            navigatePath: "/shop/buy-ipad/ipad-pro/", 
+                            text: 'Buy' 
+                        }}
                         whiteText={true} 
                         />
                         
@@ -113,14 +125,19 @@ function Homepage(){
                     <Col xs={12} md={6}>
                         <GridCard
                         src='images/HomePage/gridImg/watch.JPG'
-                        title='Apple WATCH'
+                        title='WATCH'
                         firstText='Smarter. Brighter. Mightier'
-                        leftBtn={<LearnMoreBtn 
-                            className={styles.BlueBtnGrid}
-                            path='/apple-watch-series-9/'/>}
-                        rightBtn={<BuyBtn 
-                            className={styles.BlueTransparentBtnGrid}
-                            path='/shop/buy-watch/apple-watch'/>}
+                        leftBtn={{ 
+                            variantType: 'primary',
+                            navigatePath: "/apple-watch-series-9/", 
+                            text: 'Learn More' 
+                        }}
+                        
+                        rightBtn={{ 
+                            variantType: 'outline-primary',
+                            navigatePath: "/shop/buy-watch/apple-watch/", 
+                            text: 'Buy' 
+                        }}
                         whiteText={true} 
                         />
                     </Col>
@@ -130,29 +147,38 @@ function Homepage(){
                     <Col xs={12} md={6}>
                         <GridCard 
                         className={styles.tradeInCard}
+                        logo={true}
                         src='images/HomePage/gridImg/card.JPG'
-                        title='Apple CARD'
-                        firstText='Get up to 3% Daily Cash back' 
+                        title='Card'
+                        firstText='Get up to 3% Daily Cash back'
                         secondText='with every purchase.'
-        
-                        leftBtn={<LearnMoreBtn 
-                            className={styles.BlueBtnGrid}
-                            path='/apple-card/' />}
-                        rightBtn={<ApplyNowBtn 
-                            className={styles.BlueTransparentBtnGrid} 
-                            path='/apple-card/signin/' />}
+                        leftBtn={{ 
+                            variantType: 'primary',
+                            navigatePath: "/apple-card/", 
+                            text: 'Learn More' 
+                        }}
+                        
+                        rightBtn={{ 
+                            variantType: 'outline-primary',
+                            navigatePath: "/apple-card/signin/", 
+                            text: 'Apply Now' 
+                        }}
+                        extraPadding={true}
                         />
                     </Col>
 
                     <Col xs={12} md={6}>
-                        <GridCard className={styles.tradeInCard} id='tradeInCard'
+                        <GridCard className={styles.tradeInCard}
                         src='images/HomePage/gridImg/tradeIn.JPG'
-                        title='Apple Trade In'
-                        firstText='Get $170-$620 in credit when you'
-                        secondText=' trade in iPhone 11 or higher.'
-                        leftBtn={<GetYourEstimateBtn 
-                            className={styles.BlueBtnGrid}
-                            path='/shop/trade-in'/>}
+                        title='Trade In'
+                        logo={true}
+                        firstText='Get $170-$620 in credit when'
+                        secondText='you trade in iPhone 11 or higher.'
+                        leftBtn={{ 
+                            navigatePath: '/shop/trade-in', 
+                            text: 'Get your estimate' 
+                        }}
+                        extraPadding={true}
                         />
                     </Col>
                 </Row>

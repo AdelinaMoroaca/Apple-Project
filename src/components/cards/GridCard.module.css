@@ -1,9 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 .cardContainer {
     position: relative;
     border: none !important;
@@ -15,10 +9,18 @@
     overflow: hidden;
 }
   
-.backgroundImage, .backgroundVideo {
-    width: 100%;
-    object-fit: contain;
-    display: block;
+.backgroundImage{
+    width: 100% !important;
+    height: auto !important;
+}
+
+.titleIcon{
+    width: 4% !important;
+    height: auto !important;
+    margin-right: 1px; 
+    padding-bottom: 0.5rem;
+    /* height: 2rem; */
+    /* width: 2rem; */
 }
 
 .cardBody {
@@ -27,126 +29,226 @@
     left: 0;
     top: 0;
     width: 100%;
-    
-    background: rgba(0, 0, 0, 0.09);
-    padding-top: 2.6rem !important;
     box-sizing: border-box;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content:flex-start !important;
 }
   
 .cardTitle > h3 > b{
-    font-size: 2.8rem !important;
+    margin-bottom: 0rem !important;
+    font-size: 2.4rem !important;
     font-weight: 600 !important;
     letter-spacing: -0.096px !important;
 }
-  
-.cardText > p, .firstText > p, .secondText > p{
+
+.cardTitle > h3 {
+    padding-top: clamp(1rem, calc(1rem + (1.6rem - 1rem) * ((100vw - 1440px) / (2000px - 1440px))), 1.6rem);
+    margin-top: 0.4rem !important;
+    margin-bottom: 0rem !important;
+}
+
+p{
+    margin-bottom: 0.2rem !important;
+}
+
+.firstText, .secondText{
     font-size: 1.4rem !important;
     font-weight: 400 !important;
     letter-spacing: 0.2px !important;
-    margin-top: 0.3 !important;
+    /* line-height: 0.9;  */
 }
-  
+
+.firstText{
+    line-height: 1; 
+    margin-bottom:  0.2px !important;
+}
+
+
+.secondText{
+    margin: -25px !important;
+}
+
 .btnContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.6rem !important;
-    padding-top: 1rem !important;
+    padding-top: 0rem !important;
+    margin-top: clamp(0.6rem, calc(0.6rem + (1rem - 0.6rem) * ((100vw - 1440px) / (2000px - 1440px))), 1rem) !important;
 }
 
 .whiteText .cardTitle,
-.whiteText .firstText{
+.whiteText .firstText,
+.whiteText .secondText{
   color: white !important;
 }
 
-.firstText p {
-    margin-bottom: -1.2rem !important;
+
+.extraPadding p {
+    line-height: 1.1; 
 }
 
-.secondText p {
-    margin-bottom: 0.2rem !important;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1030px){
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+    .cardBody{
+        padding: 2rem 1rem !important;
+    }
     .cardContainer{
-        height: 31rem !important;
+        height: 30rem !important;
+        max-height: 34rem !important;
     }
 
     .backgroundImage{
-        height: 31rem !important;
         object-fit: cover !important;
+        height: 100% !important;
     }
 
-    .cardBody {
-        padding: 2.6rem 1.5rem 1rem 1.5rem !important;
-    }
-  
-    .cardTitle > h3{
-      font-size: 2rem !important;
-    }
-  
-    h3, p, .firstText{
-        margin-bottom: 0rem !important; 
-    }
-  
-    .secondText {
-        margin-bottom: 0.6rem !important; 
-    }
-  
-}
-
-@media screen and (min-width: 321px) and (max-width: 768px) {
-    .cardContainer{
-        height: 31rem !important;
-    }
-
-    .backgroundImage{
-        height: 31rem !important;
-        object-fit: cover !important;
-    }
-
-    .cardBody {
-        padding: 1.6rem 1.5rem 1rem 1.5rem !important;
-    }
-  
     .cardTitle > h3 > b{
-      font-size: 1.8rem !important;
+        font-weight: 400 !important;
+        font-size: 2rem !important;
     }
-  
-    .firstText > p, .secondText > p{
-        font-size: 1.2rem !important;
-    }
-  
-    .firstText p{
-        margin-bottom: -0.8rem !important;
-    }
-  
-}
-
-@media (max-width: 320px) {
-    .cardContainer{
-        height: 31rem !important;
-    }
-
-    .backgroundImage{
-        height: 31rem !important;
-        object-fit: cover !important;
-    }
-
-    .cardBody {
-        padding: 1.6rem 1.5rem 1rem 1.5rem !important;
-    }
-  
-    .cardTitle, .cardText{
+    
+    .cardTitle > h3, .cardTitle {
         margin-bottom: 0rem !important;
     }
 
-    .cardTitle > h3 > b{
-      font-size: 1.4rem !important;
+    .firstText{
+        margin-bottom: 0.8rem !important;
+        font-size: 1.2rem !important;     
+        line-height: 0.9; 
+        padding: 0rem clamp(1.6rem, calc(1.6rem + 0.0333vw * (100vw - 361px)), 5.6rem) !important;
     }
-  
-    .secondText > p, .firstText > p{
-        font-size: 1rem !important;
+
+    .btnContainer{
+        padding-top: 0rem !important;
     }
-  
+
+    .extraPadding{
+        padding: 0rem !important;
+        padding: 0rem clamp(0.2rem, calc(0.2rem + (2.5rem - 0.2rem) * ((100vw - 361px) / (480px - 361px))), 2.5rem) !important;
+    }
 }
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .cardBody{
+        padding: 1rem !important;
+        margin-top: 1.1rem !important;
+    }
+    .cardContainer{
+        height: 30rem !important;
+        max-height: 34rem !important;
+    }
+
+    .backgroundImage{
+        object-fit: cover !important;
+        height: 100% !important;
+    }
+
+    .cardTitle > h3 > b{
+        font-weight: 400 !important;
+        font-size: 2rem !important;
+    }
+    
+    .cardTitle > h3, .cardTitle {
+        margin-bottom: 0rem !important;
+    }
+
+    .firstText{
+        margin-bottom: 0rem !important;
+        font-size: 1.2rem !important;     
+        line-height: 0.9; 
+        padding: 0rem clamp(1.6rem, calc(1.6rem + 0.0333vw * (100vw - 361px)), 5.6rem) !important;
+    }
+
+    .btnContainer{
+        margin-top: 0.6rem !important;
+    }
+
+    .extraPadding{
+        padding: 0rem !important;
+        padding: 0rem clamp(0.2rem, calc(0.2rem + (2.5rem - 0.2rem) * ((100vw - 361px) / (480px - 361px))), 2.5rem) !important;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 768px) {
+    .cardBody{
+        padding: 1rem !important;
+        margin-top: 1.2rem !important;
+    }
+
+    .cardContainer{
+        height: 32rem !important;
+    }
+
+    .backgroundImage{
+        object-fit: cover !important;
+        height: 100% !important;
+    }
+
+    .cardTitle > h3 > b{
+        font-weight: 400 !important;
+        font-size: clamp(2rem, calc(2rem + (2rem - 2.2rem) * ((100vw - 360px) / (768px - 360px))), 2.2rem) !important;
+    }
+    
+    .cardTitle > h3, .cardTitle {
+        margin-bottom: 0rem !important;
+    }
+
+    .firstText{
+        margin-bottom: 0rem !important;
+        font-size: clamp(1.2rem, calc(1.2rem + (1.4rem - 1.2rem) * ((100vw - 360px) / (768px - 360px))), 1.4rem) !important;
+        line-height: 0.9; 
+        padding: 0rem 1.8rem 0rem 1.8rem !important;
+    }
+
+    .btnContainer{
+        margin-top: 0.4rem !important;
+    }
+
+    .extraPadding{
+        padding: 0rem !important;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    .cardBody{
+        padding: 1rem !important;
+        margin-top: 1.3rem !important;
+    }
+    .cardContainer{
+        height: 30rem !important;
+    }
+
+    .backgroundImage{
+        object-fit: cover !important;
+        height: 100% !important;
+    }
+
+    .cardTitle > h3 > b{
+        font-weight: 400 !important;
+        font-size: 2rem !important;
+    }
+    
+    .cardTitle > h3, .cardTitle{
+        margin-bottom: 0rem !important;
+    }
+
+    .firstText{
+        margin-bottom: 0rem !important;
+        font-size: 1.2rem !important;     
+        line-height: 0.9; 
+        padding: 0rem 1.4rem 0rem 1.4rem !important;
+    }
+
+    .btnContainer{
+        margin-top: 0.4rem !important;
+    }
+
+    .extraPadding{
+        padding: 0rem 0rem !important;
+    } 
+}
+
