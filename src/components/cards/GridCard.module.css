@@ -19,8 +19,6 @@
     height: auto !important;
     margin-right: 1px; 
     padding-bottom: 0.5rem;
-    /* height: 2rem; */
-    /* width: 2rem; */
 }
 
 .cardBody {
@@ -44,7 +42,8 @@
 }
 
 .cardTitle > h3 {
-    padding-top: clamp(1rem, calc(1rem + (1.6rem - 1rem) * ((100vw - 1440px) / (2000px - 1440px))), 1.6rem);
+    /* padding-top: clamp(1rem, calc(1rem + (1.6rem - 1rem) * ((100vw - 1440px) / (2000px - 1440px))), 1.6rem); */
+    padding-top: clamp(0rem, 0.4rem, 0.8rem);
     margin-top: 0.4rem !important;
     margin-bottom: 0rem !important;
 }
@@ -76,7 +75,9 @@ p{
     align-items: center;
     gap: 0.6rem !important;
     padding-top: 0rem !important;
-    margin-top: clamp(0.6rem, calc(0.6rem + (1rem - 0.6rem) * ((100vw - 1440px) / (2000px - 1440px))), 1rem) !important;
+    margin-top: clamp(0.1rem, 0.3rem, 0.5rem) !important;
+
+    /* margin-top: clamp(0.6rem, calc(0.6rem + (1rem - 0.6rem) * ((100vw - 1440px) / (2000px - 1440px))), 1rem) !important; */
 }
 
 .whiteText .cardTitle,
@@ -92,8 +93,9 @@ p{
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
     .cardBody{
-        padding: 2rem 1rem !important;
+        padding: 0.8rem 1rem 1rem 1rem !important;
     }
+
     .cardContainer{
         height: 30rem !important;
         max-height: 34rem !important;
@@ -114,7 +116,7 @@ p{
     }
 
     .firstText{
-        margin-bottom: 0.8rem !important;
+        margin-bottom: 0.4rem !important;
         font-size: 1.2rem !important;     
         line-height: 0.9; 
         padding: 0rem clamp(1.6rem, calc(1.6rem + 0.0333vw * (100vw - 361px)), 5.6rem) !important;
@@ -126,7 +128,15 @@ p{
 
     .extraPadding{
         padding: 0rem !important;
-        padding: 0rem clamp(0.2rem, calc(0.2rem + (2.5rem - 0.2rem) * ((100vw - 361px) / (480px - 361px))), 2.5rem) !important;
+        /* padding: 0rem clamp(0.2rem, calc(0.2rem + (2.5rem - 0.2rem) * ((100vw - 361px) / (480px - 361px))), 2.5rem) !important; */
+        padding: 0rem clamp(0.2rem, 1.35rem, 2.5rem) !important;
+    }
+
+    .titleIcon{
+        width: 3.8% !important;
+        height: auto !important;
+        margin-right: 3px; 
+        padding-bottom: 0.6rem;
     }
 }
 
@@ -134,8 +144,8 @@ p{
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .cardBody{
-        padding: 1rem !important;
-        margin-top: 1.1rem !important;
+        padding: 0.4rem 1rem 0.8rem 1rem !important;
+        margin-top: 0.4rem !important;
     }
     .cardContainer{
         height: 30rem !important;
@@ -169,14 +179,22 @@ p{
 
     .extraPadding{
         padding: 0rem !important;
-        padding: 0rem clamp(0.2rem, calc(0.2rem + (2.5rem - 0.2rem) * ((100vw - 361px) / (480px - 361px))), 2.5rem) !important;
+        /* padding: 0rem clamp(0.2rem, calc(0.2rem + (2.5rem - 0.2rem) * ((100vw - 361px) / (480px - 361px))), 2.5rem) !important; */
+        padding: 0rem clamp(0.2rem, 1.35rem, 2.5rem) !important;
+    }
+
+    .titleIcon{
+        width: 5.8% !important;
+        height: auto !important;
+        margin-right: 4px; 
+        padding-bottom: 0.6rem;
     }
 }
 
 @media screen and (min-width: 360px) and (max-width: 768px) {
     .cardBody{
-        padding: 1rem !important;
-        margin-top: 1.2rem !important;
+        padding: 0.4rem 1rem 0.8rem 1rem !important;
+        margin-top: 0.4rem !important;
     }
 
     .cardContainer{
@@ -190,7 +208,8 @@ p{
 
     .cardTitle > h3 > b{
         font-weight: 400 !important;
-        font-size: clamp(2rem, calc(2rem + (2rem - 2.2rem) * ((100vw - 360px) / (768px - 360px))), 2.2rem) !important;
+        /* font-size: clamp(2rem, calc(2rem + (2rem - 2.2rem) * ((100vw - 360px) / (768px - 360px))), 2.2rem) !important; */
+        font-size: clamp(2rem, calc(2rem + 0.2rem * ((100vw - 360px) / 408)), 2.2rem) !important;
     }
     
     .cardTitle > h3, .cardTitle {
@@ -199,7 +218,8 @@ p{
 
     .firstText{
         margin-bottom: 0rem !important;
-        font-size: clamp(1.2rem, calc(1.2rem + (1.4rem - 1.2rem) * ((100vw - 360px) / (768px - 360px))), 1.4rem) !important;
+        /* font-size: clamp(1.2rem, calc(1.2rem + (1.4rem - 1.2rem) * ((100vw - 360px) / (768px - 360px))), 1.4rem) !important; */
+        font-size: clamp(1.2rem, calc(1.2rem + 0.2rem * ((100vw - 360px) / 408)), 1.4rem) !important;
         line-height: 0.9; 
         padding: 0rem 1.8rem 0rem 1.8rem !important;
     }
@@ -211,12 +231,19 @@ p{
     .extraPadding{
         padding: 0rem !important;
     }
+
+    .titleIcon{
+        width: 6% !important;
+        height: auto !important;
+        margin-right: 4px; 
+        padding-bottom: 0.6rem;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 359px) {
     .cardBody{
-        padding: 1rem !important;
-        margin-top: 1.3rem !important;
+        padding: 0.6rem 1rem 0.8rem 1rem !important;
+        margin-top: 0.2rem !important;
     }
     .cardContainer{
         height: 30rem !important;
@@ -250,5 +277,12 @@ p{
     .extraPadding{
         padding: 0rem 0rem !important;
     } 
+
+    .titleIcon{
+        width: 6% !important;
+        height: auto !important;
+        margin-right: 2px; 
+        padding-bottom: 0.4rem;
+    }
 }
 
