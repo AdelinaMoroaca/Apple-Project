@@ -1,6 +1,12 @@
 .swiper {
-  position: relative;
+  position: relative !important;
   width: 100%;
-  max-width: 100%; /* Ensure it doesn't overflow the viewport */
+  max-width: 100%;
   overflow: hidden;
+  z-index: 1 !important;
+}
+
+.swiperButtonNext,
+.swiperButtonPrev {
+  z-index: 10 !important;
 }

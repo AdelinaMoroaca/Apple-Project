@@ -50,8 +50,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/a11y';
-
-
+import './App.css';
+import './index.css';
 
 function App() {
   return (
@@ -65,7 +65,7 @@ function App() {
               <Route path='/shop/buy-ipad/' element={<BuyIpad/>}/>
               <Route path='/shop/buy-ipad/ipad-pro/' element={<BuyIpadPro/>}/>
             
-              <Route path='/shop/buy-Apple-Watch/' element={<BuyWatch/>}/>  {/* /shop/buy-watch/ not working as expected */}
+              <Route path='/shop/buy-Apple-Watch/' element={<BuyWatch/>}/>  {/* /shop/buy-watch/ is not defined already */}
               <Route path='/shop/buy-watch/apple-watch/' element={<BuyAppleWatch9/>}/>
               <Route path='/shop/accessories/all/' element={<AccessoriesPage/>}/>
               <Route path='/iPhone/' element={<IPhonePage/>}/>

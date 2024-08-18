@@ -6,15 +6,19 @@ import styles from './Btn.module.css';
 function Btn(props) {
   const { variantType, navigatePath, btnText, className } = props;
   const navigate = useNavigate();
-  
+
+  function handleOnClick(){
+    navigate(navigatePath);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Button
-    //  xs={12} md={6}
-    variant={variantType}
-    // id={id}
-    className={`${styles.Btn}  ${className}`}
-    onClick={() => navigate(navigatePath)}
-    >{btnText}</Button>
+      variant={variantType}
+      className={`${styles.Btn}  ${className}`}
+      onClick={handleOnClick}
+      >{btnText}
+    </Button>
   );
 }
 

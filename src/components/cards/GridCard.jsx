@@ -17,20 +17,15 @@ function GridCard(props) {
             <Card.Body className={styles.cardBody}>
 
                 <Card.Title className={styles.cardTitle}>
-
-                    <h3><b>               
-                       {/* <span> */}
-               {logo && (<Image 
-
-                  src="images/AppleLogoBlack.png" 
-                  alt="Icon" 
-                  logo={logo}
-                  className={`img-fluid ${styles.titleIcon}`} 
-                  
-                  />)
-               }
-                {title}</b>
-                </h3>
+                    <h3><b>              
+                    {logo && (<Image 
+                    src="images/AppleLogoBlack.png" 
+                    alt="Icon" 
+                    logo={logo}
+                    className={`img-fluid ${styles.titleIcon}`} 
+                  />)}
+                  {title}</b>
+                  </h3>
                 </Card.Title>
                 
                 <Card.Text className={`${styles.text}`}>

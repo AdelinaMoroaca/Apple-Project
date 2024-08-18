@@ -8,9 +8,7 @@ function TvHomePage() {
         <LayoutWhite>
             <section className={styles.introSection}>
                 <PresentationLargeCard 
-                    selectedId={'97'} 
-                    firstAboutText='The future hits home.'
-                    secondAboutText='On the big screen.'
+                    selectedId={7} 
                 />
             </section>
         </LayoutWhite>

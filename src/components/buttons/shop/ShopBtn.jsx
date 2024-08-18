@@ -6,14 +6,17 @@ function ShopBtn(props) {
   const { path, product, className, id } = props;
   const navigate = useNavigate();
 
+  function handleOnClick(){
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
-   
       <Button variant="primary"
       id={id}
       className={`${styles.shopBtn} ${className}`}
-      onClick={() => navigate(path)}
+      onClick={handleOnClick}
       >Shop {product}</Button>
-
   );
 }
 

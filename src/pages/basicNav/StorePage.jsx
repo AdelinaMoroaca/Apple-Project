@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 // import {StoreProductList} from "./StoreProductList";
-import { LayoutWhite } from "../../components/Layout";
+import { LayoutWhite } from '../../components/Layout';
 import {Container, Image, Col, Row } from 'react-bootstrap';
 // import StoreCard from "../../components/cards/StoreCard";
 import BasicEduStoreCard from "../../components/modal/BasicEduStoreCard";
@@ -26,6 +26,7 @@ function Storepage(){
     }, []);
 
     const handleInteraction = () => {
+   
         if (window.innerWidth <= 1540) {
             setUserInteraction(true);
         }
@@ -181,6 +182,7 @@ function Storepage(){
 
 
             <section 
+                style={{ zIndex: 1, marginTop: '20px', position: 'relative' }}
                 className={`${styles.storeCarouselSwiperList} 
                 ${userInteraction ? styles.noPadding : ''}`} 
                 onClick={handleInteraction}

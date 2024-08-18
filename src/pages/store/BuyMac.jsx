@@ -20,7 +20,7 @@ function BuyMac() {
     const [loadingStorage, setLoadingStorage] = useState(false);
 
     const { data, loading } = useFetchData(
-        "https://json-server-deployment-5til.onrender.com/MacStoreProducts"
+        "https://json-server-deployment-5til.onrender.com/products"
     );
 
     useEffect(() => {

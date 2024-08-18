@@ -5,7 +5,7 @@ import { NavList } from './../../components/product-list/NavList';
 import styles from './IpadPage.module.css';
 
 function IpadPage() {
-    const categoryProductsId = 2;  // iPad category ID
+    const categoryProductsId = 2;
 
     return (
         <LayoutWhite>
@@ -14,9 +14,7 @@ function IpadPage() {
             </section>
             <section className={styles.introSection}>
                 <PresentationLargeCard 
-                    selectedId={'92'} 
-                    firstAboutText='Touch, draw, and type'
-                    secondAboutText='on one magical device.'
+                    selectedId={2} 
                 />
             </section>
         </LayoutWhite>

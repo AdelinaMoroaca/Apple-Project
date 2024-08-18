@@ -3,7 +3,7 @@ import { Col, Row, Container, Spinner, Figure } from 'react-bootstrap';
 import { useFetchData } from '../../utils/hooks/useFetch';
 
 function NavList({ categoryProductsId }) {
-    const apiUrl = `https://json-server-deployment-5til.onrender.com/models?categoryProductsId=${categoryProductsId}`;
+    const apiUrl = `https://json-server-deployment-5til.onrender.com/nav?categoryProductsId=${categoryProductsId}`;
     const { data: models, loading, error } = useFetchData(apiUrl);
 
     if (loading) return <Spinner animation="border" />;

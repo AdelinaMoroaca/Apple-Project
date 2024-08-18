@@ -201,7 +201,7 @@ function BuyIphone(){
                                                                             onChange={() => handleOptionChange(product.id, 'storage', `${size}${index < product.storageType.length ? product.storageType[index] : 'GB'}`)}
                                                                             className={styles.optionInput}
                                                                         />
-                                                                        {size}{index < product.storageType.length ? product.storageType[index] : 'GB'}
+                                                                        {size}
                                                                     </label>
                                                                 </div>
 

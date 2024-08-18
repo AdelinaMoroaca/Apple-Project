@@ -14,8 +14,7 @@ function IPhonePage() {
             </section>
             <section className={styles.introSection}>
                 <PresentationLargeCard 
-                    selectedId={'93'} 
-                    firstAboutText='Designed to be loved.'
+                    selectedId={3} 
                 />
             </section>
         </LayoutWhite>

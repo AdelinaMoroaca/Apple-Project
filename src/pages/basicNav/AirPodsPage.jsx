@@ -8,9 +8,7 @@ function AirPodsPage() {
         <LayoutWhite>
             <section className={styles.introSection}>
                 <PresentationLargeCard 
-                    selectedId={'95'} 
-                    firstAboutText='A magical connection'
-                    secondAboutText='to your devices.'
+                    selectedId={5} 
                 />
             </section>
         </LayoutWhite>

@@ -8,8 +8,7 @@ function WatchPage() {
         <LayoutWhite>
             <section className={styles.introSection}>
                 <PresentationLargeCard 
-                    selectedId={'94'} 
-                    firstAboutText='To wear it is to love it.'
+                    selectedId={4} 
                 />
             </section>
         </LayoutWhite>
