@@ -1,0 +1,10 @@
+.cardPresentation{
+    background-color: bisque;
+    width: 100%;
+}
+
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
