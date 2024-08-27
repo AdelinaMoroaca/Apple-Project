@@ -5,10 +5,9 @@ import { IntroStorePage } from './IntroStorePage';
 // import styles from './BuyMac.module.css'; 
 
 function BuyMac() {
-
     return (
         <LayoutWhite>
-            <section style={{marginTop: '2rem'}}>
+            <section style={{marginTop: '3rem'}}>
                 <IntroStorePage selectedId={1}/> 
             </section>
             <section style={{marginTop: '2rem'}}>

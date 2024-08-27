@@ -1,6 +1,11 @@
+.introContainer{
+    width: 100vw !important;
+    background-color: transparent !important;
+}
+
 .cardPresentation{
-    background-color: bisque;
-    width: 100%;
+    background-color: transparent !important;
+    border: 0 !important;
 }
 
 .cardInfo{

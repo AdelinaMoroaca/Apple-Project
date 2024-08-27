@@ -1,0 +1,18 @@
+.containerProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
+}
+
+.title{
+    text-align: left;
+}
+
+.card {
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%; 
+    height: auto;
+}
+

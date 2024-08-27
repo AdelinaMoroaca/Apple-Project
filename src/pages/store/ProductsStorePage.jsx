@@ -1,6 +1,8 @@
 import React from "react";
 import { Col, Row, Container, Spinner, Figure, Card } from 'react-bootstrap';
 import { useFetchData } from '../../utils/hooks/useFetch';
+import styles from './ProductsStorePage.module.css'; 
+
 
 function ProductsStorePage({ categoryProductsId }) {
     const apiUrl = `https://json-server-deployment-5til.onrender.com/products?categoryProductsId=${categoryProductsId}`;
@@ -10,23 +12,24 @@ function ProductsStorePage({ categoryProductsId }) {
     if (error) return <p>Error loading models. Please try again later.</p>;
 
     return (
-        <Container>
-             <h3>All models. <span>Take your pick.</span></h3>
+        <Container className={styles.containerProduct}>
+            <h3 className={styles.title}>All models. <span>Take your pick.</span></h3>
             {products && products.length > 0 ? (
                 <Row>
                     {products.map(product => (
                         <Col xs={12} sm={6} md={6} lg={6} className="mb-4" key={product.id}>
-                            <Card>
-                                <Card.Body>
+                            <Card className={styles.card}>
+                                <Card.Body className={styles.cardBody}>
                                     <Figure>
                                         <Figure.Image
+                                            className={styles.figureImage}
                                             width={171}
                                             height={180}
                                             alt="171x180"
                                             src={product.imagePath}
                                         />
                                         <Figure.Caption>
-                                            {product.productsClass}
+                                            <h4 style={{color: 'black'}} ><b>{product.productsClass}</b></h4>
                                         </Figure.Caption>
                                     </Figure>
                                 </Card.Body>

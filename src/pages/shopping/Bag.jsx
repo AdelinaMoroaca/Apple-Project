@@ -7,11 +7,9 @@ import styles from "./Bag.module.css";
 
 function Bag() {
   const { bagState } = useContext(BagContext); 
-//   const [selectedOptions, setSelectedOptions] = useState({});
 
   let totalCost = 0;
   bagState.bag.forEach(product => {
-    // const selected = selectedOptions[product.id] || {};
     const quantity = 1; 
     totalCost += product.price * quantity;
   });

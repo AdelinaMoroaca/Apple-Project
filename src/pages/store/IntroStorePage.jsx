@@ -23,9 +23,7 @@ function IntroStorePage({selectedId}) {
     : data;
 
     return(
-        <Container 
-        style={{width: '100vw'}}
-        >
+        <Container className={styles.introContainer}>
                 {filteredData.length === 0 ? (
                     <p>No matching data</p>
                 ) : (

@@ -68,8 +68,19 @@ function LoginPage() {
                             <Button variant="primary" type="submit">
                                 Submit
                             </Button>
+              
                         </Form>
+
+                        <div className={styles.infoUser}>
+                        <h5>
+                            <b>Demo user : adelina@gmail.com</b> 
+                        </h5>
+                        <h5>
+                            <b>Demo pass : 1234</b> 
+                        </h5>
+                    </div>
                     </Container>
+
                 </section>
 
             </LayoutWhite>

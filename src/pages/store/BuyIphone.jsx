@@ -19,16 +19,6 @@ function BuyIphone(){
         "https://json-server-deployment-5til.onrender.com/iPhone"
     );
 
-    // const [products, setProducts] = React.useState([]);
-    // useEffect(() => {
-    //     fetch('https://json-server-deployment-5til.onrender.com/iPhone')
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             setProducts(data);
-    //         })
-    //         .catch(error => console.error('Error fetching data:', error));
-    // }, []);
-
     const handleAddToBag = (product) => {
         const selected = selectedOptions[product.id] || {};
 
@@ -52,17 +42,6 @@ function BuyIphone(){
 
     const handleAddToFavorites = (product) =>{
         const selected = selectedOptions[product.id] || {};
-
-        // if (!selected.finish || !selected.storage) {
-        //     alert('Please select both finish and storage options before adding to cart.');
-        //     return;
-        // }
-
-        // favoriteDispatch(addToBag({
-        //     ...product,
-        //     finish: selected.finish,
-        //     storage: selected.storage,
-        // }));
 
         favoriteDispatch(addToFavorite(product));
         console.log(`Added to Favorite ${product.title} with  ${product.price},  ${selected.finish} finish and ${selected.storage} storage to cart`);    

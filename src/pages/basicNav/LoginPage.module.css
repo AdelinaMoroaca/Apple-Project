@@ -19,6 +19,14 @@
 
 .formContainer{
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.infoUser{
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
