@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { BagContext } from "../../store/Shopping/context";
+import React, { useContext } from 'react';
+import { BagContext } from '../../store/Shopping/context';
 import { LayoutWhite } from '../../components/Layout';
-import { Table, Container, Row, Col } from "react-bootstrap";
-import styles from "./Bag.module.css";
+import { Table, Container, Row, Col } from 'react-bootstrap';
+import styles from './Bag.module.css';
 
 
 function Bag() {
@@ -42,7 +42,7 @@ function Bag() {
                         <tr key={product.id}>
                             <td>{product.title}</td>
                             <td>{product.finish}</td>
-                            <td>{product.storage}</td>
+                            <td>{product.storageSize}</td>
                             <td>1</td>
                             <td>{product.price}{product.countryValue}</td>
                         </tr>

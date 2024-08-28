@@ -7,6 +7,7 @@ import { BagContext } from '../../store/Shopping/context';
 import { FavoriteContext } from '../../store/Favorites/context';
 import {Container, Card, Carousel, Button, Col, Row, Spinner } from 'react-bootstrap';
 import RadioFinishesColorBtn from '../../components/buttons/radio/RadioFinishesColorBtn';
+import RadioStorageSizeBtn from '../../components/buttons/radio/RadioStorageSizeBtn';
 import styles from './BuyIphone.module.css'; 
 
 
@@ -21,19 +22,20 @@ function BuyIphone(){
 
     const handleAddToBag = (product) => {
         const selected = selectedOptions[product.id] || {};
-
-        if (!selected.finish || !selected.storage) {
+    
+        if (!selected.finish || !selected.storageSize) {
             alert('Please select both finish and storage options before adding to cart.');
             return;
         }
-
+    
         bagDispatch(addToBag({
             ...product,
             finish: selected.finish,
-            storage: selected.storage,
+            storageSize: selected.storageSize,
         }));
-
-        console.log(`Added ${product.title} with  ${product.price},  ${selected.finish} finish and ${selected.storage} storage to cart`);    
+        alert(
+            `Added ${product.title} with ${product.price}$, ${selected.finish} finish and ${selected.storageSize} storage to cart`
+        )
     };
 
     useEffect(() => {
@@ -44,7 +46,7 @@ function BuyIphone(){
         const selected = selectedOptions[product.id] || {};
 
         favoriteDispatch(addToFavorite(product));
-        console.log(`Added to Favorite ${product.title} with  ${product.price},  ${selected.finish} finish and ${selected.storage} storage to cart`);    
+        alert(`Added to Favorite ${product.title} with  ${product.price}$,  ${selected.finish} finish and ${selected.storage} storage; Please login to see your favorites`);    
 
     }
 
@@ -167,17 +169,15 @@ function BuyIphone(){
 
                                                         <div style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap' }}>
                                                             {product.storageSize.map((size, index) => (
-                                                                    <label key={index} className={styles.optionLabel}>
-                                                                        <input
-                                                                            type="radio"
-                                                                            name={`storage-${product.id}`}
-                                                                            value={`${size}${index < product.storageType.length ? product.storageType[index] : 'GB'}`}
-                                                                            checked={selectedOptions[product.id]?.storage === `${size}${index < product.storageType.length ? product.storageType[index] : 'GB'}`}
-                                                                            onChange={() => handleOptionChange(product.id, 'storage', `${size}${index < product.storageType.length ? product.storageType[index] : 'GB'}`)}
-                                                                            className={styles.optionInput}
-                                                                        />
-                                                                        {size}
-                                                                    </label>
+                                                                <RadioStorageSizeBtn
+                                                                    key={index}
+                                                                    label={size}
+                                                                    name={`storage-${product.id}`}
+                                                                    value={size}
+                                                                    checked={selectedOptions[product.id]?.storageSize === size}
+                                                                    onChange={() => handleOptionChange(product.id, 'storageSize', size                                                                    )}
+                                                                    className={styles.optionLabel}
+                                                                />
                                                             ))}
                                                         </div>
                                                     </Card.Text>
