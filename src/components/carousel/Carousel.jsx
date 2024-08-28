@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import ExampleCarouselImage from './CarouselImage'; // Adjust the import path as needed
+import ExampleCarouselImage from './CarouselImage';
 
 function ControlledCarousel() {
   const [index, setIndex] = useState(0);
@@ -52,8 +52,8 @@ function ControlledCarousel() {
           imageSrc="images/HomePage/Carusel/iPhone16.JPG" 
         />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <h3>Taste the Apple experience</h3>
+          <p>Not just a company,it's a lifestyle.</p>
         </Carousel.Caption>
       </Carousel.Item>
 
