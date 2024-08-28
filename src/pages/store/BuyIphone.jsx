@@ -93,10 +93,10 @@ function BuyIphone(){
                                 <Col xs={12} sm={6} className="mb-4" key={product.id}>
                                     <Card className={styles.buyCard}
                                         style={{ width: '100%', 
-                                        borderRadius: '1rem', 
-                                        boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-                                        padding: '1rem',
-                                        height: '100%'
+                                                borderRadius: '1rem', 
+                                                boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+                                                padding: '1rem',
+                                                height: '100%'
                                         }} >
                
                                         <Card.Body>                                      
@@ -146,9 +146,7 @@ function BuyIphone(){
 
                                                         <div style={{display: 'flex', gap: '0.3rem', flexWrap: 'wrap', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start'}}>
                                                             {product.finishesColor.map((color, index) => (
-                                                                <div style={{borderRadius: '0.8rem',border : '1px solid black', padding: '0.2rem 0.3rem', cursor: 'pointer'}}>
                                                                     <RadioFinishesColorBtn
-                                                                        // className={styles.RadioFinishesColorBtn}
                                                                         className={styles.optionLabel}
                                                                         key={index}
                                                                         label={color}
@@ -157,7 +155,6 @@ function BuyIphone(){
                                                                         checked={selectedOptions[product.id]?.finish === color}
                                                                         onChange={() => handleOptionChange(product.id, 'finish', color)}
                                                                     />
-                                                                </div>
                                                         
                                                             ))}
                                                         </div>
@@ -170,7 +167,6 @@ function BuyIphone(){
 
                                                         <div style={{display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap' }}>
                                                             {product.storageSize.map((size, index) => (
-                                                                <div style={{ borderRadius: '0.8rem', border : '1px solid black', padding: '0.2rem 0.3rem', cursor: 'pointer'}}>
                                                                     <label key={index} className={styles.optionLabel}>
                                                                         <input
                                                                             type="radio"
@@ -182,8 +178,6 @@ function BuyIphone(){
                                                                         />
                                                                         {size}
                                                                     </label>
-                                                                </div>
-
                                                             ))}
                                                         </div>
                                                     </Card.Text>

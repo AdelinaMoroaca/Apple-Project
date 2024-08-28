@@ -1,19 +1,19 @@
 import React from 'react';
-import './RadioFinishesColorBtn.module.css';
+import styles from './RadioFinishesColorBtn.module.css';
 
 function RadioFinishesColorBtn(props) {
   const { label, name, value, checked, onChange } = props;
   return (
-    <label className="test-radio">
+    <label className={styles.radioLabel}>
       <input
         type="radio"
         name={name}
         value={value}
         checked={checked}
         onChange={onChange}
-        className="test-radio-input"
+        className={styles.radioInput}
       />
-      <span className="test-radio-checkmark"></span>
+      <span className={styles.radioCheckmark}></span>
       {label}
     </label>
   );

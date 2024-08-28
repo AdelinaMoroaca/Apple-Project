@@ -49,6 +49,15 @@
   
 .optionLabel{
     cursor: pointer !important;
+    border-radius: 0.8rem !important;
+    border: 1px solid black;
+    padding: 0.2rem 0.3rem;
+}
+
+.optionLabel:hover{
+    border: 1px solid rgb(0, 89, 255);
+    background-color: rgb(13, 110, 253) !important;
+    color: white;
 }
 
 /* @media screen and (min-width: 321px) and (max-width: 768px) {
