@@ -1,12 +1,64 @@
-.swiper {
-    position: relative !important;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    z-index: 1 !important;
-  }
+.swiperContainer {
+    width: 90vw !important;
+}
   
-  .swiperButtonNext,
-  .swiperButtonPrev {
-    z-index: 10 !important;
-  }
+.swiper {
+    width: 100%;
+    max-width: 1300px;
+}
+  
+.swiperSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.figureStyle {
+    cursor: pointer;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.figureImg {
+    max-width: 100%;
+    height: 4rem !important;
+}
+  
+.figureCaption {
+    font-size: 0.8rem !important;
+    text-align: center;
+    margin-top: 0.4rem !important;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.744) !important;
+}
+  
+.swiperButtonPrev,
+.swiperButtonNext {
+  position: absolute;
+  top: 75%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: rgba(0, 0, 0);
+  background-color: #f4f4f4 !important;
+  cursor: pointer;
+  font-size: 0rem;
+  height: 100%;
+  width: 2.6rem;
+  border: none !important;
+}
+
+.swiperButtonPrev {
+    display: none;
+    padding-right: 1rem;
+    left: -1px;
+    border-right: 1px solid black !important;
+}
+
+.swiperButtonNext {
+    padding-left: 1rem;
+    right: -1px;
+    border-left: 1px solid black !important;
+}

@@ -50,7 +50,6 @@
     fill:rgba(255, 255, 255, 0.765) !important;
 }
 
-/* for color light nav */
 .cartLightSvg,.signInLightSvg, .favouritesSvg{
     fill:rgba(0, 0, 0, 0.562) !important;
 }
@@ -61,7 +60,6 @@
     fill:rgba(0, 0, 0, 0.65) !important;
 }
   
-  /* Define styles for the list */
 .listDefaultBackground {
     background-color: black !important;
 }
