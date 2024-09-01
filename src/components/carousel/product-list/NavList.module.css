@@ -1,5 +1,5 @@
 .swiperContainer {
-    width: 90vw !important;
+    width: 70vw !important;
 }
   
 .swiper {
@@ -11,28 +11,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-  
-.figureStyle {
-    cursor: pointer;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-  
-.figureImg {
-    max-width: 100%;
-    height: 4rem !important;
-}
-  
-.figureCaption {
-    font-size: 0.8rem !important;
-    text-align: center;
-    margin-top: 0.4rem !important;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.744) !important;
 }
   
 .swiperButtonPrev,

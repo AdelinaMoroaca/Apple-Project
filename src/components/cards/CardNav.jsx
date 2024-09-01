@@ -1,30 +1,28 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import Figure from 'react-bootstrap/Figure';
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
+import styles from './CardNav.module.css';
 
-// import styles from './StoreProductList.module.css';
+function CardNav({ selectedProductCategory }) {
+    if (!selectedProductCategory) {
+        return null;
+    }
 
-function CardNav({selectedProductCategory}){
-    const { id, image, modelName } = selectedProductCategory;
-
-    // const handleCategory = (category) => {
-    //     console.log(`Added ${category.title} `);
-
-    // }
+    const { onClick, className, imgClassName, captionClassName, image, alt, caption } = selectedProductCategory;
 
     return (
-
-        <Figure key={id}>
-            <img src={image} alt={modelName} width={30} height={40} />
-            <Figure.Caption>{modelName}</Figure.Caption>
-                  {/* <Link className={styles.figureLink} 
-        //         onClick={()=> handleCategory(category)} 
-        //         to={`/shop/buy-${category.title}/`}>
-        //         {category.title}
-        //         </Link> */}
+        <Figure
+            onClick={onClick}
+            className={`${styles.figureContainer} ${className}`}
+        >
+            <img
+                src={image}
+                alt={alt}
+                className={`${styles.figureImg} ${imgClassName}`}
+            />
+            
+            <Figure.Caption className={`${styles.figureCaption} ${captionClassName}`}>
+                {caption}
+            </Figure.Caption>
         </Figure>
     )
 }

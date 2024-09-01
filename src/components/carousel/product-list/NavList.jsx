@@ -1,8 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Spinner, Figure } from "react-bootstrap";
-import { useFetchData } from "../../utils/hooks/useFetch";
+import { Spinner } from "react-bootstrap";
+import { useFetchData } from "../../../utils/hooks/useFetch";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { CardNav } from "../../cards/CardNav";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -49,19 +50,14 @@ function NavList({ categoryProductsId }) {
         {models && models.length > 0 ? (
           models.map((model) => (
             <SwiperSlide className={styles.swiperSlide} key={model.id}>
-              <Figure
-                onClick={() => handleProduct(model)}
-                className={styles.figureStyle}
-              >
-                <img
-                  src={model.image}
-                  alt={model.modelName}
-                  className={styles.figureImg}
-                />
-                <Figure.Caption className={styles.figureCaption}>
-                  {model.modelName}
-                </Figure.Caption>
-              </Figure>
+              <CardNav
+                selectedProductCategory={{
+                  onClick: () => handleProduct(model),
+                  image: model.image,
+                  alt: model.modelName,
+                  caption: model.modelName
+                }}
+              />
             </SwiperSlide>
           ))
         ) : (
