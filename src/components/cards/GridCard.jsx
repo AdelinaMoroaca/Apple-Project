@@ -41,6 +41,7 @@ function GridCard(props) {
                             navigatePath={leftBtn.navigatePath} 
                             className={styles.leftButton}
                             btnText={leftBtn.text} 
+                            handleOnClick={leftBtn.handleOnClick}
                         />
                     )}
 
@@ -50,6 +51,7 @@ function GridCard(props) {
                             navigatePath={rightBtn.navigatePath} 
                             className={styles.rightButton}
                             btnText={rightBtn.text} 
+                            handleOnClick={rightBtn.handleOnClick}
                         />
                     )}
 

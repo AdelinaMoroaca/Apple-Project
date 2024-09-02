@@ -1,5 +1,6 @@
 import React from "react";
 import { LayoutBlack } from '../../components/Layout';
+import { useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -12,6 +13,13 @@ import { BuyBtn } from '../../components/buttons/buy/BuyBtn';
 import styles from './HomePage.module.css';
 
 function Homepage(){
+    const navigate = useNavigate();
+
+    const handleOnClick = (navigatePath) => {
+      navigate(navigatePath);
+      window.scrollTo(0, 0);
+    };
+    
     return(
         <LayoutBlack>
             <section className={styles.largeCardContainder}>
@@ -63,7 +71,8 @@ function Homepage(){
                             leftBtn={{ 
                                 variantType:'light',
                                 navigatePath:'/business/', 
-                                text: 'Learn More' 
+                                text: 'Learn More', 
+                                handleOnClick: () => handleOnClick('/business/')
                             }}
                             
                             modalBtn={{ 
@@ -84,7 +93,7 @@ function Homepage(){
 
                         leftBtn={{ 
                             variantType: 'primary',
-                            navigatePath: "/apple-intelligence/", 
+                            handleOnClick: () => handleOnClick('/apple-intelligence/'),
                             text: 'Learn More' 
                         }}
                         
@@ -108,13 +117,13 @@ function Homepage(){
 
                         leftBtn={{ 
                             variantType: 'primary',
-                            navigatePath: "/ipad-pro/", 
+                            handleOnClick: () => handleOnClick('/ipad-pro/'),
                             text: 'Learn More' 
                         }}
                         
                         rightBtn={{ 
                             variantType: 'outline-primary',
-                            navigatePath: "/shop/buy-ipad/ipad-pro/", 
+                            handleOnClick: () => handleOnClick('/shop/buy-ipad/ipad-pro/'),
                             text: 'Buy' 
                         }}
                         whiteText={true} 
@@ -129,13 +138,13 @@ function Homepage(){
                         firstText='Smarter. Brighter. Mightier'
                         leftBtn={{ 
                             variantType: 'primary',
-                            navigatePath: "/apple-watch-series-9/", 
+                            handleOnClick: () => handleOnClick('/apple-watch-series-9/'),
                             text: 'Learn More' 
                         }}
                         
                         rightBtn={{ 
                             variantType: 'outline-primary',
-                            navigatePath: "/shop/buy-watch/apple-watch/", 
+                            handleOnClick: () => handleOnClick('/shop/buy-watch/apple-watch/'),
                             text: 'Buy' 
                         }}
                         whiteText={true} 
@@ -154,13 +163,13 @@ function Homepage(){
                         secondText='with every purchase.'
                         leftBtn={{ 
                             variantType: 'primary',
-                            navigatePath: "/apple-card/", 
+                            handleOnClick: () => handleOnClick('/apple-card/'),
                             text: 'Learn More' 
                         }}
                         
                         rightBtn={{ 
                             variantType: 'outline-primary',
-                            navigatePath: "/apple-card/signin/", 
+                            handleOnClick: () => handleOnClick('/apple-card/signin/'),
                             text: 'Apply Now' 
                         }}
                         extraPadding={true}
@@ -175,7 +184,7 @@ function Homepage(){
                         firstText='Get $170-$620 in credit when'
                         secondText='you trade in iPhone 11 or higher.'
                         leftBtn={{ 
-                            navigatePath: '/shop/trade-in', 
+                            handleOnClick: () => handleOnClick('/shop/trade-in'),
                             text: 'Get your estimate' 
                         }}
                         extraPadding={true}

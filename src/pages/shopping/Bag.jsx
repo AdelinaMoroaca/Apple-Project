@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { BagContext } from '../../store/Shopping/context';
+import { removeFromBag } from '../../store/Shopping/actions';
 import { LayoutWhite } from '../../components/Layout';
 import { Table, Container, Row, Col } from 'react-bootstrap';
+import { Btn } from './../../components/buttons/Btn';
 import styles from './Bag.module.css';
 
 
 function Bag() {
-  const { bagState } = useContext(BagContext); 
+  const { bagState, bagDispatch } = useContext(BagContext); 
 
   let totalCost = 0;
   bagState.bag.forEach(product => {
@@ -14,6 +16,10 @@ function Bag() {
     totalCost += product.price * quantity;
   });
   
+  const handleDelete = (id) => {
+    bagDispatch(removeFromBag(id));
+  };
+
   return (
     <LayoutWhite>
         <Container className={styles.pageContainer}>
@@ -35,6 +41,7 @@ function Bag() {
                             <th>Storage Size</th>
                             <th>Quantity</th>
                             <th>Price</th>
+                            <th>Remove item</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,6 +52,14 @@ function Bag() {
                             <td>{product.storageSize}</td>
                             <td>1</td>
                             <td>{product.price}{product.countryValue}</td>
+                            <td>
+                              <Btn
+                                  variantType='danger'
+                                  handleOnClick={() => handleDelete(product.id)}
+                                  btnText='Delete'
+                              />
+                            </td>
+                            
                         </tr>
                         ))}
                     </tbody>
