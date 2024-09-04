@@ -22,12 +22,13 @@ function NavList({ categoryProductsId }) {
 
   useEffect(() => {
     if (prevRef.current && nextRef.current) {
-      const swiper = document.querySelector(`.${styles.swiper}`);
-      swiper.swiper.params.navigation.prevEl = prevRef.current;
-      swiper.swiper.params.navigation.nextEl = nextRef.current;
-      swiper.swiper.navigation.update();
+      const swiper = document.querySelector(`.${styles.swiper}`).swiper;
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
     }
-  }, [models]);
+  }, [models]); // Use models as dependency to ensure it runs when models change
 
   const handleProduct = (model) => {
     const formattedModelName = model.modelName.toLowerCase().replace(/\s+/g, "-");
@@ -44,8 +45,8 @@ function NavList({ categoryProductsId }) {
         spaceBetween={20}
         slidesPerView={5}
         navigation={{
-          nextEl: `.${styles.swiperButtonNext}`,
-          prevEl: `.${styles.swiperButtonPrev}`,
+          nextEl: nextRef.current,
+          prevEl: prevRef.current,
         }}
         pagination={{ clickable: true }}
         modules={[Navigation, Scrollbar, A11y]}
@@ -75,10 +76,10 @@ function NavList({ categoryProductsId }) {
         ) : (
           <p>No models found for this category.</p>
         )}
-
-        <button className={`${styles.swiperButtonPrev} swiper-button-prev`}>s</button>
-        <button className={`${styles.swiperButtonNext} swiper-button-next`}>|</button>
       </Swiper>
+
+      <button ref={prevRef} className={`${styles.swiperButtonPrev} swiper-button-prev`}>s</button>
+      <button ref={nextRef} className={`${styles.swiperButtonNext} swiper-button-next`}>|</button>
     </div>
   );
 }
