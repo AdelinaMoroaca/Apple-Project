@@ -15,11 +15,13 @@ function LayoutBlack({ children }) {
 function LayoutWhite({ children }) {
     return(
         <div className={styles.LayoutWhiteContainer}>
-            <HeaderWhite state/>
+            <HeaderWhite/>
             <main>{children}</main>
             <Footer/>
         </div>
     )
 }
+
+//need to implement layoutBlue for ipad air 
 
 export { LayoutBlack, LayoutWhite };

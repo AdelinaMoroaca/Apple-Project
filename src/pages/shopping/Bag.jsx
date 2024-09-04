@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, {  useContext } from 'react';
 import { BagContext } from '../../store/Shopping/context';
 import { removeFromBag } from '../../store/Shopping/actions';
 import { LayoutWhite } from '../../components/Layout';
@@ -10,6 +10,8 @@ import styles from './Bag.module.css';
 function Bag() {
   const { bagState, bagDispatch } = useContext(BagContext); 
 
+//   const [count, setCount] = useState(0);
+
   let totalCost = 0;
   bagState.bag.forEach(product => {
     const quantity = 1; 
@@ -19,6 +21,27 @@ function Bag() {
   const handleDelete = (id) => {
     bagDispatch(removeFromBag(id));
   };
+
+//   const handleIncreaseQuantity = (id) => {
+//     console.log('+1')
+//     setCount(count + 1)
+
+    // bagDispatch(updateQuantity(id, 1));
+
+//   };
+
+//   const handleDecreaseQuantity = (id) => {
+//     console.log('-1')
+//     setCount(count - 1)
+
+
+    // const product = bagState.bag.find(item => item.id === id);
+    // if (product && product.quantity > 1) {
+    //     console.log('+1')
+    //   bagDispatch(updateQuantity(id, -1));
+    // }
+
+//   };
 
   return (
     <LayoutWhite>
@@ -50,7 +73,20 @@ function Bag() {
                             <td>{product.title}</td>
                             <td>{product.finish}</td>
                             <td>{product.storageSize}</td>
-                            <td>1</td>
+                            <td>
+                                {/* <Button 
+                                    variant='outline-dark'
+                                    onClick={() => handleDecreaseQuantity(product.id)}
+                                >-
+                                </Button> */}
+                                    {/* { count } */}
+                                    1
+                                {/* <Button 
+                                    variant='outline-dark'
+                                    onClick={() => handleIncreaseQuantity(product.id)}
+                                >+
+                                </Button> */}
+                            </td>
                             <td>{product.price}{product.countryValue}</td>
                             <td>
                               <Btn

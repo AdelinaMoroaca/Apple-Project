@@ -1,4 +1,3 @@
-import './App.css';
 import './index.css';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
@@ -45,13 +44,6 @@ import Favorites from './pages/userNav/Favourites';
 //other pages
 import Page404 from './pages/Page404';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/a11y';
-import './App.css';
-import './index.css';
 
 function App() {
   return (
