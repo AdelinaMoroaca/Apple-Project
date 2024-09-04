@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 import { useFetchData } from "../../../utils/hooks/useFetch";
@@ -16,6 +16,18 @@ function NavList({ categoryProductsId }) {
   const apiUrl = `https://json-server-deployment-5til.onrender.com/nav?categoryProductsId=${categoryProductsId}`;
   const { data: models, loading, error } = useFetchData(apiUrl);
   const navigate = useNavigate();
+
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  useEffect(() => {
+    if (prevRef.current && nextRef.current) {
+      const swiper = document.querySelector(`.${styles.swiper}`);
+      swiper.swiper.params.navigation.prevEl = prevRef.current;
+      swiper.swiper.params.navigation.nextEl = nextRef.current;
+      swiper.swiper.navigation.update();
+    }
+  }, [models]);
 
   const handleProduct = (model) => {
     const formattedModelName = model.modelName.toLowerCase().replace(/\s+/g, "-");
