@@ -28,7 +28,7 @@ function NavList({ categoryProductsId }) {
       swiper.navigation.init();
       swiper.navigation.update();
     }
-  }, [models]); // Use models as dependency to ensure it runs when models change
+  }, [models]);
 
   const handleProduct = (model) => {
     const formattedModelName = model.modelName.toLowerCase().replace(/\s+/g, "-");
@@ -79,7 +79,7 @@ function NavList({ categoryProductsId }) {
       </Swiper>
 
       <button ref={prevRef} className={`${styles.swiperButtonPrev} swiper-button-prev`}>s</button>
-      <button ref={nextRef} className={`${styles.swiperButtonNext} swiper-button-next`}>|</button>
+      <button ref={nextRef} className={`${styles.swiperButtonNext} swiper-button-next`}>|s</button>
     </div>
   );
 }
