@@ -1,5 +1,6 @@
 import './index.css';
 import React from 'react';
+import ScrollToTop from "./components/ScrollToTop";
 import { Route, Routes } from 'react-router-dom';
 //providers
 import { FavoriteProvider } from './store/Favorites/context';
@@ -51,6 +52,7 @@ function App() {
       <AuthenticationProvider>
         <FavoriteProvider>
           <BagProvider>
+            <ScrollToTop />
             <Routes>     
               <Route path='/' element={<Homepage/>}/>
               <Route path='/store/' element={<Storepage/>}/>
@@ -94,8 +96,6 @@ function App() {
           </BagProvider>   
         </FavoriteProvider>
       </AuthenticationProvider> 
-
-      
     </div>
   );
 }

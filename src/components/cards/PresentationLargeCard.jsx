@@ -30,11 +30,6 @@ function PresentationLargeCard({ selectedId }) {
 
     if (!data) return <p>No data</p>;
 
-
-
-    // const availableIds = data.map(item => item.id);
-
-
     const filteredData = selectedId
         ? data.filter(item => item.id === selectedId)
         : data;

@@ -17,7 +17,6 @@ function Homepage(){
 
     const handleOnClick = (navigatePath) => {
       navigate(navigatePath);
-      window.scrollTo(0, 0);
     };
     
     return(
@@ -37,13 +36,11 @@ function Homepage(){
                 />
                 
                 <LargeImageCard 
-                  
                     src='/images/HomePage/Store.jpg' 
                     leftBtn = {<ShopBtn className={styles.shopBtnBlue} path='/store/'/>}
                 />
                 
                 <LargeImageCard
-                   
                     src='/images/HomePage/iPhoneStore.jpg' 
                     title='iPhone' 
                     firstParagraph='Our most powerful cameras yet.'
@@ -57,7 +54,6 @@ function Homepage(){
                         path='/shop/buy-iphone/'/>}
                     topBody={true}
                 />
-
             </section>
    
             <Container fluid={true} className={styles.gridContainer}>
