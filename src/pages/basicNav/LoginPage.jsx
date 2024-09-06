@@ -2,7 +2,7 @@ import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState, useContext } from "react";
-import { LayoutWhite } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import {AuthenticationContext} from '../../store/Authentication/context';
 import styles from './LoginPage.module.css'
 
@@ -17,7 +17,7 @@ function LoginPage() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        if(formValues.email.includes('adelina@gmail.com') && formValues.password === ('1234')){
+        if(formValues.email.includes('test@gmail.com') && formValues.password === ('1234')){
             setUser(formValues.email);
             formValues.email = '';
             formValues.password = '';
@@ -28,7 +28,7 @@ function LoginPage() {
     }
 
     return (
-            <LayoutWhite>
+            <Layout bgThemeVariant="light" iconColor="gray">
                 <section className={styles.formPage}>
                     <h1 className={styles.pageTitle}>
                        <b>Sign in for faster checkout.</b> 
@@ -73,7 +73,7 @@ function LoginPage() {
 
                         <div className={styles.infoUser}>
                         <h5>
-                            <b>Demo user : adelina@gmail.com</b> 
+                            <b>Demo user : test@gmail.com</b> 
                         </h5>
                         <h5>
                             <b>Demo pass : 1234</b> 
@@ -83,7 +83,7 @@ function LoginPage() {
 
                 </section>
 
-            </LayoutWhite>
+            </Layout>
     );
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { LayoutBlack } from "../../components/Layout";
+import { Layout } from "../../components/Layout";
 import { useFetchData } from '../../utils/hooks/useFetch';
 import { addToBag } from '../../store/Shopping/actions';
 import { addToFavorite } from '../../store/Favorites/actions';
@@ -78,7 +78,7 @@ function BuyIphone(){
     }
 
     return (
-        <LayoutBlack>
+        <Layout bgThemeVariant="dark" iconColor="gray">
             <section style={{
                 display: 'flex', 
                 flexDirection: 'column',
@@ -215,7 +215,7 @@ function BuyIphone(){
                         </Row>
                     </Container>
             </section>
-        </LayoutBlack>
+        </Layout>
     );
 };
 

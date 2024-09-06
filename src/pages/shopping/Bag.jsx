@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { BagContext } from '../../store/Shopping/context';
 import { removeFromBag } from '../../store/Shopping/actions';
-import { LayoutWhite } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import { Table, Container, Row, Col, Button } from 'react-bootstrap';
 import { Btn } from './../../components/buttons/Btn';
 import styles from './Bag.module.css';
@@ -39,7 +39,7 @@ function Bag() {
   };
 
   return (
-    <LayoutWhite>
+    <Layout bgThemeVariant="light" iconColor="gray">
     <Container className={styles.pageContainer}>
       <Row className={styles.pageTitle}>
         <Col>
@@ -101,7 +101,7 @@ function Bag() {
         </>
       }
     </Container>
-  </LayoutWhite>
+  </Layout>
   )
 }
 

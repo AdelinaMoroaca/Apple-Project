@@ -1,5 +1,5 @@
 import React from "react";
-import { LayoutBlack } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import { useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -20,7 +20,7 @@ function Homepage(){
     };
     
     return(
-        <LayoutBlack>
+        <Layout  bgThemeVariant="dark" iconColor="gray">
             <section className={styles.largeCardContainder}>
                 <LargeVideoCard 
                 src='/videos/vision.mp4'
@@ -190,7 +190,7 @@ function Homepage(){
             </Container>
 
             <ControlledCarousel/>  
-        </LayoutBlack>
+        </Layout>
     )
 }
 

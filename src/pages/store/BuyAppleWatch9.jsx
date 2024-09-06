@@ -1,15 +1,15 @@
 import React from "react";
-import { LayoutWhite } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import WillBeBackPage from '../WillBeBackPage'
 
 function BuyAppleWatch9(){
     return(
-        <LayoutWhite>
+        <Layout bgThemeVariant="light" iconColor="gray">
             <WillBeBackPage
                 pageContent='Apple Watch Series 9 STORE'
             />
    
-        </LayoutWhite>
+        </Layout>
     )
 }
 

@@ -1,17 +1,15 @@
 import React from 'react';
 import PresentationLargeCard from '../../components/cards/PresentationLargeCard';
-import { LayoutWhite } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import styles from './AirPodsPage.module.css';
 
 function AirPodsPage() {
     return (
-        <LayoutWhite>
+        <Layout bgThemeVariant="light" iconColor="gray">
             <section className={styles.introSection}>
-                <PresentationLargeCard 
-                    selectedId={5} 
-                />
+                <PresentationLargeCard selectedId={5} />
             </section>
-        </LayoutWhite>
+        </Layout>
     );
 }
 

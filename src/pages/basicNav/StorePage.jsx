@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 // import {StoreProductList} from "./StoreProductList";
-import { LayoutWhite } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import {Container, Image, Col, Row } from 'react-bootstrap';
 // import StoreCard from "../../components/cards/StoreCard";
 import BasicEduStoreCard from "../../components/modal/BasicEduStoreCard";
@@ -96,7 +96,7 @@ function Storepage(){
         },
     ];
     return(
-        <LayoutWhite>
+        <Layout bgThemeVariant="light" iconColor="gray">
             <section className={styles.storeIntro}>
                 <Container fluid>
                     <Row className='text-center'>
@@ -324,7 +324,7 @@ function Storepage(){
                 </Container>
             </section> */}
 
-        </LayoutWhite>
+        </Layout>
     )
 
 }

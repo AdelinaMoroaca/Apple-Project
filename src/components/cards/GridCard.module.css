@@ -44,7 +44,7 @@
 .cardTitle > h3 {
     /* padding-top: clamp(1rem, calc(1rem + (1.6rem - 1rem) * ((100vw - 1440px) / (2000px - 1440px))), 1.6rem); */
     padding-top: clamp(0rem, 0.4rem, 0.8rem);
-    margin-top: 2.6rem !important;
+    margin-top: 0.4rem !important;
     margin-bottom: 0rem !important;
 }
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import PresentationLargeCard from '../../components/cards/PresentationLargeCard';
-import { LayoutWhite } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import { NavList } from './../../components/carousel/product-list/NavList';
 import styles from './MacPage.module.css';
 
 function MacPage() {
     return (
-        <LayoutWhite>
-            <section style={{marginTop: '2rem'}}>
+        <Layout bgThemeVariant="light" iconColor="gray">
+            <section style={{marginTop: '3rem'}}>
                 <NavList categoryProductsId={1} />
             </section>
             <section className={styles.introSection}>
@@ -15,7 +15,7 @@ function MacPage() {
                     selectedId={1} 
                 />
             </section>
-        </LayoutWhite>
+        </Layout>
     );
 }
 

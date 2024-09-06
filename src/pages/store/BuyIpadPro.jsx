@@ -1,14 +1,14 @@
 import React from "react";
 import WillBeBackPage from '../WillBeBackPage';
-import { LayoutWhite } from "../../components/Layout";
+import { Layout } from "../../components/Layout";
 
 function BuyIpadPro(){
     return(
-        <LayoutWhite>
+        <Layout bgThemeVariant="light" iconColor="gray">
             <WillBeBackPage
                 pageContent='iPad Pro STORE'
             />
-        </LayoutWhite>
+        </Layout>
     )
 }
 

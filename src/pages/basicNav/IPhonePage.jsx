@@ -1,14 +1,14 @@
 import React from 'react';
 import PresentationLargeCard from '../../components/cards/PresentationLargeCard';
-import { LayoutWhite } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import { NavList } from './../../components/carousel/product-list/NavList';
 import styles from './IPhonePage.module.css';
 
 function IPhonePage() {
 
     return (
-        <LayoutWhite>
-            <section style={{marginTop: '2rem'}}>
+        <Layout bgThemeVariant="light" iconColor="gray">
+            <section style={{marginTop: '3rem'}}>
                 <NavList categoryProductsId={3} />
             </section>
             <section className={styles.introSection}>
@@ -16,7 +16,7 @@ function IPhonePage() {
                     selectedId={3} 
                 />
             </section>
-        </LayoutWhite>
+        </Layout>
     );
 }
 

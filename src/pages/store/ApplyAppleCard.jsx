@@ -1,15 +1,15 @@
 import React from "react";
-import { LayoutWhite } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import WillBeBackPage from '../WillBeBackPage'
 
 function ApplyAppleCard(){
     return(
-        <LayoutWhite>
+        <Layout bgThemeVariant="light" iconColor="gray">
             <WillBeBackPage
                 pageContent='Sign in to apply for Apple Card'
             />
    
-        </LayoutWhite>
+        </Layout>
     )
 }
 

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { FavoriteContext } from "../../store/Favorites/context";
-import { LayoutWhite } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "./Favourites.module.css";
 
@@ -9,7 +9,7 @@ function Favourites() {
   const { favoriteState } = useContext(FavoriteContext); 
 
   return (
-    <LayoutWhite >
+    <Layout bgThemeVariant="light" iconColor="gray">
         <Container className={styles.pageContainer}>
             <Row className={styles.pageTitle}>
                 <Col>
@@ -32,7 +32,7 @@ function Favourites() {
             </Row>
 
         </Container>
-    </LayoutWhite>
+    </Layout>
   )
 }
 
