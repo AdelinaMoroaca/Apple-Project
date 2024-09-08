@@ -1,17 +1,17 @@
 import React from "react";
-import { LayoutWhite } from '../../components/Layout';
+import { Layout } from '../../components/Layout';
 import WillBeBackPage from '../WillBeBackPage'
 
 
 
 function Business(){
     return(
-        <LayoutWhite>
+        <Layout bgThemeVariant="light" iconColor="gray">
             <WillBeBackPage
                 pageContent='Apple Business'
             />
    
-        </LayoutWhite>
+        </Layout>
     )
 }
 
