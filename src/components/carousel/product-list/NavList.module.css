@@ -1,130 +1,13 @@
-
-/*   
-.swiper {
-
-    max-width: 1300px;
-    background-color: blue !important;
-    width: 100vw !important;
-    position: relative !important;
-    background-color: aqua !important;
-}
-  
-.swiperSlide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-  
-.swiperButtonPrev,
-.swiperButtonNext {
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  z-index: 10 !important;
-  color: rgba(0, 0, 0) !important;
-  background-color: #f4f4f4 !important;
-  cursor: pointer   !important;
-  font-size: 0rem    !important;
-  height: 10%       !important;
-  width: 2.6rem     !important;
-  border: none !important;
-}
-
-.swiperButtonPrev {
-    display: none;
-    padding-right: 1rem;
-    left: -1px;
-    border-right: 1px solid black !important;
-}
-
-.swiperButtonNext {
-    padding-left: 1rem;
-    right: -1px;
-    border-left: 1px solid black !important;
-}
-
- */
-
- /*  */
- /* .swiperContainer {
-    background-color: aqua;
-    position: relative;
-}
- .swiper {
-    width: 100vw !important;
-    position: relative !important;
-    margin: 0 auto !important;
-    display: flex   !important;
-    justify-content: center !important;
-  }
-  
-  .swiperSlide {
-    width: auto !important;
-    display: flex   !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin: 0 15px !important;
-    flex-shrink: 0  !important;
-  }
-
-  .swiperButtonPrev,
-  .swiperButtonNext {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 27px;
-    height: 44px;
-    background-size: 27px 44px;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    z-index: 10;
-    padding: 0;
-    margin: 0;
-    border: none;
-    outline: none;
-    background-color: transparent;
-  }
-  
-  .swiperButtonPrev {
-    display: none;
-    left: 10px;
-  }
-  
-  .swiperButtonNext {
-    right: 10px;
-  }
- */
-
- /* .swiperSlide {
-
-    width: auto !important;
-    flex-shrink: 0  !important;
-  }
-  
-  .swiperContainer {
-    position: relative  !important;
-    border: 1px solid black !important;
-  }
-  
-  .swiperButtonNext {
-    position: absolute  !important;
-    top: 50% !important;
-    right: 0 !important;
-    transform: translateY(-50%) !important;
-    z-index: 100 !important;
-  } */
-
 .swiperContainer {
-    position: relative; /* Make sure the container is relative */
+    position: relative !important;
 }
   
 .swiper {
-    width: 100vw !important;
     margin: 0 auto !important;
     display: flex !important;
+    align-items: center !important;
     justify-content: center !important;
-    position: relative; /* Position the swiper container as relative */
+    position: relative  !important; 
 }
   
 .swiperSlide {
@@ -136,7 +19,7 @@
 }
   
 .swiperButtonNext {
-    color: black;
+    color: var(--dark);
     position: absolute;
     top: 50%; 
     right: 0; 
@@ -149,8 +32,8 @@
     padding: 0;
     margin: 0;
     border: none;
-    border-left: 1px solid black;
+    border-left: 1px solid var(--dark);
     outline: none;
-    background-color: #fff;
+    background-color: var(--light);
 }
   
