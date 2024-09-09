@@ -7,7 +7,7 @@ import styles from './MacPage.module.css';
 function MacPage() {
     return (
         <Layout bgThemeVariant="light" iconColor="gray">
-            <section style={{marginTop: '3rem'}}>
+            <section style={{margin: '1rem 0rem'}}>
                 <NavList categoryProductsId={1} />
             </section>
             <section className={styles.introSection}>

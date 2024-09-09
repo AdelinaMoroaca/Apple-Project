@@ -44,35 +44,29 @@
 }
 
  */
+
+ /*  */
+ /* .swiperContainer {
+    background-color: aqua;
+    position: relative;
+}
  .swiper {
-    max-width: 1300px;
-    /* background-color: blue !important; */
     width: 100vw !important;
     position: relative !important;
-    /* background-color: aqua !important; */
-    /* width: 100%; */
-    /* height: 100%; */
+    margin: 0 auto !important;
+    display: flex   !important;
+    justify-content: center !important;
   }
   
   .swiperSlide {
-    /* text-align: center; */
-    /* font-size: 18px; */
-    /* background: #fff; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+    width: auto !important;
+    display: flex   !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 15px !important;
+    flex-shrink: 0  !important;
   }
-  
-  .swiperSlide img {
-    /* display: block; */
-    /* width: 100%; */
-    /* height: 100%; */
-    /* object-fit: cover; */
-  }
-  
+
   .swiperButtonPrev,
   .swiperButtonNext {
     position: absolute;
@@ -100,3 +94,63 @@
   .swiperButtonNext {
     right: 10px;
   }
+ */
+
+ /* .swiperSlide {
+
+    width: auto !important;
+    flex-shrink: 0  !important;
+  }
+  
+  .swiperContainer {
+    position: relative  !important;
+    border: 1px solid black !important;
+  }
+  
+  .swiperButtonNext {
+    position: absolute  !important;
+    top: 50% !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+    z-index: 100 !important;
+  } */
+
+.swiperContainer {
+    position: relative; /* Make sure the container is relative */
+}
+  
+.swiper {
+    width: 100vw !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    position: relative; /* Position the swiper container as relative */
+}
+  
+.swiperSlide {
+    width: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 15px !important;
+}
+  
+.swiperButtonNext {
+    color: black;
+    position: absolute;
+    top: 50%; 
+    right: 0; 
+    transform: translateY(-50%);
+    width: 44px;
+    height: 100%;
+    background-size: 27px 44px;
+    background-position: center;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-left: 1px solid black;
+    outline: none;
+    background-color: #fff;
+}
+  

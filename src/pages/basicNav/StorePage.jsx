@@ -96,7 +96,7 @@ function Storepage(){
         },
     ];
     return(
-        <Layout bgThemeVariant="light" iconColor="gray">
+        <Layout bgThemeVariant="light" iconColor="gray" className={styles.backgroundLayout}>
             <section className={styles.storeIntro}>
                 <Container fluid>
                     <Row className='text-center'>
