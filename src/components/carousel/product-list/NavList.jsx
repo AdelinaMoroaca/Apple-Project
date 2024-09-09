@@ -39,7 +39,7 @@ function NavList({ categoryProductsId }) {
   if (error) return <p>Error loading models. Please try again later.</p>;
 
   return (
-    <div className={styles.swiperContainer}>
+    // <div className={styles.swiperContainer}>
       <Swiper
         className={styles.swiper}
         spaceBetween={20}
@@ -76,17 +76,15 @@ function NavList({ categoryProductsId }) {
         ) : (
           <p>No models found for this category.</p>
         )}
+              <button ref={prevRef} className={`${styles.swiperButtonPrev} swiper-button-prev`}>s</button>
+              <button ref={nextRef} className={`${styles.swiperButtonNext} swiper-button-next`}>|s</button>
+
       </Swiper>
 
-      <button ref={prevRef} className={`${styles.swiperButtonPrev} swiper-button-prev`}>s</button>
-      <button ref={nextRef} className={`${styles.swiperButtonNext} swiper-button-next`}>|s</button>
-    </div>
+      // <button ref={prevRef} className={`${styles.swiperButtonPrev} swiper-button-prev`}>s</button>
+      // <button ref={nextRef} className={`${styles.swiperButtonNext} swiper-button-next`}>|s</button>
+    // </div>
   );
 }
+
 export { NavList };
-
-
-
-
-
-

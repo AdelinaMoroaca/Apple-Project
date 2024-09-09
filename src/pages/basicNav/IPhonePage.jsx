@@ -8,7 +8,7 @@ function IPhonePage() {
 
     return (
         <Layout bgThemeVariant="light" iconColor="gray">
-            <section style={{marginTop: '3rem'}}>
+            <section style={{marginTop: '1rem'}}>
                 <NavList categoryProductsId={3} />
             </section>
             <section className={styles.introSection}>
