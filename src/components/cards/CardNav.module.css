@@ -1,4 +1,5 @@
 .figureContainer {
+    /* margin: 1rem !important; */
     cursor: pointer;
     margin: 0 auto;
     display: flex;

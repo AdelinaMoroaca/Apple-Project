@@ -76,3 +76,10 @@
 .collapse {
     transition: none !important;
 }
+
+.activeLink{
+    letter-spacing: 0.002rem !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+    text-underline-position: under !important;
+}

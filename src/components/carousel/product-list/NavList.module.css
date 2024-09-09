@@ -1,5 +1,5 @@
 .swiperContainer {
-    width: 70vw !important;
+    width: 100vw !important;
 }
   
 .swiper {
@@ -16,7 +16,7 @@
 .swiperButtonPrev,
 .swiperButtonNext {
   position: absolute;
-  top: 18%;
+  top: 14%;
   transform: translateY(-50%);
   z-index: 10;
   color: rgba(0, 0, 0);
@@ -40,3 +40,5 @@
     right: -1px;
     border-left: 1px solid black !important;
 }
+
+

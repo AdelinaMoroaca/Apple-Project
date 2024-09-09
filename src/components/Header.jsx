@@ -6,7 +6,7 @@ import { faApple } from '@fortawesome/free-brands-svg-icons';
 import { faUserCircle as fasUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { faUserCircle as farUserCircle, faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'; 
 import { Nav, Navbar, Container, Button, Collapse } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {AuthenticationContext} from '../store/Authentication/context';
 import styles from './Header.module.css'
  
@@ -17,6 +17,8 @@ function Header({ bgThemeVariant, iconColor }) {
   const [isCollapsed, setCollapsed] = useState(true);
   const [isToggled, setIsToggled] = useState(false);
   const [renderContent, setRenderContent] = useState(false);
+
+  const location = useLocation();
 
   useEffect(() => {
     const body = document.body;
@@ -58,6 +60,7 @@ function Header({ bgThemeVariant, iconColor }) {
     }
   }, [isCollapsed]);
   
+  
   function toggleCollapsedState(){
     setCollapsed(!isCollapsed);
     setIsToggled(!isToggled);
@@ -67,6 +70,34 @@ function Header({ bgThemeVariant, iconColor }) {
     setUser(null);
   }
 
+  // const handleMouseEnter = () => {
+  //   console.log(isToggled, 'handleMouseEnter');
+  //   setIsToggled(true);
+  //   console.log(isToggled);
+  // };
+
+  // const handleMouseLeave = () => {
+  //   console.log(isToggled, 'handleMouseLeave');
+  //   console.log(isToggled);
+  //   setIsToggled(false);
+  // };
+
+  
+  // useEffect(() => {
+  //   console.log('useEffect called');
+  //   const navLinks = document.querySelectorAll('.nav-link');
+  //   console.log('navLinks:', navLinks);
+  //   navLinks.forEach((link) => {
+  //     console.log('adding event listener to:', link);
+  //     link.addEventListener('mouseleave', handleMouseLeave);
+  //   });
+  //   return () => {
+  //     console.log('cleaning up');
+  //     navLinks.forEach((link) => {
+  //       link.removeEventListener('mouseleave', handleMouseLeave);
+  //     });
+  //   };
+  // }, [handleMouseLeave]);
   return (
     <header >
       <Navbar bg={bgThemeVariant} className={styles.navbar} data-bs-theme={bgThemeVariant} expand="lg" onToggle={() => setExpanded(!isExpanded)}>
@@ -108,7 +139,7 @@ function Header({ bgThemeVariant, iconColor }) {
 
                   <div className="d-flex align-items-center d-none d-lg-block" style={{ whiteSpace: 'nowrap'}}>
                   <FontAwesomeIcon icon={fasUserCircle}  className={styles.iconNav}/>
-                  <span className={styles.navUserIcon}>Sign Out</span>  
+                  <span className={styles.navUserIcon}> Sign Out</span>  
                   </div>        
                 ): <FontAwesomeIcon icon={farUserCircle}  className={styles.iconNav}/> } 
               </Nav.Link>
@@ -179,17 +210,17 @@ function Header({ bgThemeVariant, iconColor }) {
         <div className={`bg-${bgThemeVariant} text-${bgThemeVariant === 'dark' ? 'light' : 'dark'} ${styles.collapsedContainer}`} data-bs-theme={bgThemeVariant}>
           {renderContent && (
             <Nav bg={bgThemeVariant} data-bs-theme={bgThemeVariant} className={`flex-column text-left ${styles.collapsedNav}`}>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/store">Store</Nav.Link>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/mac">Mac</Nav.Link>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/ipad">iPad</Nav.Link>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/iphone">iPhone</Nav.Link>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/watch">Watch</Nav.Link>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/apple-vision-pro">Vision</Nav.Link>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/airpods">AirPods</Nav.Link>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/tv-home">TV & Home</Nav.Link>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/services">Entertainment</Nav.Link>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/shop/accessories/all">Accessories</Nav.Link>
-              <Nav.Link as={Link} style={{ color: `${iconColor}`}} to="/support">Support</Nav.Link>
+              <Nav.Link className={`${location.pathname === '/store' ? styles.activeLink : ''}`} as={Link} style={{ color: `${iconColor}`}} to="/store">Store</Nav.Link>
+              <Nav.Link className={`${location.pathname === '/mac' ? styles.activeLink : ''}`} as={Link} style={{ color: `${iconColor}`}} to="/mac">Mac</Nav.Link>
+              <Nav.Link className={location.pathname === '/ipad' ? styles.activeLink : ''} as={Link} style={{ color: `${iconColor}`}} to="/ipad">iPad</Nav.Link>
+              <Nav.Link className={location.pathname === '/iphone' ? styles.activeLink : ''} as={Link} style={{ color: `${iconColor}`}} to="/iphone">iPhone</Nav.Link>
+              <Nav.Link className={location.pathname === '/watch' ? styles.activeLink : ''} as={Link} style={{ color: `${iconColor}`}} to="/watch">Watch</Nav.Link>
+              <Nav.Link className={location.pathname === '/apple-vision-pro' ? styles.activeLink : ''} as={Link} style={{ color: `${iconColor}`}} to="/apple-vision-pro">Vision</Nav.Link>
+              <Nav.Link className={location.pathname === '/airpods' ? styles.activeLink : ''} as={Link} style={{ color: `${iconColor}`}} to="/airpods">AirPods</Nav.Link>
+              <Nav.Link className={location.pathname === '/tv-home' ? styles.activeLink : ''} as={Link} style={{ color: `${iconColor}`}} to="/tv-home">TV & Home</Nav.Link>
+              <Nav.Link className={location.pathname === '/services' ? styles.activeLink : ''} as={Link} style={{ color: `${iconColor}`}} to="/services">Entertainment</Nav.Link>
+              <Nav.Link className={location.pathname === '/shop/accessories/all' ? styles.activeLink : ''} as={Link} style={{ color: `${iconColor}`}} to="/shop/accessories/all">Accessories</Nav.Link>
+              <Nav.Link className={location.pathname === '/support' ? styles.activeLink : ''} as={Link} style={{ color: `${iconColor}`}} to="/support">Support</Nav.Link>
             </Nav>
           )}
         </div>
