@@ -1,0 +1,9 @@
+.signUpFormContainer{
+    display: flex !important;
+    flex-direction: column  !important;
+}
+
+.heading{
+    margin: 10px 0 !important;
+}
+

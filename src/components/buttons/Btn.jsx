@@ -15,4 +15,21 @@ function Btn(props) {
   );
 }
 
-export { Btn };
+const BUTTON_TYPE_CLASSES = {
+  google: styles.googleSignIn,
+  inverted: styles.inverted
+}
+
+function BtnDemo({ children, buttonType, ...otherProps }) {
+ 
+
+  return (
+    <button
+      className={`${styles.BtnContainer}  ${BUTTON_TYPE_CLASSES[buttonType]}`}
+      {...otherProps}
+      >{ children }
+    </button>
+  );
+}
+
+export { Btn, BtnDemo };

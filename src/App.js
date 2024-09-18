@@ -5,7 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 //providers
 import { FavoriteProvider } from './store/Favorites/context';
 import { BagProvider } from './store/Shopping/context';
-import { AuthenticationProvider } from './store/Authentication/context';
+// import { AuthenticationProvider } from './store/Authentication/context';
+import { UserProvider } from './store/Authentication/UserAuthentication';
 //nav - main pages
 import Homepage from './pages/basicNav/HomePage';
 import Storepage from './pages/basicNav/StorePage';
@@ -13,6 +14,7 @@ import {WatchPage} from './pages/basicNav/WatchPage';
 import {AirPodsPage} from './pages/basicNav/AirPodsPage';
 import SupportPage from './pages/basicNav/SupportPage';
 import LoginForm from './pages/basicNav/LoginPage';
+import Authentification from './pages/basicNav/Authentification';
 import Bag from './pages/shopping/Bag';
 import AccessoriesPage from './pages/basicNav/AccessoriesPage';
 import {MacPage} from './pages/basicNav/MacPage';
@@ -49,7 +51,8 @@ import Page404 from './pages/Page404';
 function App() {
   return (
     <div className="App">
-      <AuthenticationProvider>
+      <UserProvider>
+      {/* <AuthenticationProvider> */}
         <FavoriteProvider>
           <BagProvider>
             <ScrollToTop />
@@ -78,6 +81,7 @@ function App() {
               <Route path='/watch/' element={<WatchPage/>}/>
               <Route path='/apple-watch-series-9/' element={<AppleWatch9Page/>}/>
               <Route path='/shop/signIn/' element={<LoginForm/>}/>
+              <Route path='/auth' element={<Authentification/>}/>
               <Route path='/shop/trade-in/' element={<AppleTradeIn/>}/>
               <Route path='/apple-vision-pro/' element={<Visionpage/>}/>
               
@@ -95,7 +99,8 @@ function App() {
             </Routes>
           </BagProvider>   
         </FavoriteProvider>
-      </AuthenticationProvider> 
+      {/* </AuthenticationProvider>  */}
+      </UserProvider>
     </div>
   );
 }

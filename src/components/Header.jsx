@@ -1,4 +1,5 @@
 import React, { useEffect,useContext, useState } from 'react';
+import { UserContext } from '../store/Authentication/UserAuthentication';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBasket, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 // import { faSearch} from '@fortawesome/free-solid-svg-icons'; //will be implemented
@@ -7,18 +8,24 @@ import { faUserCircle as fasUserCircle } from '@fortawesome/free-solid-svg-icons
 import { faUserCircle as farUserCircle, faHeart as farHeart } from '@fortawesome/free-regular-svg-icons'; 
 import { Nav, Navbar, Container, Button, Collapse } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
-import {AuthenticationContext} from '../store/Authentication/context';
+import { signOutUser } from '../utils/firebase/firebase';
+// import {AuthenticationContext} from '../store/Authentication/context';
 import styles from './Header.module.css'
  
 
 function Header({ bgThemeVariant, iconColor }) {
-  const { user, setUser } = useContext(AuthenticationContext);
+  // const { user, setUser } = useContext(AuthenticationContext);
+  const { currentUser } = useContext(UserContext);
+
+
   const [isExpanded, setExpanded] = useState(false);
   const [isCollapsed, setCollapsed] = useState(true);
   const [isToggled, setIsToggled] = useState(false);
   const [renderContent, setRenderContent] = useState(false);
 
   const location = useLocation();
+
+
 
   useEffect(() => {
     const body = document.body;
@@ -66,9 +73,6 @@ function Header({ bgThemeVariant, iconColor }) {
     setIsToggled(!isToggled);
   };
 
-  function logoutUser() {
-    setUser(null);
-  }
 
   // const handleMouseEnter = () => {
   //   console.log(isToggled, 'handleMouseEnter');
@@ -99,7 +103,7 @@ function Header({ bgThemeVariant, iconColor }) {
   //   };
   // }, [handleMouseLeave]);
   return (
-    <header >
+    <header>
       <Navbar bg={bgThemeVariant} className={styles.navbar} data-bs-theme={bgThemeVariant} expand="lg" onToggle={() => setExpanded(!isExpanded)}>
         <Container className={`d-flex justify-content-between align-items-center`} fluid>
           <div className="d-none d-lg-flex justify-content-center align-items-center flex-grow-1">
@@ -117,7 +121,7 @@ function Header({ bgThemeVariant, iconColor }) {
               <Nav.Link className={styles.navLink} as={Link} to="/tv-home">TV & Home</Nav.Link>
               <Nav.Link className={styles.navLink} as={Link} to="/services">Entertainment</Nav.Link>
               <Nav.Link className={styles.navLink} as={Link} to="/shop/accessories/all">Accessories</Nav.Link>
-             
+
               {/* {need to implement after the searchbar implementation} */}
               {/* <Nav.Link className={styles.navLink} as={Link} to="/support">Support</Nav.Link> */}
              
@@ -125,23 +129,32 @@ function Header({ bgThemeVariant, iconColor }) {
               {/* <Nav.Link as={Link} to="/search" className="d-none d-lg-block">
                 <FontAwesomeIcon icon={faSearch} size="sm" color={iconColor} />
               </Nav.Link> */}
+
               <Nav.Link as={Link} to="/bag" className={`${styles.navLink} d-none d-lg-block`}>
                 <FontAwesomeIcon icon={faShoppingBasket} className={styles.iconNav}/>
               </Nav.Link>
-              {user ? (
+              {currentUser ? (
                 <Nav.Link as={Link} to="/favorites" className={styles.navLink} >
                   <FontAwesomeIcon icon={farHeart} className={styles.iconNav}/>
                 </Nav.Link>
               ): '' } 
 
-              <Nav.Link as={Link} to="/shop/signIn" onClick={logoutUser}  className={`${styles.navLink} d-none d-lg-block`} >
-                {user ? (
+              {/* <Nav.Link as={Link} to="/shop/signIn" onClick={logoutUser}  className={`${styles.navLink} d-none d-lg-block`} > */}
 
-                  <div className="d-flex align-items-center d-none d-lg-block" style={{ whiteSpace: 'nowrap'}}>
-                  <FontAwesomeIcon icon={fasUserCircle}  className={styles.iconNav}/>
-                  <span className={styles.navUserIcon}> Sign Out</span>  
+              <Nav.Link as={Link} to="/auth" onClick={signOutUser}  className={`${styles.navLink} d-none d-lg-block`} >
+                {currentUser ? (
+
+                  <div className="d-flex align-items-center d-none d-lg-block" 
+                  style={{ whiteSpace: 'nowrap'}}>
+                    <FontAwesomeIcon icon={fasUserCircle}  className={styles.iconNav}/>
+                    <span className={styles.navUserIcon}> Sign Out</span>  
                   </div>        
-                ): <FontAwesomeIcon icon={farUserCircle}  className={styles.iconNav}/> } 
+                ) : (
+                  <>
+                    <FontAwesomeIcon icon={farUserCircle}  className={styles.iconNav}/>
+                    <span className={styles.navUserIcon}> Sign In</span>  
+                  </>
+                )} 
               </Nav.Link>
             </Nav>
           </div>
@@ -162,7 +175,7 @@ function Header({ bgThemeVariant, iconColor }) {
                 <FontAwesomeIcon icon={faSearch} size="md" color={iconColor} />
               </Nav.Link> */}
    
-              {user && isCollapsed ? (
+              {currentUser && isCollapsed ? (
                 <Nav.Link as={Link} to="/favorites" className={styles.navLink}>
                   <div className="d-flex align-items-start">
                     <FontAwesomeIcon icon={farHeart} className={styles.iconNavLarge} style={{  marginBottom: '5px' }} color={iconColor}/>    
@@ -170,8 +183,8 @@ function Header({ bgThemeVariant, iconColor }) {
                 </Nav.Link>): '' } 
 
               {isCollapsed && (
-                <Nav.Link as={Link} to="/shop/signIn" onClick={logoutUser}>
-                  {user ? (
+                <Nav.Link as={Link} to="/auth" onClick={signOutUser}>
+                  {currentUser ? (
                     <div className="d-flex align-items-start">
                       <FontAwesomeIcon icon={fasUserCircle} className={styles.iconNavLarge} color={iconColor} />
                       <span className={styles.iconSpan}> Sign Out </span>  
@@ -179,6 +192,7 @@ function Header({ bgThemeVariant, iconColor }) {
                   ):(        
                     <div className="d-flex align-items-start" style={{marginBottom: '5px'}}>
                       <FontAwesomeIcon icon={farUserCircle} className={styles.iconNavLarge} color={iconColor} /> 
+                      <span> Sign In</span>  
                       {/* <span className={styles.iconSpan}> </span>     */}
                     </div>
                   )}

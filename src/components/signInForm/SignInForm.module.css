@@ -1,0 +1,13 @@
+.signUpFormContainer{
+    display: flex !important;
+    flex-direction: column  !important;
+}
+
+.heading{
+    margin: 10px 0  !important;
+}
+
+.buttonsContainer{
+    display: flex !important;
+    justify-content: space-between  !important;
+}
