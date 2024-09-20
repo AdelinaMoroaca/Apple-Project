@@ -1,9 +1,10 @@
 .signUpFormContainer{
     display: flex !important;
     flex-direction: column  !important;
+    padding: 2rem !important;
 }
 
 .heading{
-    margin: 10px 0 !important;
+    margin: 1rem 0 !important;
 }
 

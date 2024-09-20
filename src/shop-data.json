@@ -1,0 +1,66 @@
+    [
+    {
+      "id": 1,
+      "name": "Mac",
+      "motto": "If you can dream it,\nMac can do it.",
+      "imageUrl": "/images/category/Mac.JPG",
+      "videoUrl": "/videos/Mac.mp4"
+    },
+    {
+      "id": 2,
+      "name": "iPad",
+      "motto": "Touch, draw, and type\non one magical device.",
+      "imageUrl": "/images/category/iPad.JPG",
+      "videoUrl": "/videos/iPad.mp4"
+    },
+    {
+      "id": 3,
+      "name": "iPhone",
+      "motto": "Designed to be loved.",
+      "imageUrl": "/images/category/iPhone.JPG",
+      "videoUrl": "/videos/iPhone.mp4"
+    },
+    {
+      "id": 4,
+      "name": "Apple Watch",
+      "motto": "To wear it is to love it.",
+      "imageUrl": "/images/category/watch.JPG",
+      "videoUrl": "/videos/watch.mp4"
+    },
+    {
+      "id": 5,
+      "name": "AirPods",
+      "motto": "A magical connection to your devices.",
+      "imageUrl": "/images/category/AirPods.JPG",
+      "videoUrl": "/videos/AirPods.mp4"
+    },
+    {
+      "id": 6,
+      "name": "AirTag",
+      "imageUrl": "/images/category/AirTag.JPG"
+    },
+    {
+      "id": 7,
+      "name": "Apple TV 4K",
+      "motto": "The future hits home. On the big screen.",
+      "imageUrl": "/images/category/TV.JPG",
+      "videoUrl": "/videos/TV-Home.mp4"
+    },
+    {
+      "id": 8,
+      "name": "HomePod",
+      "imageUrl": "/images/category/HomePod.JPG"
+    },
+    {
+      "id": 9,
+      "name": "Accessories",
+      "imageUrl": "/images/category/Accessories.JPG"
+    },
+    {
+      "id": 10,
+      "name": "Apple Gift Card",
+      "imageUrl": "/images/category/GiftCard.JPG"
+    }
+  ]
+  
+  

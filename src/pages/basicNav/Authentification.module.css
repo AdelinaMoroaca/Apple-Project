@@ -1,7 +1,6 @@
 .authenticationContainer {
     display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 5rem !important;
-    margin: 4rem 0rem 4rem 0rem !important;
+    justify-content: center !important;
+    align-items: center;
+    margin: 4rem 0rem !important;
 }

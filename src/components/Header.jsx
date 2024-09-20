@@ -1,7 +1,8 @@
 import React, { useEffect,useContext, useState } from 'react';
 import { UserContext } from '../store/Authentication/UserAuthentication';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingBasket, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import CartIcon from './bagIcon/BagIcon';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 // import { faSearch} from '@fortawesome/free-solid-svg-icons'; //will be implemented
 import { faApple } from '@fortawesome/free-brands-svg-icons';
 import { faUserCircle as fasUserCircle } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +10,8 @@ import { faUserCircle as farUserCircle, faHeart as farHeart } from '@fortawesome
 import { Nav, Navbar, Container, Button, Collapse } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import { signOutUser } from '../utils/firebase/firebase';
+import BagDropdown from './bagDropDown/BagDropdown';
+import { BagContext } from '../store/contexts-D/BagContext';
 // import {AuthenticationContext} from '../store/Authentication/context';
 import styles from './Header.module.css'
  
@@ -16,6 +19,7 @@ import styles from './Header.module.css'
 function Header({ bgThemeVariant, iconColor }) {
   // const { user, setUser } = useContext(AuthenticationContext);
   const { currentUser } = useContext(UserContext);
+  const { isBagOpen } = useContext(BagContext);
 
 
   const [isExpanded, setExpanded] = useState(false);
@@ -112,6 +116,7 @@ function Header({ bgThemeVariant, iconColor }) {
                 <FontAwesomeIcon icon={faApple} className={styles.iconNavLarge} />
               </Nav.Link>
               <Nav.Link className={styles.navLink} as={Link} to="/store">Store</Nav.Link>
+              <Nav.Link className={styles.navLink} as={Link} to="/shop">Shop</Nav.Link>
               <Nav.Link className={styles.navLink} as={Link} to="/mac">Mac</Nav.Link>
               <Nav.Link className={styles.navLink} as={Link} to="/ipad">iPad</Nav.Link>
               <Nav.Link className={styles.navLink} as={Link} to="/iphone">iPhone</Nav.Link>
@@ -130,9 +135,10 @@ function Header({ bgThemeVariant, iconColor }) {
                 <FontAwesomeIcon icon={faSearch} size="sm" color={iconColor} />
               </Nav.Link> */}
 
-              <Nav.Link as={Link} to="/bag" className={`${styles.navLink} d-none d-lg-block`}>
-                <FontAwesomeIcon icon={faShoppingBasket} className={styles.iconNav}/>
+              <Nav.Link as={Link} to="" className={`${styles.navLink} d-none d-lg-block`}>
+                <CartIcon className={styles.iconNav}/>
               </Nav.Link>
+
               {currentUser ? (
                 <Nav.Link as={Link} to="/favorites" className={styles.navLink} >
                   <FontAwesomeIcon icon={farHeart} className={styles.iconNav}/>
@@ -157,6 +163,7 @@ function Header({ bgThemeVariant, iconColor }) {
                 )} 
               </Nav.Link>
             </Nav>
+
           </div>
 
 
@@ -199,9 +206,9 @@ function Header({ bgThemeVariant, iconColor }) {
                 </Nav.Link>)}
 
               {isCollapsed && (
-              <Nav.Link as={Link} to="/bag" className={styles.navLink}>
+              <Nav.Link as={Link} to="" className={styles.navLink}>
               <span className="d-inline-flex align-items-start">
-                <FontAwesomeIcon icon={faShoppingBasket} className={styles.iconNavLarge} color={iconColor} />
+                <CartIcon className={styles.iconNavLarge} color={iconColor}/>
               </span>
               </Nav.Link>)}
 
@@ -239,6 +246,8 @@ function Header({ bgThemeVariant, iconColor }) {
           )}
         </div>
       </Collapse>
+
+      {isBagOpen && <BagDropdown />}
     </header>
   );
 }
