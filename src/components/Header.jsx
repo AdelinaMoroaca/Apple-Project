@@ -135,7 +135,7 @@ function Header({ bgThemeVariant, iconColor }) {
                 <FontAwesomeIcon icon={faSearch} size="sm" color={iconColor} />
               </Nav.Link> */}
 
-              <Nav.Link as={Link} to="" className={`${styles.navLink} d-none d-lg-block`}>
+              <Nav.Link as={Link} to="/bag" className={`${styles.navLink} d-none d-lg-block`}>
                 <CartIcon className={styles.iconNav}/>
               </Nav.Link>
 
@@ -206,7 +206,7 @@ function Header({ bgThemeVariant, iconColor }) {
                 </Nav.Link>)}
 
               {isCollapsed && (
-              <Nav.Link as={Link} to="" className={styles.navLink}>
+              <Nav.Link as={Link} to="/bag" className={styles.navLink}>
               <span className="d-inline-flex align-items-start">
                 <CartIcon className={styles.iconNavLarge} color={iconColor}/>
               </span>
