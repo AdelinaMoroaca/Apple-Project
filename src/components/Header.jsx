@@ -116,7 +116,7 @@ function Header({ bgThemeVariant, iconColor }) {
                 <FontAwesomeIcon icon={faApple} className={styles.iconNavLarge} />
               </Nav.Link>
               <Nav.Link className={styles.navLink} as={Link} to="/store">Store</Nav.Link>
-              <Nav.Link className={styles.navLink} as={Link} to="/shop">Shop</Nav.Link>
+              {/* <Nav.Link className={styles.navLink} as={Link} to="/shop">Shop</Nav.Link> */}
               <Nav.Link className={styles.navLink} as={Link} to="/mac">Mac</Nav.Link>
               <Nav.Link className={styles.navLink} as={Link} to="/ipad">iPad</Nav.Link>
               <Nav.Link className={styles.navLink} as={Link} to="/iphone">iPhone</Nav.Link>
