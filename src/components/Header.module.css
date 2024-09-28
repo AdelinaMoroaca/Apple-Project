@@ -30,6 +30,7 @@
 }
 
 .iconSpan{
+    color: grey !important;
     text-align: start !important;
     margin: 0rem 0rem 0.2rem 0.2rem !important; 
 }

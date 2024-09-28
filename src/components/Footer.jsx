@@ -6,7 +6,7 @@ import styles from './Footer.module.css';
 function Footer(){
   return (
     <footer className={styles.footer}>
-      <Container>
+      <Container className={styles.footerContainer}>
         <Row className="justify-content-center">
           <Col md={3} sm={6} xs={12} className="text-center">
             <h6>Shop and Learn</h6>

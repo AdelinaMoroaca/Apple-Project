@@ -1,12 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    
-}
-
-
 .smallCard{
     position: relative !important;
     overflow: hidden !important;
@@ -14,6 +5,7 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
     border-radius: 1.12rem !important;
     cursor: pointer !important;
+    /* width: 20rem !important; */
 }
 
 .figureStyle{

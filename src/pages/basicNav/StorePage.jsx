@@ -1,22 +1,28 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 // import {StoreProductList} from "./StoreProductList";
 import { Layout } from '../../components/Layout';
 import {Container, Image, Col, Row } from 'react-bootstrap';
-// import StoreCard from "../../components/cards/StoreCard";
-import BasicEduStoreCard from "../../components/modal/BasicEduStoreCard";
-import SmallCard from "../../components/modal/SmallCard";
+// import BasicEduStoreCard from "../../components/modal/BasicEduStoreCard";
+// import SmallCard from "../../components/modal/SmallCard";
 
 // import { useFetchData } from '../../utils/hooks/useFetch';
 // import CarouselSwiper from '../../demo/CarouselSwiper';
 import LargeCardsCarousel from "../../components/carousel/LargeCardsCarousel";
-import { CarouselSwiperList } from "../../components/carousel/CarouselSwiperList";
+
+//old
+// import { CarouselSwiperList } from "../../components/carousel/CarouselSwiperList";
+//updates firbase
+import Figure from 'react-bootstrap/Figure';
+import { CategoriesContext } from "../../store/contexts-D/CategoriesContext";
 import styles from './StorePage.module.css';
 
 
 
 function Storepage(){
     const [userInteraction, setUserInteraction] = useState(false);
+    const { categoriesMap } = useContext(CategoriesContext);
+
 
     useEffect(() => {
         // Clean up the effect if needed
@@ -26,29 +32,10 @@ function Storepage(){
     }, []);
 
     const handleInteraction = () => {
-   
         if (window.innerWidth <= 1540) {
             setUserInteraction(true);
         }
     };
-    // const [category, setproductCategory] = useState([]);
-
-    // function getAppleCategory() {
-    //     fetch("https://json-server-deployment-5til.onrender.com/category")
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         setproductCategory(data)
-    //     })
-       
-    // }
-
-    // useEffect(() => {
-    //     getAppleCategory();
-    // },[]);
-
-    // const { data, loading } = useFetchData(
-    //     "https://json-server-deployment-5til.onrender.com/category"
-    // );
 
     // need to update backend
     const educationStoreCards = [
@@ -95,19 +82,17 @@ function Storepage(){
           monthlyPrice: '$41.58/mo.',
         },
     ];
+
     return(
         <Layout bgThemeVariant="light" iconColor="gray" className={styles.backgroundLayout}>
             <section className={styles.storeIntro}>
                 <Container fluid>
                     <Row className='text-center'>
                         <Col>
-                            <Image
-                            fluid
-                            src={'/images/StorePage/top-img.JPG'}
-                            alt="me"
-                            className={styles.educationStoreImg}
-                            />
-                           
+                            <Image src={'/images/StorePage/top-img.JPG'} alt="education store"
+                                className={styles.educationStoreImg}
+                                fluid
+                            />        
                         </Col>
                     </Row>
                     
@@ -139,60 +124,81 @@ function Storepage(){
                         </Col>
                     </Row>
                 </Container>
-                {/* <Container className={styles.containerIntro}>
-                    <Row className={styles.rowContainer}>
-                        <Col xs={12} md={4} className={styles.imageCol}>
-                            <Image 
-                            
-                            src='/images/StorePage/top-img.JPG'
-                            alt='509/193'
-                            className={`${styles.imgFluid} img-fluid`}
-                            rounded />
-                        </Col>
-                    </Row>
-                    <Row className={styles.aboutIntro}>
-                        <Col xs={12} md={4} className={styles.leftIntro}>
-                            <h1 className={styles.classicText}>
-                                <span className={styles.colourText}>Education Store.</span>
-                                The most powerful tools for learning.
-                            </h1>
-                        </Col>
-                        <Col xs={12} md={4} className={styles.rightIntro}>
-                            <div>
-                                <h6 className={styles.classicText}>Need shopping help?</h6>
-                                <h6 className={styles.classicText}>Ask a specialist</h6>
-                            </div>
-
-                            <div>
-                                <h6 className={styles.classicText}>Visit an Apple Store</h6>
-                                <h6 className={styles.classicText}>Find one near you</h6>
-                            </div>
-
-                        </Col>
-                    </Row>
-                </Container> */}
-
-                {/* INITIAL DESIGN */}
-                {/* {loading && <Spinner />} 
-                {data && <StoreProductList category={data} /> } */}
-             
-           
-
             </section>
 
-
-            <section 
-                style={{ zIndex: 1, marginTop: '20px', position: 'relative' }}
+            {/* <section 
+                style={{ 
+                    zIndex: 1, 
+                    marginTop: '20px', 
+                    position: 'relative', 
+                    backgroundColor: 'magenta',
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center',
+                }}
+                //when user interaction is on apply .noPadding style class
                 className={`${styles.storeCarouselSwiperList} 
-                ${userInteraction ? styles.noPadding : ''}`} 
+                ${userInteraction ? '' : ''}
+                `} 
                 onClick={handleInteraction}
                 onTouchStart={handleInteraction}
-            >
-                <CarouselSwiperList/>
-            </section>
+            > */}
+                {/* <SwiperDemo/> */}
+                <Container 
+                style={{
+                    marginBottom: '4rem',
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center',
+                }}>
+                    <Row className="g-4" 
+                        style={{
+                            display: 'flex', 
+                            justifyContent: 'space-between', 
+                            alignItems: 'center',
+                        }}>
+                        {Object.keys(categoriesMap).map((title) => (
+                            <Col key={title} xs={6} sm={4} md={3} lg={2}
+                                style={{
+                                display: 'flex', 
+                                justifyContent: 'center', 
+                                alignItems: 'center',
+                                }}>
+
+                                <Figure key={title} style={{
+                                display: 'flex', 
+                                flexDirection: 'column',
+                                justifyContent: 'center', 
+                                alignItems: 'center',
+                                }}>
+                                    <Figure.Image
+                                        rounded
+                                        fluid
+                                        style={{ 
+                                            minWidth: '90px',   
+                                        width: '260px'}}
+                                        // width={180}
+                                        // height={180}
+                                        alt={title}
+                                        src={categoriesMap[title].imageUrl}
+                                    />
+                            
+                                    <Figure.Caption style={{ whiteSpace: 'nowrap'}}>
+                                        <Link to={`/${categoriesMap[title].routeName}`} 
+                                        style={{
+                                        color: 'black', 
+                                        textDecoration: 'none', 
+                                        fontWeight: 'bold'}}>
+                                        {title}
+                                        </Link>
+                                    </Figure.Caption> 
+                                </Figure>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
    
-            <section
-                className={`${styles.bestClassStore}  `} 
+            <section className={`${styles.bestClassStore}`} 
                 // ${userInteraction ? styles.noPadding : ''}`} 
                 // onClick={handleInteraction}
                 // onTouchStart={handleInteraction}
@@ -201,8 +207,6 @@ function Storepage(){
                     <span> Choose from a best-in-class lineup.</span>
                 </h2>
 
-            
-
                 <LargeCardsCarousel 
                     cards={educationStoreCards}
                     slidesPerView={{
@@ -210,6 +214,7 @@ function Storepage(){
                         640: 1.6,
                         1024: 2.4,
                     }}
+
                     spaceBetween={{
                         320: 10,
                         640: 20,
@@ -218,9 +223,7 @@ function Storepage(){
                 />
             </section>
 
-
-            
-            <section className={styles.educationStore}>
+            {/* <section className={styles.educationStore}>
                 <h2>
                     Max out your credits.
                     <span> Add even more exclusive education offers.</span>
@@ -230,100 +233,55 @@ function Storepage(){
                     <Row>
                         <Col xs={12} md={4} className={styles.leftContainer}>
                             <BasicEduStoreCard
-                            title="See all the ways to get set for college."
-                            src="/images/StorePage/main.JPG"
-                            width={380}
-                            height={500}
-                            alt="400x500"
+                                title="See all the ways to get set for college."
+                                src="/images/StorePage/main.JPG"
+                                width={380}
+                                height={500}
+                                alt="400x500"
                             />
                         </Col>
 
-                    <Col xs={12} md={8} className={styles.rightContainer}>
-                        <Row className={styles.firstRow}>
-                        <Col xs={12} sm={6}>
-                            <SmallCard
-                            title="Education savings for students, faculty, and more."
-                            src="/images/StorePage/4.JPG"
-                            width={480}
-                            height={250}
-                            />
+                        <Col xs={12} md={8} className={styles.rightContainer}>
+                            <Row className={styles.firstRow}>
+                                <Col xs={12} sm={6}>
+                                    <SmallCard
+                                        title="Education savings for students, faculty, and more."
+                                        src="/images/StorePage/4.JPG"
+                                        width={480}
+                                        height={250}
+                                    />
+                                </Col>
+                                <Col xs={12} sm={6}>
+                                    <SmallCard
+                                    title="Apple Music Student Plan with free Apple TV+."
+                                    src="/images/StorePage/3.JPG"
+                                    width={480}
+                                    height={250}
+                                    />
+                                </Col>
+                            </Row>
+                            <Row className={styles.secondRow}>
+                                <Col xs={12} sm={6}>
+                                    <SmallCard
+                                    title="20% off AppleCare+."
+                                    src="/images/StorePage/2.JPG"
+                                    width={480}
+                                    height={250}
+                                    />
+                                </Col>
+                                <Col xs={12} sm={6}>
+                                    <SmallCard
+                                    title="Get the Pro Apps Bundle for $199.99."
+                                    src="/images/StorePage/1.JPG"
+                                    width={480}
+                                    height={250}
+                                    />
+                                </Col>
+                            </Row>
                         </Col>
-                        <Col xs={12} sm={6}>
-                            <SmallCard
-                            title="Apple Music Student Plan with free Apple TV+."
-                            src="/images/StorePage/3.JPG"
-                            width={480}
-                            height={250}
-                            />
-                        </Col>
-                        </Row>
-                        <Row className={styles.secondRow}>
-                        <Col xs={12} sm={6}>
-                            <SmallCard
-                            title="20% off AppleCare+."
-                            src="/images/StorePage/2.JPG"
-                            width={480}
-                            height={250}
-                            />
-                        </Col>
-                        <Col xs={12} sm={6}>
-                            <SmallCard
-                            title="Get the Pro Apps Bundle for $199.99."
-                            src="/images/StorePage/1.JPG"
-                            width={480}
-                            height={250}
-                            />
-                        </Col>
-                        </Row>
-                    </Col>
                     </Row>
-                </Container>
-            </section>
-
-            {/* <section className={styles.bestClassStore}>
-                <h2>Endless potential.
-                    <span> Take teaching and learning further with Apple.</span>
-                </h2>
-
-                <Container className={styles.bestClassContainer}>
-                    <Row className={styles.bestClassRow} xs={6} md={4}>
-                        <StoreCard 
-                            src='images/StorePage/endlessPotential/college-card.JPG'
-                            giftValue='$150'
-                            title='MacBook Air'
-                            fullPrice='$899'
-                            monthlyPrice='$74.91/mo.'
-                        />
-
-                        <StoreCard
-                            src='images/StorePage/endlessPotential/todayatapple-card.JPG'
-                            giftValue='$100'
-                            title='iPad Air'
-                            fullPrice='$549'
-                            monthlyPrice='$45.75/mo.'
-                        />
-
-                        <StoreCard
-                            src='images/StorePage/education/macbook-pro-card.JPG'
-                            giftValue='$150'
-                            title='MacBook Pro'
-                            fullPrice='$1499'
-                            monthlyPrice='$124.91/mo.'
-                        />
-
-                        <StoreCard
-                            src='images/StorePage/education/ipad-pro-card.JPG'
-                            giftValue='$100'
-                            title='iPad Pro'
-                            fullPrice='$899'
-                            monthlyPrice='$74.91/mo.'                         
-                        />
-                    </Row>
-            
-
                 </Container>
             </section> */}
-
         </Layout>
     )
 

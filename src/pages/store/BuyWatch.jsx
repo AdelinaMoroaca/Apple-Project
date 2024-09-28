@@ -1,13 +1,20 @@
 import React from "react";
-import WillBeBackPage from '../WillBeBackPage';
 import { Layout } from "../../components/Layout";
+//firebase
+import { IntroStoreFirebase } from './IntroStorePage';
+import { ItemsStorePage } from './ItemsStorePage';
+
 
 function BuyWatch(){
     return(
         <Layout bgThemeVariant="light" iconColor="gray">
-            <WillBeBackPage
-                pageContent='Apple Watch STORE'
-            />
+            <section style={{marginTop: '3rem'}}>
+                <IntroStoreFirebase title='Apple Watch'/>
+            </section>
+
+            <section style={{margin: '2rem 0'}}>
+                <ItemsStorePage categoryItems='Apple Watch'/>
+            </section>
         </Layout>
     )
 }

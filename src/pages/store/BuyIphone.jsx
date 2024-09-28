@@ -8,6 +8,9 @@ import { FavoriteContext } from '../../store/Favorites/context';
 import {Container, Card, Carousel, Button, Col, Row, Spinner } from 'react-bootstrap';
 import RadioFinishesColorBtn from '../../components/buttons/radio/RadioFinishesColorBtn';
 import RadioStorageSizeBtn from '../../components/buttons/radio/RadioStorageSizeBtn';
+//firestore
+import { IntroStoreFirebase } from './IntroStorePage';
+import { ItemsStorePage } from './ItemsStorePage';
 import styles from './BuyIphone.module.css'; 
 
 
@@ -79,6 +82,14 @@ function BuyIphone(){
 
     return (
         <Layout bgThemeVariant="dark" iconColor="gray">
+            <section style={{marginTop: '3rem'}}>
+                <IntroStoreFirebase title='iPhone'/>
+            </section>
+
+            <section style={{margin: '2rem 0'}}>
+                <ItemsStorePage categoryItems='iPhone'/>
+            </section>
+
             <section style={{
                 display: 'flex', 
                 flexDirection: 'column',
@@ -86,7 +97,6 @@ function BuyIphone(){
                 alignItems: 'center',
                 padding: '3rem'
                 }}>
-                    <h1 style={{paddingBottom: '2rem'}}><b>Shop iPhone for Education</b></h1>
                     {loading && <Spinner />}
                      <Container>
                         <Row>

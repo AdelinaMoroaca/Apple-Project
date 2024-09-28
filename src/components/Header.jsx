@@ -77,38 +77,13 @@ function Header({ bgThemeVariant, iconColor }) {
     setIsToggled(!isToggled);
   };
 
+  function handleNavbarToggle() {
+    setExpanded(!isExpanded)
+  }
 
-  // const handleMouseEnter = () => {
-  //   console.log(isToggled, 'handleMouseEnter');
-  //   setIsToggled(true);
-  //   console.log(isToggled);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   console.log(isToggled, 'handleMouseLeave');
-  //   console.log(isToggled);
-  //   setIsToggled(false);
-  // };
-
-  
-  // useEffect(() => {
-  //   console.log('useEffect called');
-  //   const navLinks = document.querySelectorAll('.nav-link');
-  //   console.log('navLinks:', navLinks);
-  //   navLinks.forEach((link) => {
-  //     console.log('adding event listener to:', link);
-  //     link.addEventListener('mouseleave', handleMouseLeave);
-  //   });
-  //   return () => {
-  //     console.log('cleaning up');
-  //     navLinks.forEach((link) => {
-  //       link.removeEventListener('mouseleave', handleMouseLeave);
-  //     });
-  //   };
-  // }, [handleMouseLeave]);
   return (
     <header>
-      <Navbar bg={bgThemeVariant} className={styles.navbar} data-bs-theme={bgThemeVariant} expand="lg" onToggle={() => setExpanded(!isExpanded)}>
+      <Navbar bg={bgThemeVariant} className={styles.navbar} data-bs-theme={bgThemeVariant} expand="lg" onToggle={handleNavbarToggle}>
         <Container className={`d-flex justify-content-between align-items-center`} fluid>
           <div className="d-none d-lg-flex justify-content-center align-items-center flex-grow-1">
             <Nav className={styles.basicNav}>
@@ -194,32 +169,33 @@ function Header({ bgThemeVariant, iconColor }) {
                   {currentUser ? (
                     <div className="d-flex align-items-start">
                       <FontAwesomeIcon icon={fasUserCircle} className={styles.iconNavLarge} color={iconColor} />
-                      <span className={styles.iconSpan}> Sign Out </span>  
+                      <span className={styles.iconSpan}>Sign Out</span>  
                     </div>    
                   ):(        
                     <div className="d-flex align-items-start" style={{marginBottom: '5px'}}>
                       <FontAwesomeIcon icon={farUserCircle} className={styles.iconNavLarge} color={iconColor} /> 
-                      <span> Sign In</span>  
-                      {/* <span className={styles.iconSpan}> </span>     */}
+                      <span className={styles.iconSpan}>Sign In</span>  
                     </div>
                   )}
                 </Nav.Link>)}
 
               {isCollapsed && (
-              <Nav.Link as={Link} to="/bag" className={styles.navLink}>
-              <span className="d-inline-flex align-items-start">
-                <CartIcon className={styles.iconNavLarge} color={iconColor}/>
-              </span>
-              </Nav.Link>)}
+                <Nav.Link as={Link} to="/bag" className={styles.navLink} >
+                  <span className={`d-inline-flex align-items-start ${styles.iconSpan}`}>
+                    <CartIcon className={styles.iconNavLarge}
+                    color={iconColor}/>
+                  </span>
+                </Nav.Link>
+              )}
 
               <Button onClick={toggleCollapsedState} className={styles.burgerBtn} aria-expanded={!isCollapsed}>
                 {isToggled ? (
                   <span className="d-inline-flex align-items-center">
-                    <FontAwesomeIcon icon={faXmark} className={styles.iconNavLarge} />
+                    <FontAwesomeIcon icon={faXmark} className={styles.iconNavLarge} color={iconColor}/>
                   </span>
                 ) : (
                   <span className="d-inline-flex align-items-center">  
-                    <FontAwesomeIcon icon={faBars} className={styles.iconNavLarge} />
+                    <FontAwesomeIcon icon={faBars} className={styles.iconNavLarge} color={iconColor}/>
                   </span>
                 )}
               </Button>

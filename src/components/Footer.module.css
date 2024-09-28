@@ -1,15 +1,15 @@
-*{
-    padding: 0rem;
-    margin: 0rem;
-    box-sizing: border-box;
-}
-
 .footer {
-    background-color: rgb(245, 245, 247);
-    color: rgba(0, 0, 0, 0.88);
+    background-color: rgb(245, 245, 247) !important;
     padding: 1.3rem 0 !important;
+    display: flex;
+
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 1.3rem 0 !important;
+    width: 100% !important;
   }
   
+
   .footer h6 {
     margin-bottom: 0.6rem;
   }
@@ -36,4 +36,7 @@
   .footer .text-center {
     text-align: center;
   }
-  
+
+p {
+  padding: 0 1rem !important;
+}

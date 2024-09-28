@@ -157,8 +157,9 @@ function NavList({ categoryProductsId }) {
         modules={[Navigation, Scrollbar, A11y]}
         breakpoints={{
           320: { slidesPerView: 2, spaceBetween: 10 },
-          360: { slidesPerView: 2, spaceBetween: 10 },
-          480: { slidesPerView: 3, spaceBetween: 20 },
+          360: { slidesPerView: 3, spaceBetween: 10 },
+          480: { slidesPerView: 4, spaceBetween: 15 },
+          700: { slidesPerView: 6, spaceBetween: 20 },
           768: { slidesPerView: 7, spaceBetween: 20 },
           1024: { slidesPerView: 9, spaceBetween: 20 },
           1300: { slidesPerView: models ? models.length : 1, spaceBetween: 20 },

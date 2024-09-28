@@ -1,4 +1,4 @@
-import './index.css';
+// import './index.css';
 import React from 'react';
 import ScrollToTop from "./components/ScrollToTop";
 import { Route, Routes } from 'react-router-dom';
@@ -48,15 +48,19 @@ import Page404 from './pages/Page404';
 
 //demo
 import DemoShop from './demo/demo/DemoShop/DemoShop';
-import { ProductProvider } from './store/contexts-D/ProductContext';
+
+// import { ProductsProvider } from './store/contexts-D/ProductContext';
+import { CategoriesProvider } from './store/contexts-D/CategoriesContext';
 import { BagProviderD } from './store/contexts-D/BagContext';
+
 
 
 function App() {
   return (
     <div className="App">
       <AuthenticationProvider>
-        <ProductProvider>
+        {/* <ProductsProvider> */}
+          <CategoriesProvider>
           <BagProviderD>
             <FavoriteProvider>
               <BagProvider>
@@ -68,7 +72,7 @@ function App() {
                   <Route path='/shop/buy-ipad/' element={<BuyIpad/>}/>
                   <Route path='/shop/buy-ipad/ipad-pro/' element={<BuyIpadPro/>}/>
                 
-                  <Route path='/shop/buy-Apple-Watch/' element={<BuyWatch/>}/>  {/* /shop/buy-watch/ is not defined already */}
+                  <Route path='/shop/buy-watch/' element={<BuyWatch/>}/>  {/* /shop/buy-watch/ is not defined already */}
                   <Route path='/shop/buy-watch/apple-watch/' element={<BuyAppleWatch9/>}/>
                   <Route path='/shop/accessories/all/' element={<AccessoriesPage/>}/>
                   <Route path='/iPhone/' element={<IPhonePage/>}/>
@@ -106,7 +110,8 @@ function App() {
               </BagProvider>   
             </FavoriteProvider>
           </BagProviderD>
-        </ProductProvider>
+          </CategoriesProvider>
+        {/* </ProductsProvider> */}
       </AuthenticationProvider> 
     </div>
   );

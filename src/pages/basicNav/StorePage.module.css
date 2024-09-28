@@ -1,7 +1,10 @@
 .backgroundLayout {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
     background-color: rgb(244, 244, 244) !important;   
     background-image: linear-gradient(180deg, rgb(244, 244, 244),rgb(244, 244, 244), #e6e6e6,#e6e6e6, #e6e6e6,#e6e6e6, #e6e6e6,#e6e6e6,#e6e6e6,#e6e6e6, #e6e6e6) !important;
-
 }
 
 .storeIntro {
@@ -20,8 +23,6 @@
     cursor: pointer;
 }
 
-
-
 .aboutIntro {
     width: 100% !important; 
     margin: 3rem 0rem 0rem 0rem !important;
@@ -29,8 +30,6 @@
     justify-content: space-between;
     padding: 5rem 4rem 4rem 5rem;
 }
-
-
 
 .colourText{
     color: #08827c;
@@ -45,7 +44,6 @@
     gap: 0.5rem;
     justify-content: flex-end;
     /* background-color: rgba(0, 255, 255, 0.247); */
-
 }
 
 .leftIntro, .rightIntro{
@@ -53,7 +51,6 @@
     flex-direction: column;
     text-align: left !important;
     /* background-color: rgba(33, 67, 67, 0.247); */
-
 }
 
 .rightIntro{
@@ -70,8 +67,8 @@
 
 /* storeCarouselSwiperList Section------------------------------- */
 .storeCarouselSwiperList{
-    width: 100%;
-    padding-left: 9rem;
+    /* width: 100%; */
+    /* padding-left: 9rem; */
 }
 
 /* New class for no padding */
@@ -137,7 +134,7 @@
     /* gap: 2rem; */
     /* max-width: 95vw !important; */
     /* padding: 0rem 15rem 0rem 7rem !important; */
-    margin: 0rem !important;
+    /* margin: 0rem !important; */
 }
   
 .rightContainer {
@@ -193,6 +190,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .storeCarouselSwiperList {
+
         padding-left: 6rem;
         padding-bottom: 2rem !important;
     }
@@ -232,6 +230,10 @@
 
 
 @media screen and (min-width: 421px) and (max-width: 768px) {
+    .educationStoreImg {
+        margin-top: 0.6rem !important;
+        max-width: 70% !important; /* Reduce size on larger screens */
+    }
     .storeCarouselSwiperList {
         padding-left: 2.4rem;
         padding-bottom: 1.6rem !important;
@@ -247,10 +249,10 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px){
-    .educationStoreImg {
+    /* .educationStoreImg {
         margin-top: 0.6rem !important;
-        max-width: 70% !important; /* Reduce size on larger screens */
-    }
+        max-width: 70% !important; 
+    } */
 
     .storeIntro{
         padding-bottom: 1.2rem !important;
