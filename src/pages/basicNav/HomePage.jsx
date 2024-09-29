@@ -1,9 +1,6 @@
 import React from "react";
 import { Layout } from '../../components/Layout';
 import { useNavigate } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import ControlledCarousel from '../../components/carousel/Carousel';
 import { LargeImageCard, LargeVideoCard } from "../../components/cards/LargeCard";
 import { GridCard } from '../../components/cards/GridCard'
@@ -55,142 +52,122 @@ function Homepage(){
                     topBody={true}
                 />
             </section>
-           
-            <section>
-                <Container fluid={true} className={styles.gridContainer}>
-                    <Row className='g-3'>
-                        <Col xs={12} md={6}>
-                            <GridCard
-                                src='images/HomePage/gridImg/outOfOffice.JPG'
-                                title='Out of Office'
-                                firstText='Apple at Work works from anywhere'
+
+            <section className={styles.gridSection}>
+                <div className={styles.gridContainer}>
+                    <GridCard
+                        src='images/HomePage/gridImg/outOfOffice.JPG'
+                        title='Out of Office'
+                        firstText='Apple at Work works from anywhere'
                                 
-                                leftBtn={{ 
-                                    variantType:'light',
-                                    navigatePath:'/business/', 
-                                    text: 'Learn More', 
-                                    handleOnClick: () => handleOnClick('/business/')
-                                }}
+                        leftBtn={{ 
+                            variantType:'light',
+                            navigatePath:'/business/', 
+                            text: 'Learn More', 
+                            handleOnClick: () => handleOnClick('/business/')
+                        }}
                                 
-                                modalBtn={{ 
-                                    variantType: 'outline-light',
-                                    text: 'Watch the Film',
-                                    src: "https://www.youtube.com/embed/asKvPLmjxXY?si=lbazm4Z58Hrz_Z-l",
-                                    titleMovie: "The Underdogs: OOO (Out Of Office) | Apple at Work", 
-                                }} 
-                                whiteText={true} 
-                            />
-                        </Col>
+                        modalBtn={{ 
+                            variantType: 'outline-light',
+                            text: 'Watch the Film',
+                            src: "https://www.youtube.com/embed/asKvPLmjxXY?si=lbazm4Z58Hrz_Z-l",
+                            titleMovie: "The Underdogs: OOO (Out Of Office) | Apple at Work", 
+                        }} 
+                        whiteText={true} 
+                    />
 
-                        <Col xs={12} md={6}>
-                            <GridCard
-                            src='images/HomePage/gridImg/appleIntelligence.JPG'
-                            title='Apple Intelligence'
-                            firstText='AI for the rest of us. Coming in beta this fall'
+                    <GridCard
+                        src='images/HomePage/gridImg/appleIntelligence.JPG'
+                        title='Apple Intelligence'
+                        firstText='AI for the rest of us. Coming in beta this fall'
 
-                            leftBtn={{ 
-                                variantType: 'primary',
-                                handleOnClick: () => handleOnClick('/apple-intelligence/'),
-                                text: 'Learn More' 
-                            }}
+                        leftBtn={{ 
+                            variantType: 'primary',
+                            handleOnClick: () => handleOnClick('/apple-intelligence/'),
+                            text: 'Learn More' 
+                        }}
                             
-                            modalBtn={{ 
-                                variantType: 'outline-primary',
-                                navigatePath: '/apple-card/signin/', 
-                                text: 'Watch the Film' ,
-                                titleMovie: 'Apple Intelligence in 5 minutes', 
-                                src:'https://www.youtube.com/embed/Q_EYoV1kZWk?si=A14MGZjC4IwEIYW1'
-                            }} 
-                            />
-                        </Col>
-                    </Row>
+                        modalBtn={{ 
+                            variantType: 'outline-primary',
+                            navigatePath: '/apple-card/signin/', 
+                            text: 'Watch the Film' ,
+                            titleMovie: 'Apple Intelligence in 5 minutes', 
+                            src:'https://www.youtube.com/embed/Q_EYoV1kZWk?si=A14MGZjC4IwEIYW1'
+                        }} 
+                    />
 
-                    <Row className='g-3'>
-                        <Col xs={12} md={6}>
-                            <GridCard
-                            src='images/HomePage/gridImg/iPadPRO.JPG'
-                            title='iPad Pro'
-                            firstText='Unbelievably thin. Incredibly powerful.'
+                    <GridCard
+                        src='images/HomePage/gridImg/iPadPRO.JPG'
+                        title='iPad Pro'
+                        firstText='Unbelievably thin. Incredibly powerful.'
 
-                            leftBtn={{ 
-                                variantType: 'primary',
-                                handleOnClick: () => handleOnClick('/ipad-pro/'),
-                                text: 'Learn More' 
-                            }}
+                        leftBtn={{ 
+                            variantType: 'primary',
+                            handleOnClick: () => handleOnClick('/ipad-pro/'),
+                            text: 'Learn More' 
+                        }}
                             
-                            rightBtn={{ 
-                                variantType: 'outline-primary',
-                                handleOnClick: () => handleOnClick('/shop/buy-ipad/ipad-pro/'),
-                                text: 'Buy' 
-                            }}
-                            whiteText={true} 
-                            />
+                        rightBtn={{ 
+                            variantType: 'outline-primary',
+                            handleOnClick: () => handleOnClick('/shop/buy-ipad/ipad-pro/'),
+                            text: 'Buy' 
+                        }}
+                        whiteText={true} 
+                    />
+
+                    <GridCard
+                        src='images/HomePage/gridImg/watch.JPG'
+                        title='WATCH'
+                        firstText='Smarter. Brighter. Mightier'
+                        leftBtn={{ 
+                            variantType: 'primary',
+                            handleOnClick: () => handleOnClick('/apple-watch-series-9/'),
+                            text: 'Learn More' 
+                        }}
                             
-                        </Col>
+                        rightBtn={{ 
+                            variantType: 'outline-primary',
+                            handleOnClick: () => handleOnClick('/shop/buy-watch/apple-watch/'),
+                            text: 'Buy' 
+                        }}
+                        whiteText={true} 
+                    />
 
-                        <Col xs={12} md={6}>
-                            <GridCard
-                            src='images/HomePage/gridImg/watch.JPG'
-                            title='WATCH'
-                            firstText='Smarter. Brighter. Mightier'
-                            leftBtn={{ 
-                                variantType: 'primary',
-                                handleOnClick: () => handleOnClick('/apple-watch-series-9/'),
-                                text: 'Learn More' 
-                            }}
+                    <GridCard 
+                        className={styles.tradeInCard}
+                        logo={true}
+                        src='images/HomePage/gridImg/card.JPG'
+                        title='Card'
+                        firstText='Get up to 3% Daily Cash back'
+                        secondText='with every purchase.'
+                        leftBtn={{ 
+                            variantType: 'primary',
+                            handleOnClick: () => handleOnClick('/apple-card/'),
+                            text: 'Learn More' 
+                        }}
                             
-                            rightBtn={{ 
-                                variantType: 'outline-primary',
-                                handleOnClick: () => handleOnClick('/shop/buy-watch/apple-watch/'),
-                                text: 'Buy' 
-                            }}
-                            whiteText={true} 
-                            />
-                        </Col>
-                    </Row>
+                        rightBtn={{ 
+                            variantType: 'outline-primary',
+                            handleOnClick: () => handleOnClick('/apple-card/signin/'),
+                            text: 'Apply Now' 
+                        }}
+                        extraPadding={true}
+                    />
 
-                    <Row className='g-3'>
-                        <Col xs={12} md={6}>
-                            <GridCard 
-                            className={styles.tradeInCard}
-                            logo={true}
-                            src='images/HomePage/gridImg/card.JPG'
-                            title='Card'
-                            firstText='Get up to 3% Daily Cash back'
-                            secondText='with every purchase.'
-                            leftBtn={{ 
-                                variantType: 'primary',
-                                handleOnClick: () => handleOnClick('/apple-card/'),
-                                text: 'Learn More' 
-                            }}
-                            
-                            rightBtn={{ 
-                                variantType: 'outline-primary',
-                                handleOnClick: () => handleOnClick('/apple-card/signin/'),
-                                text: 'Apply Now' 
-                            }}
-                            extraPadding={true}
-                            />
-                        </Col>
-
-                        <Col xs={12} md={6}>
-                            <GridCard className={styles.tradeInCard}
-                            src='images/HomePage/gridImg/tradeIn.JPG'
-                            title='Trade In'
-                            logo={true}
-                            firstText='Get $170-$620 in credit when'
-                            secondText='you trade in iPhone 11 or higher.'
-                            leftBtn={{ 
-                                handleOnClick: () => handleOnClick('/shop/trade-in'),
-                                text: 'Get your estimate' 
-                            }}
-                            extraPadding={true}
-                            />
-                        </Col>
-                    </Row>
-                </Container>
-            </section>            
-
+                    <GridCard className={styles.tradeInCard}
+                        src='images/HomePage/gridImg/tradeIn.JPG'
+                        title='Trade In'
+                        logo={true}
+                        firstText='Get $170-$620 in credit when'
+                        secondText='you trade in iPhone 11 or higher.'
+                        leftBtn={{ 
+                            handleOnClick: () => handleOnClick('/shop/trade-in'),
+                            text: 'Get your estimate' 
+                        }}
+                        extraPadding={true}
+                    />
+                </div>
+            </section>
 
             <ControlledCarousel/>  
         </Layout>

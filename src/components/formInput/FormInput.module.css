@@ -3,28 +3,37 @@
   margin: 45px 0;
 }
 
+.group input {
+  text-indent: 6px;
+  padding-top: 16px;
+
+}
+
 .formInput {
-  background: none;
   background-color: white;
-  color: grey;
+  color: gray;
   font-size: 18px;
-  padding: 10px 10px 10px 5px;
+  padding: 14px 10px 10px 8px;
   display: block;
   width: 100%;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid grey;
-  margin: 25px 0;
+  border-radius: 10px;
+  border: 1px solid grey;
+  caret-color: #4285f4;
 }
 
 .formInput:focus {
+  font-size: 20px;
   outline: none;
+  border: 2px solid #4285f4;
+  caret-color: auto;
 }
 
 .formInput:focus ~ .formInputLabel {
-  top: -14px;
+  padding-top: 4px;
+  top: 4px;
   font-size: 12px;
   color: black;
+  font-weight: 500;
 }
 
 .passwordInput {
@@ -33,19 +42,24 @@
 }
 
 .formInputLabel {
-  color: grey;
+  color: gray;
   font-size: 16px;
   font-weight: normal;
   position: absolute;
   pointer-events: none;
-  left: 5px;
-  top: 10px;
+  left: 15px;
+  top: 16px;
   transition: 300ms ease all;
 }
 
 .shrink {
-  top: -14px;
-  font-size: 12px;
+  padding-top: 5px;
+  top: 4px;
+  font-size: 10px;
   color: black;
 }
+
+
+
+
 

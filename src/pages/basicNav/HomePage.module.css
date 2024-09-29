@@ -1,9 +1,3 @@
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-} */
 
 .largeCardContainder{
     display: flex;
@@ -12,17 +6,6 @@
     gap: 1.2rem;
     margin-bottom: 1.2rem;
 }
-
-.gridContainer{
-    margin: 0 auto !important;
-    padding-left: 1.2rem !important;
-    padding-right: 1.2rem !important;
-    display: grid;
-    grid-gap: 1.2rem;
-    margin-bottom: 1.2rem;
-}
-
-
 
 /* Largecard BTN */
 .learnMoreBtnBlue {
@@ -73,47 +56,26 @@
     border: 1px solid rgb(13, 125, 238) !important; 
 }
 
-/* GridCard Btn */
-.WhiteBtnGrid{
-    background-color: white !important;
-    color: black !important;
-    border: 1px solid white !important; 
-    padding: 0.5rem 1rem !important;
-    font-size: 0.8rem !important;
+/* 6 cards grid */
+.gridSection {
+    margin-bottom: 1.2rem !important;
+    padding: 0 1.2rem !important;
 }
 
-.TransparentBtnGrid{
-    background-color: transparent !important;
-    color: white !important;
-    border: 1px solid white !important; 
-    padding: 0.5rem 1rem !important;
-    font-size: 0.8rem !important;
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)  !important;
+    grid-gap: 1.2rem !important;
+    max-width: 100%  !important;
 }
 
-.TransparentBtnGrid:hover{
-    background-color: white !important;
-    color: black !important;
-    border: 1px solid white !important; 
-}
 
-.BlueBtnGrid{
-    background-color: #0071e3 !important;
-    color: white !important;
-    border: 1px solid #0071e3 !important; 
-    padding: 0.5rem 1rem !important;
-    font-size: 0.8rem !important;
-}
-
-.BlueTransparentBtnGrid{
-    background-color: transparent !important;
-    color: #0071e3 !important;
-    border: 1px solid #0071e3 !important; 
-    padding: 0.5rem 1rem !important;
-    font-size: 0.8rem !important;
-}
-
-.BlueTransparentBtnGrid:hover{
-    background-color: #0071e3 !important;
-    color: white !important;
-    border: 1px solid #0071e3 !important; 
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    .gridSection {
+        padding: 0 !important;
+    }
+    .gridContainer {
+        grid-template-columns: 1fr !important;
+    }
 }

@@ -6,14 +6,9 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 2rem !important;
     overflow: hidden;
-
-    /* min-width: 18rem !important; */
     min-height: 300px   !important;
-    /* height: auto; Adjust this */
     padding: 1.6rem !important;
     height: 100% !important; 
-    /* min-width: 300px !important; */
-    /* box-sizing: border-box !important; */
 }
 
 .productCardContainer:hover {
@@ -38,11 +33,10 @@
 .cardTitle{
     inline-size: 245px;
     overflow-wrap: break-word;
-    /* margin: 0 0 2.6rem 0 !important; */
     margin-bottom: 1.6rem !important;
     font-size: 1.8rem !important;
     margin-right: auto !important;
-    /* padding-right: 7rem !important; */
+    padding: 0rem 0.2rem !important;
     text-align: left !important;
 }
 
@@ -50,23 +44,25 @@
     margin-left: auto !important; 
 }
 
-.price{
-    font-size: 0.7rem !important;
-    text-align: left !important;
-}
-
 .footer {
     margin: 2.6rem 0 0 0 !important;
     width: 100% !important;
     padding: 0 !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex !important;
+    align-items: center ;
+    justify-content: space-between !important;
     gap: 1.6rem;
+}
+
+.price{
+    padding: 0rem 0.2rem !important;
+    font-size: 0.7rem !important;
+    text-align: left !important;
 }
 
 
 .visibleText {
+    padding: 0rem 0.2rem !important;
     margin: 0 !important;
     font-size: 0.8rem !important;
     color:  #b64400 !important;
@@ -75,6 +71,7 @@
 }
 
 .hiddenText {
+    padding: 0rem 0.2rem !important;
     color: maroon !important;
     font-weight: bold !important;
     visibility: hidden !important; 
