@@ -18,7 +18,6 @@ function ItemsStorePage({ categoryItems }) {
     <Container>
       {categoriesMap[categoryItems] ? (
         <Fragment key={categoryItems}>
-          {/* <h1 style={{ margin: '3rem 0' }}>{categoryItems}</h1> */}
           <Row className="g-4">
             {categoriesMap[categoryItems].items && categoriesMap[categoryItems].items.length > 0 ? (
               categoriesMap[categoryItems].items.map((product) => (
