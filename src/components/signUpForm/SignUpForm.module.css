@@ -4,7 +4,11 @@
     padding: 2rem !important;
 }
 
-.heading{
-    margin: 1rem 0 !important;
+.heading, .headingDescription{
+    text-align: left !important;
 }
 
+.heading{
+    margin: 1rem 0 0.4rem 0 !important;
+    text-wrap: nowrap !important;
+}

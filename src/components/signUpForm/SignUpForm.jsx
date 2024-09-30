@@ -47,8 +47,8 @@ const SignUpForm = () => {
 
     return (
         <div className={styles.signUpFormContainer}>
-            <h3 className={styles.heading}>Don't have an Apple account?</h3>
-            <span>Create yours now.</span>
+            <h3 className={styles.heading}>Don't have an account?</h3>
+            <span className={styles.headingDescription}>Create your Apple account now.</span>
             <form onSubmit={handleSubmit}>
                 <FormInput
                     label="Display Name"

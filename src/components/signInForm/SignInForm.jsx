@@ -50,8 +50,8 @@ const SignInForm = () => {
 
         return (
                 <div className={styles.signUpFormContainer}>
-                    <h3 className={styles.heading}>Sign in for faster checkout.</h3>
-                    <span>Sign in to Apple Store</span>
+                    <h3 className={styles.heading}>Sign in to Apple Store</h3>
+                    <span className={styles.headingDescription}>Sign in for faster checkout.</span>
                     <form onSubmit={handleSubmit}>
                         <FormInput
                             label="Email"
