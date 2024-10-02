@@ -14,7 +14,7 @@ import {WatchPage} from './pages/basicNav/WatchPage';
 import {AirPodsPage} from './pages/basicNav/AirPodsPage';
 import SupportPage from './pages/basicNav/SupportPage';
 import Authentification from './pages/basicNav/Authentification';
-import Bag from './pages/shopping/Bag';
+import BagPage from './pages/shopping/BagPage';
 import AccessoriesPage from './pages/basicNav/AccessoriesPage';
 import {MacPage} from './pages/basicNav/MacPage';
 import {IpadPage} from './pages/basicNav/IpadPage';
@@ -104,7 +104,7 @@ function App() {
                   <Route path='/shop/buy-mac/' element={<BuyMac />} />
                   <Route path='/shop/buy-iphone/' element={<BuyIphone />} />
                   <Route path='/favorites/' element={<Favorites />} />
-                  <Route path='/bag/' element={<Bag />} />
+                  <Route path='/bag/' element={<BagPage />} />
                   <Route path='*' element={<Page404/>}/>
                 </Routes>
               </BagProvider>   

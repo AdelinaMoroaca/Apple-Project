@@ -9,9 +9,10 @@ import { Container } from 'react-bootstrap';
 //new Bag:
 import { BagContext } from '../../store/contexts-D/BagContext';
 import Accordion from 'react-bootstrap/Accordion';
+import { BtnDemo } from '../../components/buttons/Btn';
 
 import {BagItemReview} from '../../components/bagItem/BagItem';
-import styles from './Bag.module.css';
+import styles from './BagPage.module.css';
 
 // function Bag() {
 //   const { bagState, bagDispatch } = useContext(BagContext); 
@@ -111,15 +112,15 @@ import styles from './Bag.module.css';
 //   )
 // }
 
-function Bag() {
+function BagPage() {
   const { bagItems, bagTotal } = useContext(BagContext);
 
   return (
     <Layout bgThemeVariant="light" iconColor="gray">
-      <Container style={{ padding: '2rem 0', borderBottom: '1px solid gray'}}>
-        <h1>Your bag total is ${bagTotal}</h1>
-        <p>Free delivery and free returns.</p>
-        <button>Check Out</button>
+      <Container style={{ padding: '4rem 0', borderBottom: '1px solid gray', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <h2><b>Your bag total is ${bagTotal}</b></h2>
+        <p style={{ margin: '2rem 0rem 2rem 0rem' }}>Free delivery and free returns.</p>
+        <BtnDemo buttonType='check'>Check Out</BtnDemo>
       </Container>
 
       <Container className={styles.bagContainer}>
@@ -129,7 +130,7 @@ function Bag() {
         <span className={styles.total}>Total: ${bagTotal}</span>
       </Container>
 
-      <Accordion defaultActiveKey={null} style={{ width: '85%' }}>
+      <Accordion defaultActiveKey={null} style={{ width: '85%', padding: '2rem 0' }}>
         {/* Parent Accordion for "Questions About Buying" */}
         <Accordion.Item eventKey="0">
           <Accordion.Header>Questions About Buying</Accordion.Header>
@@ -176,31 +177,8 @@ function Bag() {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
-
-
-      {/* <Accordion defaultActiveKey="0" style={{width: '85%'}}>
-        <Accordion.Item eventKey="1">
-          <Accordion.Header>Questions About Buying</Accordion.Header>
-          <Accordion.Body>
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>When will I get my items?</Accordion.Header>
-              <Accordion.Body>
-                By entering a zip code, you’ll get estimated delivery and pickup dates for your items. You’ll get a final delivery date after you place your order. Delivery estimates are based on item availability and the shipping option you choose. For pickup, you’ll choose a pickup date and store during checkout. Learn more about Apple Shipping & Pickup
-              </Accordion.Body>
-            </Accordion.Item>
-
-            <Accordion.Item eventKey="1">
-              <Accordion.Header>Can I pick up my items at an Apple Store?</Accordion.Header>
-              <Accordion.Body>
-                Yes. If you choose pickup, you’ll select a store and a pickup date for your items during checkout. Not all items are available for pickup. We’ll send you a text message when your items are ready for pickup. Learn more about Apple Pickup
-              </Accordion.Body>
-            </Accordion.Item>
-
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion> */}
     </Layout>
   )
 }
 
-export default Bag;
+export default BagPage;

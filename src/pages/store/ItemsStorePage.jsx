@@ -7,7 +7,7 @@ import { Col, Row, Container} from 'react-bootstrap';
 //unpdate firebase
 import { CategoriesContext } from "../../store/contexts-D/CategoriesContext";
 import { useContext, Fragment } from "react";
-import ItemCard from "../../demo/demo/productCard/ItemCard";
+import ItemCard from "../../components/cards/productCard/ItemCard";
 // import styles from './ProductsStorePage.module.css'; 
 
 function ItemsStorePage({ categoryItems }) {

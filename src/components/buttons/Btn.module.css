@@ -31,7 +31,7 @@
   
   .googleSignIn {
     background-color: #4285f4;
-    color: white;
+    color: white !important;
   }
   
   .googleSignIn:hover {
@@ -51,3 +51,15 @@
     border: none;
   }
   
+.checkOut {
+  border-radius: 0.6rem !important;
+  padding: 0 4rem 0 4rem !important;
+  text-transform: unset !important;
+  background-color: #0071e3 !important;
+  color: white !important;
+}
+  
+.checkOut:hover {
+  background-color: #0076df !important;
+  border: none;
+}

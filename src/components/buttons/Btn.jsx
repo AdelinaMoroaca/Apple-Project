@@ -17,7 +17,8 @@ function Btn(props) {
 
 const BUTTON_TYPE_CLASSES = {
   google: styles.googleSignIn,
-  inverted: styles.inverted
+  inverted: styles.inverted,
+  check: styles.checkOut,
 }
 
 function BtnDemo({ children, buttonType, ...otherProps }) {

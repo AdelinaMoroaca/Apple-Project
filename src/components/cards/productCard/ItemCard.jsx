@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { BagContext } from '../../../store/contexts-D/BagContext';
 import Card from 'react-bootstrap/Card';
-import { BtnDemo } from '../../../components/buttons/Btn';
+import { BtnDemo } from '../../buttons/Btn';
 import { ReactComponent as EducationIcon } from '../../../assets/education-hat.svg';
 import styles from './ItemCard.module.css';
 
