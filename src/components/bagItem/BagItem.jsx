@@ -1,24 +1,10 @@
-import { Container, Image, Button } from 'react-bootstrap';
+import { Container, Image, Button, Row, Col} from 'react-bootstrap';
 import { Btn } from '../buttons/Btn';
 import { useContext } from 'react';
 import { BagContext } from '../../store/contexts-D/BagContext';
-import styles from './BagItem.module.css';
+// import styles from './BagItem.module.css';
 
-const BagItem = ({bagItem}) => {
-    const { name, imageUrl, price, quantity } = bagItem;
-    return (
-        <Container className={styles.bagItemContainer}>
-            <Image src={imageUrl} alt={`${name}`} rounded />
-            <div className={styles.itemDetails}>
-                <span className={styles.name}>{name}</span>
-                <span className={styles.quantity}>{quantity} x ${price}</span>
-            </div>
-
-        </Container>
-    )
-}
-
-const BagItemReview = ({bagItem}) => {
+function BagItem({bagItem}) {
     const { name, imageUrl, basePrice, quantity } = bagItem;
     const { clearItemFromBag, addItemToBag, removeItemToBag  } = useContext(BagContext);
 
@@ -35,37 +21,52 @@ const BagItemReview = ({bagItem}) => {
     }
 
     return (
-        <Container style={{display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '1rem 0', borderBottom: '1px solid gray', padding: '1rem'}}>
-            <Image src={imageUrl} alt={`${name}`} width="300" height="130"/>
-         
-            <div style={{width: '60%', display: 'flex', justifyContent: 'space-around', alignItems: 'flex-start', gap: '', backgroundColor: 'lightgray'}}>
-                <div>{name}</div>
-                <div className="d-flex justify-content-center align-items-center">
-                      <Button
+        <Container style={{
+        borderBottom: '1px solid gray', 
+         padding: '1rem'}}>
+            <Row 
+               style={{display: 'flex', 
+                justifyContent: 'space-between',
+                 alignItems: 'flex-start', 
+                 margin: '0rem', 
+                 width: '100%',
+                 padding: '1rem', 
+                 }}>
+                <Col lg={3} md={6} sm={12}>
+                    <Image fluid src={imageUrl} alt={`${name}`} width="auto" height="130"/>
+                </Col>
+
+                <Col lg={3} md={6} sm={12}>
+                    <p style={{fontSize: '1.5rem'}}>{name}</p>
+                </Col>
+
+                <Col lg={3} md={6} sm={12} 
+                style={{display: 'flex', 
+                justifyContent: 'center', alignItems: 'center'}}>
+                    <Button
                         style={{ borderRadius: '50%', width: '25px', height: '25px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                         variant='outline-dark'
                         onClick={removeItemHandler}
-                        >-
-                        </Button>
-                      <span style={{ padding: '0 0.5rem' }}>{quantity}</span>
-                      <Button
+                    ><span>-</span></Button>
+                    <span style={{ fontSize: '1.5rem', padding: '0 0.5rem' }}>{quantity}</span>
+                    <Button
                         variant='outline-dark'
                         style={{ borderRadius: '50%', width: '25px', height: '25px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
                         onClick={addItemHandler} 
-                        >+</Button>
-                </div>
-               
-                <div>
-                    <div>{basePrice} $</div>
+                    ><span>+</span></Button>                
+                </Col>
+
+                <Col lg={3} md={6} sm={12}>
+                    <p style={{fontSize: '1.5rem'}}>{basePrice} $</p>
                     <Btn
                         variantType='danger'
                         handleOnClick={clearItemHandler}
                         btnText='x'
-                    />
-                </div>
-            </div>
+                    />                
+                </Col>
+            </Row>
         </Container>
     )
 }
 
-export { BagItem, BagItemReview };
+export { BagItem };

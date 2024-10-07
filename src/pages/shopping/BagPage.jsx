@@ -11,126 +11,57 @@ import { BagContext } from '../../store/contexts-D/BagContext';
 import Accordion from 'react-bootstrap/Accordion';
 import { BtnDemo } from '../../components/buttons/Btn';
 
-import {BagItemReview} from '../../components/bagItem/BagItem';
+import { BagItem } from '../../components/bagItem/BagItem';
 import styles from './BagPage.module.css';
-
-// function Bag() {
-//   const { bagState, bagDispatch } = useContext(BagContext); 
-
-// //   const [count, setCount] = useState(0);
-
-//   let totalCost = 0;
-//   bagState.bag.forEach(product => {
-//     const quantity = 1; 
-//     totalCost += product.price * quantity;
-//   });
-  
-//   const handleDelete = (id) => {
-//     bagDispatch(removeFromBag(id));
-//   };
-
-//   const handleIncreaseQuantity = (id) => {
-//     console.log('+1')
-//     // setCount(count + 1)
-//     // bagDispatch(updateQuantity(id, 1));
-//   };
-
-//   const handleDecreaseQuantity = (id) => {
-//     console.log('-1')
-//     // setCount(count - 1)
-//     // const product = bagState.bag.find(item => item.id === id);
-//     // if (product && product.quantity > 1) {
-//     //     console.log('+1')
-//     //   bagDispatch(updateQuantity(id, -1));
-//     // }
-//   };
-
-//   return (
-//     <Layout bgThemeVariant="light" iconColor="gray">
-//     <Container className={styles.pageContainer}>
-//       <Row className={styles.pageTitle}>
-//         <Col>
-//           <h1>Your bag has these {`${bagState.bag.length}`} products:</h1>
-//         </Col>
-//       </Row>
-
-//       {
-//         bagState.bag.length === 0 ?
-//         <p>Your bag is empty.</p> :
-//         <>
-//           <Table striped bordered hover>
-//             <thead>
-//               <tr>
-//                 <th className="text-center align-middle">Product Title</th>
-//                 <th className="text-center align-middle">Finishes Color</th>
-//                 <th className="text-center align-middle">Storage Size</th>
-//                 <th className="text-center align-middle">Quantity</th>
-//                 <th className="text-center align-middle">Price</th>
-//                 <th className="text-center align-middle">Remove item</th>
-//               </tr>
-//             </thead>
-//             <tbody>
-//               {bagState.bag.map((product) => (
-//                 <tr key={product.id}>
-//                   <td className="text-center align-middle">{product.title}</td>
-//                   <td className="text-center align-middle">{product.finish}</td>
-//                   <td className="text-center align-middle">{product.storageSize}</td>
-//                   <td className="text-center align-middle">
-//                     <div className="d-flex justify-content-center align-items-center">
-//                       <Button
-//                         style={{ borderRadius: '50%', width: '25px', height: '25px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-//                         variant='outline-dark'
-//                         onClick={() => handleDecreaseQuantity(product.id)}>-</Button>
-//                       <span style={{ padding: '0 0.5rem' }}>{product.quantity} 1 </span>
-//                       <Button
-//                         variant='outline-dark'
-//                         style={{ borderRadius: '50%', width: '25px', height: '25px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}
-//                         onClick={() => handleIncreaseQuantity(product.id)}>+</Button>
-//                     </div>
-//                   </td>
-//                   <td className="text-center align-middle">{product.price}{product.countryValue}</td>
-//                   <td className="text-center align-middle">
-//                     <Btn
-//                       variantType='danger'
-//                       handleOnClick={() => handleDelete(product.id)}
-//                       btnText='Delete'
-//                     />
-//                   </td>
-//                 </tr>
-//               ))}
-//             </tbody>
-//           </Table>
-//           <Row className={styles.pageTitle}>
-//             <Col className="text-center">
-//               <h3>Total Cost: ${totalCost.toFixed(2)}</h3>
-//             </Col>
-//           </Row>
-//         </>
-//       }
-//     </Container>
-//   </Layout>
-//   )
-// }
 
 function BagPage() {
   const { bagItems, bagTotal } = useContext(BagContext);
 
   return (
     <Layout bgThemeVariant="light" iconColor="gray">
-      <Container style={{ padding: '4rem 0', borderBottom: '1px solid gray', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-        <h2><b>Your bag total is ${bagTotal}</b></h2>
-        <p style={{ margin: '2rem 0rem 2rem 0rem' }}>Free delivery and free returns.</p>
+      <Container style={{ 
+        width: '65%',
+        padding: '4rem 0', 
+        gap: '1.6rem',
+        borderBottom: '1px solid gray', 
+        display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <h2 style={{ fontSize: '2.2rem' }}>Your bag total is ${bagTotal}</h2>
+        <p style={{ margin: '0rem' }}>Free delivery and free returns.</p>
         <BtnDemo buttonType='check'>Check Out</BtnDemo>
       </Container>
 
       <Container className={styles.bagContainer}>
         {bagItems.map((cartItem) => (
-            <BagItemReview key={cartItem.id} bagItem={cartItem} />
+            <BagItem key={cartItem.id} bagItem={cartItem} />
         ))}
-        <span className={styles.total}>Total: ${bagTotal}</span>
       </Container>
 
-      <Accordion defaultActiveKey={null} style={{ width: '85%', padding: '2rem 0' }}>
+      <Container className={styles.bagDetails}>
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <span className={styles.subtotal}>Subtotal</span>
+            <span className={styles.total}>${bagTotal}</span>
+          </div>
+
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <span className={styles.subtotal}>Shipping</span>
+            <span className={styles.total}>FREE</span>
+          </div>
+        </div>
+      </Container>
+      
+      <Container className={styles.bagTotal}>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <span className={styles.total}>Total</span>
+            <span className={styles.total}>${bagTotal}</span>
+          </div>
+          <BtnDemo buttonType='check' style={{ width: '20%', margin: '1rem 0' }}>Check Out</BtnDemo>
+      </Container>
+
+      <Accordion defaultActiveKey={null} 
+      style={{ 
+        width: '65%', 
+        padding: '2rem 0' }}>
         {/* Parent Accordion for "Questions About Buying" */}
         <Accordion.Item eventKey="0">
           <Accordion.Header>Questions About Buying</Accordion.Header>

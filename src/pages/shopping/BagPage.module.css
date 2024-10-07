@@ -1,16 +1,37 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+h2 {
+    font-size: 2.2rem !important;
 }
 
-.pageContainer{
-    margin-top: 2rem !important;
-    padding: 3rem 3rem !important;
+.bagContainer{
+    display: flex !important;
+    flex-direction: column !important;  
+    align-items: center !important;
+    justify-content: center !important;
+    width: 65% !important;
+    padding: 0rem !important;
+}
+
+.bagDetails{
+    border-bottom: 1px solid gray;
+    width: 65% !important;
+    display: flex !important;
+    flex-direction: column !important;  
+    align-items: right !important;
+    justify-content: center !important;
+}
+
+.bagTotal{
+    border-bottom: 1px solid gray !important;
+    font-size: larger !important;
+    margin: 1rem 0 !important;
+    width: 65% !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
+    align-items: right !important;
+    justify-content: space-between !important;
+}
+
+.total, .subtotal{
+    margin: 0.4rem 0 !important;    
 }
 
