@@ -1,12 +1,14 @@
 // import './index.css';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { createUserDocumentFromAuth, onAuthStateChangedListener } from '../src/utils/firebase/firebase';
+import { setCurrentUser } from './store/user/user.action';
 import ScrollToTop from "./components/ScrollToTop";
 import { Route, Routes } from 'react-router-dom';
 //providers
-import { FavoriteProvider } from './store/Favorites/context';
-import { BagProvider } from './store/Shopping/context';
-// import { AuthenticationProvider } from './store/Authentication/context';
-import { AuthenticationProvider } from './store/Authentication/UserAuthentication';
+import { FavoriteProvider } from './store-contexts/Favorites/context';
+import { BagProvider } from './store-contexts/Shopping/context';
+
 //nav - main pages
 import Homepage from './pages/basicNav/HomePage';
 import Storepage from './pages/basicNav/StorePage';
@@ -49,18 +51,27 @@ import Page404 from './pages/Page404';
 //demo
 import DemoShop from './demo/demo/DemoShop/DemoShop';
 
-// import { ProductsProvider } from './store/contexts-D/ProductContext';
-import { CategoriesProvider } from './store/contexts-D/CategoriesContext';
-import { BagProviderD } from './store/contexts-D/BagContext';
+import { BagProviderD } from './store-contexts/contexts-D/BagContext';
 
 
 
 function App() {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChangedListener((user) => {
+      if(user) {
+        createUserDocumentFromAuth(user);
+      }
+      dispatch(setCurrentUser(user));
+    })
+
+    return unsubscribe;
+  },[dispatch]);
+
   return (
     <div className="App">
-      <AuthenticationProvider>
-        {/* <ProductsProvider> */}
-          <CategoriesProvider>
           <BagProviderD>
             <FavoriteProvider>
               <BagProvider>
@@ -110,9 +121,6 @@ function App() {
               </BagProvider>   
             </FavoriteProvider>
           </BagProviderD>
-          </CategoriesProvider>
-        {/* </ProductsProvider> */}
-      </AuthenticationProvider> 
     </div>
   );
 }

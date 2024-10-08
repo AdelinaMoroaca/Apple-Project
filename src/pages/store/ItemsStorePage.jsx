@@ -1,18 +1,19 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Col, Row, Container} from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 //old:
 // import { useFetchData } from '../../utils/hooks/useFetch';
 // import { Spinner, Figure, Card } from 'react-bootstrap';
 
 //unpdate firebase
-import { CategoriesContext } from "../../store/contexts-D/CategoriesContext";
-import { useContext, Fragment } from "react";
+
 import ItemCard from "../../components/cards/productCard/ItemCard";
+import { selectCategoriesMap } from "../../store/categories/category.selector";
 // import styles from './ProductsStorePage.module.css'; 
 
 function ItemsStorePage({ categoryItems }) {
-  const { categoriesMap } = useContext(CategoriesContext);
-  // const category = categoriesMap[categoryItems];
+  const categoriesMap = useSelector(selectCategoriesMap);
+
 
   return (
     <Container>

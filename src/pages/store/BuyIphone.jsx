@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Layout } from "../../components/Layout";
 import { useFetchData } from '../../utils/hooks/useFetch';
-import { addToBag } from '../../store/Shopping/actions';
-import { addToFavorite } from '../../store/Favorites/actions';
-import { BagContext } from '../../store/Shopping/context';
-import { FavoriteContext } from '../../store/Favorites/context';
+import { addToBag } from '../../store-contexts/Shopping/actions';
+import { addToFavorite } from '../../store-contexts/Favorites/actions';
+import { BagContext } from '../../store-contexts/Shopping/context';
+import { FavoriteContext } from '../../store-contexts/Favorites/context';
 import {Container, Card, Carousel, Button, Col, Row, Spinner } from 'react-bootstrap';
 import RadioFinishesColorBtn from '../../components/buttons/radio/RadioFinishesColorBtn';
 import RadioStorageSizeBtn from '../../components/buttons/radio/RadioStorageSizeBtn';
 //firestore
-import { IntroStoreFirebase } from './IntroStorePage';
+import { IntroStorePage } from './IntroStorePage';
 import { ItemsStorePage } from './ItemsStorePage';
 import styles from './BuyIphone.module.css'; 
 
@@ -83,7 +83,7 @@ function BuyIphone(){
     return (
         <Layout bgThemeVariant="dark" iconColor="gray">
             <section style={{marginTop: '3rem'}}>
-                <IntroStoreFirebase title='iPhone'/>
+                <IntroStorePage title='iPhone'/>
             </section>
 
             <section style={{margin: '2rem 0'}}>

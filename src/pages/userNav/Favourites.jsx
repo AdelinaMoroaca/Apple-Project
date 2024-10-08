@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { FavoriteContext } from "../../store/Favorites/context";
+import { FavoriteContext } from "../../store-contexts/Favorites/context";
 import { Layout } from '../../components/Layout';
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "./Favourites.module.css";

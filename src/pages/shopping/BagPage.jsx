@@ -7,7 +7,7 @@ import { Container } from 'react-bootstrap';
 // import { Btn } from './../../components/buttons/Btn';
 
 //new Bag:
-import { BagContext } from '../../store/contexts-D/BagContext';
+import { BagContext } from '../../store-contexts/contexts-D/BagContext';
 import Accordion from 'react-bootstrap/Accordion';
 import { BtnDemo } from '../../components/buttons/Btn';
 

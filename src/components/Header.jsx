@@ -1,5 +1,4 @@
 import React, { useEffect,useContext, useState } from 'react';
-import { UserContext } from '../store/Authentication/UserAuthentication';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CartIcon from './bagIcon/BagIcon';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -11,14 +10,14 @@ import { Nav, Navbar, Container, Button, Collapse } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import { signOutUser } from '../utils/firebase/firebase';
 import BagDropdown from './bagDropDown/BagDropdown';
-import { BagContext } from '../store/contexts-D/BagContext';
-// import {AuthenticationContext} from '../store/Authentication/context';
+import { BagContext } from '../store-contexts/contexts-D/BagContext';
+import { useSelector } from 'react-redux';
+import { selectCurrentUser } from '../store/user/user.selector';
 import styles from './Header.module.css'
  
 
 function Header({ bgThemeVariant, iconColor }) {
-  // const { user, setUser } = useContext(AuthenticationContext);
-  const { currentUser } = useContext(UserContext);
+  const currentUser = useSelector(selectCurrentUser);
   const { isBagOpen } = useContext(BagContext);
 
 

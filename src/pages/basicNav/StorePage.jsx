@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useCallback } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
 import { ReactComponent as EducationIcon } from '../../assets/education-hat.svg';
 
 // import {StoreProductList} from "./StoreProductList";
 import { Layout } from '../../components/Layout';
-import {Container, Image, Col, Row } from 'react-bootstrap';
+import { Container, Image, Col, Row } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 // import BasicEduStoreCard from "../../components/modal/BasicEduStoreCard";
 // import SmallCard from "../../components/modal/SmallCard";
@@ -17,28 +18,32 @@ import LargeCardsCarousel from "../../components/carousel/LargeCardsCarousel";
 // import { CarouselSwiperList } from "../../components/carousel/CarouselSwiperList";
 //updates firbase
 import Figure from 'react-bootstrap/Figure';
-import { CategoriesContext } from "../../store/contexts-D/CategoriesContext";
+// import { CategoriesContext } from "../../store-contexts/contexts-D/CategoriesContext";
+import { getCategoriesAndDocuments } from '../../utils/firebase/firebase';
+import { setCategoriesMap } from '../../store/categories/category.action';
+import { selectCategoriesMap } from '../../store/categories/category.selector';
 import styles from './StorePage.module.css';
 
 
 
 function Storepage(){
-    const [userInteraction, setUserInteraction] = useState(false);
-    const { categoriesMap } = useContext(CategoriesContext);
+    const dispatch = useDispatch();
+    const [ setUserInteraction] = useState(false);
+    const categoriesMap = useSelector(selectCategoriesMap);
     const navigate = useNavigate();
+    
 
     useEffect(() => {
-        // Clean up the effect if needed
-        return () => {
-            window.removeEventListener('resize', handleInteraction);
-        };
-    }, []);
-
-    const handleInteraction = () => {
-        if (window.innerWidth <= 1540) {
-            setUserInteraction(true);
+        const getCategoriesMap = async () => {
+            const categoryMap = await getCategoriesAndDocuments('categories');
+            console.log(categoryMap);
+            dispatch(setCategoriesMap(categoryMap));
         }
-    };
+
+        getCategoriesMap();
+
+    }, [dispatch]);
+
 
     const handleCategoryNavigation = (title) => {
         if (categoriesMap[title] && categoriesMap[title].routeName) {
@@ -46,7 +51,22 @@ function Storepage(){
         }
     }
 
-    // need to update backendss
+    const handleInteraction = useCallback(() => {
+        if (window.innerWidth <= 1540) {
+          setUserInteraction(true);
+        }
+      }, [setUserInteraction]);
+      
+      useEffect(() => {
+        window.addEventListener('resize', handleInteraction);
+      
+        // Clean up the effect if needed
+        return () => {
+          window.removeEventListener('resize', handleInteraction);
+        };
+    }, [handleInteraction]);
+
+    // need to update firebase
     const educationStoreCards = [
         {
           src: 'images/StorePage/education/store-card.JPG',

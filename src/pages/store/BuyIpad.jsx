@@ -2,14 +2,14 @@ import React from "react";
 import { Layout } from "../../components/Layout";
 //firebase
 import { ItemsStorePage } from './ItemsStorePage';
-import { IntroStoreFirebase } from './IntroStorePage';
+import { IntroStorePage } from './IntroStorePage';
 
 
 function BuyIpad(){
     return(
         <Layout bgThemeVariant="dark" iconColor="gray">
             <section style={{marginTop: '3rem'}}>
-                <IntroStoreFirebase title='iPad'/>
+                <IntroStorePage title='iPad'/>
             </section>
             
             <section style={{margin: '2rem 0'}}>

@@ -28,26 +28,3 @@
   margin-top: auto;
 }
 
-.bagItemContainer {
-  width: 100% !important;
-  display: flex !important;
-  height: 80px !important;
-  margin-top: 15px !important;
-}
-
-.bagItemContainer img {
-  width: 50%;
-}
-
-.itemDetails {
-  width: 50% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  justify-content: center !important;
-  padding: 1rem !important;
-}
-
-.name {
-  font-size: 1rem !important;
-}

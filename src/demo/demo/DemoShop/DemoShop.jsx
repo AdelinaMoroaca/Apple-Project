@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import { CategoriesContext } from "../../../store/contexts-D/CategoriesContext";
-import Container from 'react-bootstrap/Container';
-import { Row, Col, Figure } from 'react-bootstrap';
+// import { useContext } from "react";
+// import { CategoriesContext } from "../../../store-contexts/contexts-D/CategoriesContext";
+// import Container from 'react-bootstrap/Container';
+// import { Row, Col, Figure } from 'react-bootstrap';
 //old
 // import Col from 'react-bootstrap/Col';
 // import ProductCard from "../productCard/ProductCardFirebase";

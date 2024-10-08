@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 import './../../../index.css';
-import { CategoriesContext } from "../../../store/contexts-D/CategoriesContext";
+import { CategoriesContext } from "../../../store-contexts/contexts-D/CategoriesContext";
 import { Figure } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 // import required modules
