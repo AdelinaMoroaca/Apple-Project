@@ -80,6 +80,7 @@ function App() {
                   <Route path='/' element={<Homepage/>}/>
                   <Route path='/store/' element={<Storepage/>}/>
                   <Route path='/shop/' element={<DemoShop/>}/>
+                  {/* Shop pages will be dynamic routes */}
                   <Route path='/shop/buy-ipad/' element={<BuyIpad/>}/>
                   <Route path='/shop/buy-ipad/ipad-pro/' element={<BuyIpadPro/>}/>
                 
